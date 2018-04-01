@@ -1,0 +1,634 @@
+[ 2017-12-17T00:17:23+08:00 ] 172.31.232.156 77.88.5.5 GET /forgetpassword?lang=de
+[ log ] wallet.2100w.cn/forgetpassword?lang=de [运行时间：0.017498s][吞吐率：57.15req/s] [内存消耗：2,410.73kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/de.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'forgetpassword',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'de',
+)
+[ info ] [ RUN ] app\user\controller\User->forgetpassword[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Forgetpassword.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T00:40:22+08:00 ] 172.31.232.156 5.255.250.75 GET /login?lang=ko
+[ log ] wallet.2100w.cn/login?lang=ko [运行时间：0.017510s][吞吐率：57.11req/s] [内存消耗：2,332.69kb] [文件加载：39]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ko.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'ko',
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T00:46:13+08:00 ] 172.31.232.156 5.255.250.75 GET /login?lang=vi
+[ log ] wallet.2100w.cn/login?lang=vi [运行时间：0.016860s][吞吐率：59.31req/s] [内存消耗：2,332.54kb] [文件加载：39]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/vi.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'vi',
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T00:51:21+08:00 ] 172.31.232.156 106.11.157.204 GET /forgetpassword
+[ log ] wallet.2100w.cn/forgetpassword [运行时间：0.016694s][吞吐率：59.90req/s] [内存消耗：2,420.46kb] [文件加载：41]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'forgetpassword',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-cn,en-us,zh-tw,en-gb,en;',
+  'host' => 'wallet.2100w.cn',
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'YisouSpider',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->forgetpassword[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Forgetpassword.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T02:21:03+08:00 ] 172.31.232.156 77.88.5.5 GET /login?lang=ar
+[ log ] wallet.2100w.cn/login?lang=ar [运行时间：0.017084s][吞吐率：58.53req/s] [内存消耗：2,332.60kb] [文件加载：39]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ar.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'ar',
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T04:35:58+08:00 ] 172.31.232.156 77.88.5.5 GET /login?lang=zh-cn
+[ log ] wallet.2100w.cn/login?lang=zh-cn [运行时间：0.015805s][吞吐率：63.27req/s] [内存消耗：2,342.19kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'zh-cn',
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T04:41:01+08:00 ] 172.31.232.156 77.88.5.5 GET /login?lang=th
+[ log ] wallet.2100w.cn/login?lang=th [运行时间：0.015702s][吞吐率：63.69req/s] [内存消耗：2,332.72kb] [文件加载：39]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/th.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'th',
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T05:40:49+08:00 ] 172.31.232.156 77.88.5.5 GET /register?lang=ru
+[ log ] wallet.2100w.cn/register?lang=ru [运行时间：0.021982s][吞吐率：45.49req/s] [内存消耗：3,589.30kb] [文件加载：47]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ru.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'register',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'ru',
+)
+[ info ] [ RUN ] app\user\controller\User->register[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Register.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T06:19:23+08:00 ] 172.31.232.156 77.88.5.5 GET /forgetpassword?lang=en-us
+[ log ] wallet.2100w.cn/forgetpassword?lang=en-us [运行时间：0.018558s][吞吐率：53.89req/s] [内存消耗：2,411.24kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/en-us.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'forgetpassword',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'en-us',
+)
+[ info ] [ RUN ] app\user\controller\User->forgetpassword[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Forgetpassword.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T06:41:30+08:00 ] 172.31.232.156 77.88.5.5 GET /login?lang=fr
+[ log ] wallet.2100w.cn/login?lang=fr [运行时间：0.016351s][吞吐率：61.16req/s] [内存消耗：2,332.48kb] [文件加载：39]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/fr.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'fr',
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T07:18:47+08:00 ] 172.31.232.156 77.88.5.5 GET /register?lang=ko
+[ log ] wallet.2100w.cn/register?lang=ko [运行时间：0.023328s][吞吐率：42.87req/s] [内存消耗：3,589.03kb] [文件加载：47]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ko.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'register',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'ko',
+)
+[ info ] [ RUN ] app\user\controller\User->register[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Register.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T08:40:54+08:00 ] 172.31.232.156 106.11.158.194 GET /forgetpassword?lang=th
+[ log ] wallet.2100w.cn/forgetpassword?lang=th [运行时间：0.017453s][吞吐率：57.30req/s] [内存消耗：2,410.83kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/th.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'forgetpassword',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-cn,en-us,zh-tw,en-gb,en;',
+  'host' => 'wallet.2100w.cn',
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'YisouSpider',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'th',
+)
+[ info ] [ RUN ] app\user\controller\User->forgetpassword[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Forgetpassword.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T16:20:36+08:00 ] 172.31.232.156 163.179.32.205 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.014810s][吞吐率：67.52req/s] [内存消耗：2,175.28kb] [文件加载：43]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T16:20:36+08:00 ] 172.31.232.156 163.179.32.205 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.015632s][吞吐率：63.97req/s] [内存消耗：2,342.27kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'think_var=zh-cn; PHPSESSID=vcjplbnuaj27j59l7goa7dk972',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T20:55:32+08:00 ] 172.31.232.156 77.88.5.5 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.015219s][吞吐率：65.71req/s] [内存消耗：2,162.65kb] [文件加载：41]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ru.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-language' => 'ru, uk;q=0.8, be;q=0.8, en;q=0.7, *;q=0.01',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T20:55:33+08:00 ] 172.31.232.156 93.158.161.100 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.018560s][吞吐率：53.88req/s] [内存消耗：2,162.67kb] [文件加载：41]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ru.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-language' => 'ru, uk;q=0.8, be;q=0.8, en;q=0.7, *;q=0.01',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T20:55:36+08:00 ] 172.31.232.156 93.158.161.100 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.015889s][吞吐率：62.94req/s] [内存消耗：2,332.88kb] [文件加载：39]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ru.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-language' => 'ru, uk;q=0.8, be;q=0.8, en;q=0.7, *;q=0.01',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-17T20:55:37+08:00 ] 172.31.232.156 5.255.250.115 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.016062s][吞吐率：62.26req/s] [内存消耗：2,333.19kb] [文件加载：39]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ru.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-language' => 'ru, uk;q=0.8, be;q=0.8, en;q=0.7, *;q=0.01',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

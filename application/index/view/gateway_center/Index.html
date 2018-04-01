@@ -1,0 +1,731 @@
+<div class="col-md-10 wallet_min">
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active">
+			<a href="#WG1" aria-controls="WG1" role="tab" data-toggle="tab">{$Think.lang.INDEX_GATEWAY_OVERVIEW}</a>
+		</li>
+		<li role="presentation">
+			<a href="#WG2" aria-controls="WG2" role="tab" data-toggle="tab">{$Think.lang.INDEX_GATEWAY_INFOMATION}</a>
+		</li>
+		<li role="presentation">
+			<a href="#WG3" aria-controls="WG3" role="tab" data-toggle="tab">{$Think.lang.INDEX_GATEWAY_ASSET_MANAGE}</a>
+		</li>
+		<li role="presentation">
+			<a href="#WG4" aria-controls="WG4" role="tab" data-toggle="tab">{$Think.lang.INDEX_GATEWAY_INCHARGE}</a>
+		</li>
+		<li role="presentation">
+			<a href="#WG5" aria-controls="WG5" role="tab" data-toggle="tab">{$Think.lang.INDEX_GATEWAY_OUTCHARGE}</a>
+		</li>
+		<li role="presentation">
+			<a href="#WG6" aria-controls="WG6" role="tab" data-toggle="tab">{$Think.lang.INDEX_GATEWAY_BANKINFO}</a>
+		</li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active" id="WG1">
+			<h2 class="wg_h2tit">
+					    	{$Think.lang.INDEX_GATEWAY_ACCOUNT}：{$mygateway.gateway_account}
+					    	<br>
+					    	{$Think.lang.INDEX_GATEWAY_NAME}：{$mygateway.gateway_name}
+				    	</h2>
+			<div class="wg1_info">
+				<ul class="list-unstyled">
+					<li>
+						<div class="wg1_info_box wg1_box">
+							<h4>{$Think.lang.INDEX_GATEWAY_PERMISSION_LIST}</h4>
+							<p>{$Think.lang.INDEX_GATEWAY_LOW_PERMISSION}：<span id="low_threshold" class="glyphicon"></span></p>
+							<p>{$Think.lang.INDEX_GATEWAY_MIDDLE_PERMISSION}：<span id="med_threshold" class="glyphicon"></span></p>
+							<p>{$Think.lang.INDEX_GATEWAY_HIGH_PERMISSION}：<span id="high_threshold" class="glyphicon"></span></p>
+						</div>
+					</li>
+					<li>
+						<div class="wg1_info_box">
+							<h4>{$Think.lang.INDEX_GATEWAY_INCHARGE_APPLY}</h4>
+							<p>{$Think.lang.INDEX_GATEWAY_UNDEAL}：{$undeal1}{$Think.lang.INDEX_GATEWAY_BI}</p>
+							<p>{$Think.lang.INDEX_GATEWAY_INCHARGE_ALL}：{$total1}{$Think.lang.INDEX_GATEWAY_BI}</p>
+						</div>
+					</li>
+					<li>
+						<div class="wg1_info_box">
+							<h4>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_APPLY}</h4>
+							<p>{$Think.lang.INDEX_GATEWAY_UNDEAL}：{$undeal2}{$Think.lang.INDEX_GATEWAY_BI}</p>
+							<p>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_ALL}：{$total2}{$Think.lang.INDEX_GATEWAY_BI}</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- end WG1 -->
+		<div role="tabpanel" class="tab-pane" id="WG2">
+			<h2 class="wg_h2tit">
+					    	{$Think.lang.INDEX_GATEWAY_ACCOUNT}：{$mygateway.gateway_account}
+					    	<br>
+					    	{$Think.lang.INDEX_GATEWAY_NAME}：{$mygateway.gateway_name}
+				    	</h2>
+			<div class="reset_wginfo">
+				<form name="appGateway" method="post" id="appGateway">
+					<div class="form-group group_50">
+						<label>{$Think.lang.INDEX_GATEWAY_CORP}：</label>
+						<input type="text" class="form-control" name="gateway_company" value="{$mygateway.gateway_company}" datatype="*30" nullmsg="{$Think.lang.INDEX_GATEWAY_CORP_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_CORP_RULE}">
+					</div>
+					<div class="form-group group_50">
+						<label>{$Think.lang.INDEX_GATEWAY_AREA}：</label>
+						<select class="form-control" name="gateway_area">
+							<option>{$Think.lang.INDEX_GATEWAY_AREA_CHINA}</option>
+						</select>
+					</div>
+					<div class="cb"></div><!--清除浮动-->
+					<div class="form-group group_50">
+						<label>{$Think.lang.INDEX_GATEWAY_CONTACT}：</label>
+						<input type="text" class="form-control" name="gateway_contacts" value="{$mygateway.gateway_contacts}" datatype="*10" nullmsg="{$Think.lang.INDEX_GATEWAY_CONTACT_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_CONTACT_RULE}">
+					</div>
+					<div class="form-group group_50">
+						<label>{$Think.lang.INDEX_GATEWAY_PHONE}：</label>
+						<input type="text" class="form-control" name="gateway_phone" value="{$mygateway.gateway_phone}" datatype="m" nullmsg="{$Think.lang.INDEX_GATEWAY_PHONE_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_PHONE_ERR}">
+					</div>
+					<div class="form-group cb">
+						<label>{$Think.lang.INDEX_GATEWAY_ADDRESS}：</label>
+						<input type="text" class="form-control" style="width:95%;" name="gateway_address" value="{$mygateway.gateway_address}" datatype="*60" nullmsg="{$Think.lang.INDEX_GATEWAY_ADDRESS_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_ADDRESS_RULE}">
+					</div>
+					<div class="form-group group_50">
+						<label>{$Think.lang.INDEX_CONTACT_EMAIL}：</label>
+						<input type="text" class="form-control" name="gateway_email" value="{$mygateway.gateway_email}" datatype="e" nullmsg="{$Think.lang.INDEX_GATEWAY_EMAIL_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_EMAIL_ERR}">
+					</div>
+					<div class="form-group group_50">
+						<label>{$Think.lang.INDEX_GATEWAY_SERVICES}：</label>
+						<input type="text" class="form-control" placeholder="{$Think.lang.INDEX_GATEWAY_SERVICES_FORMAT}" name="gateway_service" value="{$mygateway.gateway_service}">
+					</div>
+					<div class="form-group cb">
+						<button type="submit" class="btn btn-primary wg_btn">{$Think.lang.INDEX_GATEWAY_MODIFY}</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- end WG2 -->
+		<div role="tabpanel" class="tab-pane" id="WG3">
+			<div class="zcguanli">
+				<form name="assetManage" method="post" id="assetManage" action="assetManage">
+					<div class="form-group group_50">
+						<label>{$Think.lang.INDEX_GATEWAY_ASSET_CODE}：</label>
+						<input type="text" class="form-control" placeholder="{$Think.lang.INDEX_GATEWAY_ASSET_CODE_RULE}" name="asset_code" id="asset_code" datatype="*3" nullmsg="{$Think.lang.INDEX_GATEWAY_ASSET_CODE_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_ASSET_CODE_RULE}" />
+						<input type="hidden" class="form-control" name="asset_issuer" id="asset_issuer" value="{$Think.session.USER_ACCOUNT}" />
+					</div>
+					<div class="form-group group_50">
+						<label>{$Think.lang.INDEX_GATEWAY_ASSET_DESC}：</label>
+						<input type="text" class="form-control" placeholder="{$Think.lang.INDEX_GATEWAY_ASSET_MEAN}" name="asset_desc" id="asset_desc" datatype="*32" nullmsg="{$Think.lang.INDEX_GATEWAY_ASSET_MEAN_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_ASSET_MEAN_RULE}" />
+					</div>
+					<div class="cb"></div><!--清除浮动-->
+					<div class="form-group">
+						<label>{$Think.lang.INDEX_GATEWAY_ASSET_ISSUER_AMOUNT}：</label>
+						<label style="margin-right: 20px;"  onclick="$('#wg_amount').hide();$('#wg_price').show();"><input type="radio" name="zc" id="zc" checked="checked" value="0">{$Think.lang.INDEX_GATEWAY_ASSET_UNLIMIT}</label>
+						<label onclick="$('#wg_amount').show();$('#wg_price').hide();"><input type="radio" name="zc" id="zc" value="1">{$Think.lang.INDEX_GATEWAY_ASSET_LIMIT}</label>
+					</div>
+					<div class="wg3_gdzc" id="wg_price" style="display: block;">
+						<div class="form-group group_50">
+							<label>{$Think.lang.INDEX_GATEWAY_ASSET_PRICE}：</label>
+							<input type="text" class="form-control" placeholder="{$Think.lang.INDEX_GATEWAY_ASSET_PRICE_DESC}" name="asset_price" id="asset_price" datatype="amount" nullmsg="{$Think.lang.INDEX_GATEWAY_ASSET_PRICE_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_ASSET_PRICE_INPUT}" />
+						</div>
+						<span class="group_50">{$Think.lang.INDEX_GATEWAY_ASSET_PRICE_IMPORTENT}！</span>
+						<div class="form-group cb">
+							
+						</div>
+					</div>
+					<div class="wg3_gdzc" id="wg_amount">
+						<div class="form-group group_50">
+							<label>{$Think.lang.INDEX_GATEWAY_ASSET_ISSUER_AMOUNT}：</label>
+							<input type="text" class="form-control" placeholder="{$Think.lang.INDEX_GATEWAY_ASSET_MAX}1000000000" name="asset_amount" id="asset_amount" datatype="amount" nullmsg="{$Think.lang.INDEX_GATEWAY_ASSET_AMOUNT_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_ASSET_AMOUNT_INPUT}" />
+						</div>
+						<span class="group_50">{$Think.lang.INDEX_GATEWAY_ASSET_NOTICE}</span>
+						<div class="form-group cb">
+							<span class="group_50"><font color="red">{$Think.lang.INDEX_GATEWAY_ASSET_ISSUER_DESC}</font></span>
+						</div>
+					</div>
+					<div class="form-group text-center">
+						<button type="button" id="btnIssuer" class="btn btn-success">{$Think.lang.INDDEX_GATEWAY_ISSUER_SUBMIT}</button>
+					</div>
+				</form>
+				<div class="zcgl_table">
+					<table class="table table-bordered">
+						<thead>
+							<td>{$Think.lang.INDEX_GATEWAY_ASSET_CODE}</td>
+							<td>{$Think.lang.INDEX_GATEWAY_ASSET_DESC}</td>
+							<td>{$Think.lang.INDEX_GATEWAY_ASSET_ISSUER_AMOUNT}</td>
+							<td>{$Think.lang.INDEX_GATEWAY_ASSET_ISSUER}</td>
+						</thead>
+						<tbody>
+							<volist name="assetlist" id="al">
+								<tr>
+									<td>{$al.asset_code}</td>
+									<td>{$al.asset_desc}</td>
+									<td>{$al.asset_amount}</td>
+									<td>{$al.asset_issuer}</td>
+								</tr>
+							</volist>
+						</tbody>
+					</table>
+					<div class="pagesbox">
+						{$page0}
+					</div>
+					<!--end pagebox-->
+				</div>
+			</div>
+		</div>
+		<!-- end WG3 -->
+		<div role="tabpanel" class="tab-pane" id="WG4">
+			<div class="wg_gl_table cz_table">
+				<h2 class="wg_h2tit">{$Think.lang.INDEX_GATEWAY_INCHARGE_TOTAL}:{$total1}{$Think.lang.INDEX_GATEWAY_BI} {$Think.lang.INDEX_GATEWAY_UNDEAL}:{$undeal1}{$Think.lang.INDEX_GATEWAY_BI} </h2>
+				<table class="table table-bordered">
+					<thead>
+						<td>{$Think.lang.INDEX_GATEWAY_INCHARGE_ASSET}</td>
+						<td>{$Think.lang.INDEX_GATEWAY_INCHARGE_TIME}</td>
+						<td>{$Think.lang.INDEX_GATEWAY_INCHARGE_AMOUNT}</td>
+						<td>{$Think.lang.INDEX_GATEWAY_INCHARGE_ACCOUNT}</td>
+						<td>{$Think.lang.INDEX_GATEWAY_INCHARGE_STATUS}</td>
+						<td>{$Think.lang.INDEX_GATEWAY_INCHARGE_OPTRATION}</td>
+					</thead>
+					<tbody>
+						<volist name="incharge" id="in">
+							<tr>
+								<td><if condition="(array_key_exists('asset', $in))" >{$in.asset.asset_code}<else/>[{$Think.lang.INDEX_GATEWAY_KNOWN}]</if></td>
+								<td>{$in.record_start}</td>
+								<td>{$in.record_amount}</td>
+								<td><span class="simp_address">{$in.user_account_obj}</span></td>
+								<td><span class="text-success">{$in.status}</span></td>
+								<td><button type="button" class="btn btn-default" onclick="showCZXQ(this);getCZXQData('{$in.record_id}')">{$Think.lang.INDEX_GATEWAY_DETAIL}</button></td>
+							</tr>
+						</volist>
+					</tbody>
+				</table>
+				<div class="pagesbox">
+					{$page1}
+				</div>
+				<!--end pagebox-->
+			</div>
+
+			<div class="table_cz_xx">
+				<p>{$Think.lang.INDEX_GATEWAY_ASSET_CODE}：<span id="czxq_asset">--</span></p>
+				<p>{$Think.lang.INDEX_GATEWAY_APPLY_TIME}：<span id="czxq_datetime">--</span></p>
+				<p>{$Think.lang.INDEX_GATEWAY_INCHARGE_ACCOUNT}：<span id="czxq_account">--</span></p>
+				<p>{$Think.lang.INDEX_GATEWAY_ACCOUNT_IS_EXIST}：<span id="czxq_exist">{$Think.lang.INDEX_GATEWAY_ACCOUNT_EXIST}</span></p>
+				<p>{$Think.lang.INDEX_GATEWAY_INCHARGE_AMOUNT}：<span id="czxq_amount">--</span></p>
+				<p>{$Think.lang.INDEX_GATEWAY_INCHARGE_INFO}：
+					<div class="dz_info">
+						<p class="col-md-6">{$Think.lang.INDEX_GATEWAY_INCHARGE_TYPE}<b id="czxq_type">--</b></p>
+						<p class="col-md-6">{$Think.lang.INDEX_GATEWAY_INCHARGE_BANK_MEMBER}<b id="czxq_member">--</b></p>
+						<p class="col-md-6">{$Think.lang.INDEX_GATEWAY_INCHARGE_BANK_NAME}<b id="czxq_bank">--</b></p>
+						<p class="col-md-6">{$Think.lang.INDEX_GATEWAY_INCHARGE_BANK_ACCOUNT}<b id="czxq_bankaccount">--</b></p>
+					</div>
+				</p>
+				<p>{$Think.lang.INDEX_GATEWAY_INCHARGE_DEAL}：<span class="text-danger" id="czxq_status">--</span></p>
+				<div class="form-group text-center">
+					<button type="button" class="btn btn-success" id="czxq_btn_status" data-toggle="modal">{$Think.lang.INDEX_GATEWAY_INCHARGE_DEALED}</button>
+					<button type="button" class="btn btn-default" onclick="hideCZXQ()">{$Think.lang.MAIN_BACK}</button>
+				</div>
+			</div>
+			<!--end 充值详细信息-->
+		</div>
+		<!-- end WG4 -->
+		<div role="tabpanel" class="tab-pane" id="WG5">
+			<div class="wg_gl_table tx_table">
+				<h2 class="wg_h2tit">{$Think.lang.INDEX_GATEWAY_OUTCHARGE_TOTAL}:{$total2}{$Think.lang.INDEX_GATEWAY_BI} {$Think.lang.INDEX_GATEWAY_UNDEAL}:{$undeal2}{$Think.lang.INDEX_GATEWAY_BI}</h2>
+				<table class="table table-bordered">
+					<thead>
+						<td>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_ASSET}</td>
+						<td>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_TIME}</td>
+						<td>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_AMOUNT}</td>
+						<td>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_ACCOUNT}</td>
+						<td>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_STATUS}</td>
+						<td>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_OPTRATION}</td>
+					</thead>
+					<tbody>
+						<volist name="outcharge" id="in">
+							<tr>
+								<td><if condition="(array_key_exists('asset', $in))" >{$in.asset.asset_code}<else/>[{$Think.lang.INDEX_GATEWAY_KNOWN}]</if></td>
+								<td>{$in.record_start}</td>
+								<td>{$in.record_amount}</td>
+								<td><span class="simp_address">{$in.user_account_src}</span></td>
+								<td><span class="text-success">{$in.status}</span></td>
+								<td><button type="button" class="btn btn-default" onclick="showTXXQ(this);getTXXQData('{$in.record_id}')">{$Think.lang.INDEX_GATEWAY_DETAIL}</button></td>
+							</tr>
+						</volist>
+					</tbody>
+				</table>
+				<div class="pagesbox">
+					{$page2}
+				</div>
+				<!--end pagebox-->
+			</div>
+
+			<div class="table_tx_xx">
+				<p>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_ASSET}：<span id="txxq_asset">--</span></p>
+				<p>{$Think.lang.INDEX_GATEWAY_APPLY_TIME}：<span id="txxq_datetime">--</span></p>
+				<p>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_ACCOUNT}：<span id="txxq_account">--</span></p>
+				<p>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_AMOUNT}：<span id="txxq_amount">--</span></p>
+				<p>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_INFO}：
+					<div class="dz_info">
+						<p class="col-md-6">{$Think.lang.INDEX_GATEWAY_OUTCHARGE_TYPE}<b id="txxq_bank">--</b></p>
+						<p class="col-md-6">{$Think.lang.INDEX_GATEWAY_OUTCHARGE_BANK_MEMBER}<b id="txxq_member">--</b></p>
+						<p class="col-md-6">{$Think.lang.INDEX_GATEWAY_OUTCHARGE_BANK_NAME}<b id="txxq_ext">--</b></p>
+						<p class="col-md-6">{$Think.lang.INDEX_GATEWAY_OUTCHARGE_BANK_ACCOUNT}<b id="txxq_bankaccount">--</b></p>
+					</div>
+				</p>
+				<p>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_DEAL}：<span class="text-danger" id="txxq_status">{$Think.lang.INDEX_GATEWAY_OUTCHARGE_UNDEALED}</span></p>
+				<div class="form-group text-center">
+					<button type="button" class="btn btn-success" id="txxq_btn_status" onclick="javascript:setTXXQStatus()">{$Think.lang.INDEX_GATEWAY_OUTCHARGE_DEALED}</button>
+					<button type="button" class="btn btn-default" onclick="hideTXXQ()">{$Think.lang.MAIN_BACK}</button>
+				</div>
+			</div>
+			<!--end 充值详细信息-->
+		</div>
+		<!-- end WG5 -->
+		<div role="tabpanel" class="tab-pane" id="WG6">
+			<div class="zcguanli">
+				<form name="bankManage" method="post" id="bankManage" action="bankManage">
+					<div class="form-group group_50">
+						<label>{$Think.lang.INDEX_GATEWAY_BANK_NAME}：</label>
+						<select class="form-control" name="bank_id">
+							<volist name="banklist" id="bl">
+								<option value="{$bl.bank_id}">{$bl.bank_name}</option>
+							</volist>
+						</select>
+					</div>
+					<div class="form-group group_50">
+						<label>{$Think.lang.INDEX_GATEWAY_BANK_MEMBER}：</label>
+						<input type="text" class="form-control" placeholder="{$Think.lang.INDEX_GATEWAY_BANK_MEMBER_INPUT}" name="bank_member" id="bank_member" datatype="*32" nullmsg="{$Think.lang.INDEX_GATEWAY_BANK_MEMBER_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_BANK_MEMBER_RULE}" />
+					</div>
+					<div class="form-group group_50">
+						<label>{$Think.lang.INDEX_GATEWAY_BANK_ACCOUNT}：</label>
+						<input type="text" class="form-control" placeholder="{$Think.lang.INDEX_GATEWAY_BANK_ACCOUNT_INPUT}" name="bank_account" id="bank_account" datatype="*32" nullmsg="{$Think.lang.INDEX_GATEWAY_BANK_ACCOUNT_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_BANK_ACCOUNT_RULE}" />
+					</div>
+					<div class="form-group group_50">
+						<label>{$Think.lang.INDEX_GATEWAY_BANK_EXT}：</label>
+						<input type="text" class="form-control" placeholder="{$Think.lang.INDEX_GATEWAY_BANK_EXT_INPUT}" name="bank_ext" id="bank_ext" />
+					</div>
+					<div class="cb"></div><!--清除浮动-->
+					<div class="form-group group_100">
+						<label>{$Think.lang.INDEX_GATEWAY_BANK_ASSET_LIST}：</label>
+						<volist name="myassetlist" id="ml">
+							<input type="checkbox" id="all_asset" name="asset_id[]" value="{$ml.asset_id}" />{$ml.asset_code}
+						</volist>
+
+					</div>
+					<div class="form-group group_100">
+						<label>{$Think.lang.INDEX_GATEWAY_BANK_REMARK}：</label>
+						<input type="text" class="form-control" placeholder="{$Think.lang.INDEX_GATEWAY_BANK_REMARK_INPUT}" name="info_comment" id="info_comment" />
+					</div>
+					<div class="form-group text-center">
+						<button type="submit" id="btnIssuer" class="btn btn-success">{$Think.lang.INDEX_GATEWAY_BANK_SAVE}</button>
+					</div>
+				</form>
+				<div class="zcgl_table">
+					<table class="table table-bordered">
+						<thead>
+							<td>{$Think.lang.INDEX_GATEWAY_BANK_NAME}</td>
+							<td>{$Think.lang.INDEX_GATEWAY_BANK_MEMBER}</td>
+							<td>{$Think.lang.INDEX_GATEWAY_BANK_ACCOUNT}</td>
+							<td>{$Think.lang.INDEX_GATEWAY_BANK_ASSET_SUPPORT}</td>
+							<td>{$Think.lang.INDEX_GATEWAY_BANK_DEL}</td>
+						</thead>
+						<tbody>
+							<volist name="accountlist" id="al">
+								<tr>
+									<td>{$al.bank_name}</td>
+									<td>{$al.bank_member}</td>
+									<td>{$al.bank_account}</td>
+									<td>{$al.asset_list}</td>
+									<td>
+										<a href="javascript:doDelBankInfo({$al.info_id});">{$Think.lang.INDEX_GATEWAY_BANK_DEL}</a>
+									</td>
+								</tr>
+							</volist>
+						</tbody>
+					</table>
+					<div class="pagesbox">
+
+					</div>
+					<!--end pagebox-->
+				</div>
+			</div>
+		</div>
+		<!-- end WG6 -->
+	</div>
+</div>
+</div>
+</section>
+<!--Content end-->
+<!--支付密码弹框-->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">{$Think.lang.MAIN_INPUT_PAYSET}</h4>
+			</div>
+			<div class="modal-body">
+				<b class="edit_tips">*{$Think.lang.MAIN_INPUT_DESC}！</b>
+				<br>
+				<div class="form-group">
+					<label>{$Think.lang.MAIN_INPUT_PASSWORD}：</label>
+					<input type="password" class="form-control" id="pwd" />
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-primary pull-right" onclick="javascript:doPay()">{$Think.lang.MAIN_INPUT_OK}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--支付密码弹框 end-->
+<script>
+	var g_recordID;
+	var g_dstAccount;
+	var g_assetCode;
+	var g_assetIssuer;
+	var g_assetAmount;
+	var g_action; //当前的动作
+
+	/**
+	 * 删除支付信息
+	 */
+	function doDelBankInfo(id){
+		if(confirm("{$Think.lang.INDEX_GATEWAY_DEL_CONFIRM}")){
+			location.href='/bankdel/id/'+id;
+		}
+	}
+	/**
+	 * 输入密码后的支付
+	 */
+	function doPay() {
+		addlongloading();//调出loading
+		if(g_action == 1) {
+			//发行资产
+			g_callbackPayment = function() {
+				
+			}
+			g_callbackKillme = function(){
+				$('#myModal').modal('hide');
+				$('#assetManage')[0].submit();
+			}
+			g_callbackCreateUser = function(){
+				
+			}
+			assetManage($('#pwd').val(), '{$Think.session.USER_3DES}', $('#asset_code').val(), $('#asset_amount').val(), '{$Think.session.USER_ACCOUNT}');
+		} else if(g_action == 2) {
+			
+			if($('#czxq_exist').text() == "{$Think.lang.INDEX_GATEWAY_NOT_EXIST}"){
+				//创建账号
+				g_callbackCreateUser = function() {
+					$('#myModal').modal('hide');
+					//提交结果
+					$.ajax({
+						type: "get",
+						url: "/czxqPay/id/" + g_recordID,
+						async: true,
+						success: function() {
+							//返回
+							location.reload();
+							//hideCZXQ();
+						}
+					});
+	
+				}
+				startCreateUser($('#pwd').val(), '{$Think.session.USER_3DES}', g_dstAccount, g_assetIssuer, g_assetCode, g_assetAmount);
+			}else{
+				//充值
+				g_callbackPayment = function() {
+					$('#myModal').modal('hide');
+					delloading();//关闭loading
+					//提交结果
+					$.ajax({
+						type: "get",
+						url: "/czxqPay/id/" + g_recordID,
+						async: true,
+						success: function() {
+							//返回
+							location.reload();
+							//hideCZXQ();
+						}
+					});
+	
+				}
+				paymentAsset($('#pwd').val(), '{$Think.session.USER_3DES}', g_dstAccount, g_assetIssuer, g_assetCode, g_assetAmount);
+			}
+			
+		}
+	}
+	/*
+	 * 修改支付状态
+	 */
+	function setTXXQStatus() {
+		$.ajax({
+			type: "get",
+			url: "/txxqPay/id/" + g_recordID,
+			async: true,
+			success: function() {
+				//返回
+				location.reload();
+				//hideCZXQ();
+			}
+		});
+	}
+	/**
+	 * 获取提现详情
+	 */
+	function getTXXQData(id) {
+		$.ajax({
+			type: "get",
+			url: "txxqData/id/" + id,
+			async: true,
+			success: function(data) {
+				var data = JSON.parse(data);
+				$('#txxq_asset').text(data.asset.asset_code.replace(/(^\s*)|(\s*$)/g, ""));
+				$('#txxq_datetime').text(data.record_datetime);
+				$('#txxq_account').text(data.user_account_src.replace(/(^\s*)|(\s*$)/g, ""));
+				$('#txxq_amount').text(data.record_amount);
+				$('#txxq_bank').text(data.bank.bank_name);
+				$('#txxq_member').text(data.info.bank_member);
+				$('#txxq_ext').text(data.info.bank_ext);
+				$('#txxq_bankaccount').text(data.info.bank_account);
+				$('#txxq_status').text(data.status);
+				g_recordID = data.record_id;
+
+				if(data.record_status == 2) {
+					//已确认
+					$('#txxq_btn_status').hide();
+				} else {
+					$('#txxq_btn_status').show();
+				}
+			}
+		});
+	}
+	/***
+	 * 获取充值详情
+	 * @param {Object} id 信息ID
+	 */
+	function getCZXQData(id) {
+		$.ajax({
+			type: "get",
+			url: "czxqData/id/" + id,
+			async: false,
+			success: function(data) {
+				var data = JSON.parse(data);
+				$('#czxq_asset').text(data.asset.asset_code.replace(/(^\s*)|(\s*$)/g, ""));
+				$('#czxq_datetime').text(data.record_datetime);
+				$('#czxq_account').text(data.user_account_obj.replace(/(^\s*)|(\s*$)/g, ""));
+				$('#czxq_amount').text(data.record_amount);
+				$('#czxq_type').text(data.bank.bank_name);
+				$('#czxq_member').text(data.info.bank_member);
+				$('#czxq_bank').text(data.info.bank_ext);
+				$('#czxq_bankaccount').text(data.info.bank_account);
+				$('#czxq_status').text(data.status);
+				g_recordID = data.record_id;
+				g_dstAccount = data.user_account_obj.replace(/(^\s*)|(\s*$)/g, "");
+				g_assetCode = data.asset.asset_code.replace(/(^\s*)|(\s*$)/g, "");
+				g_assetIssuer = data.asset.asset_issuer.replace(/(^\s*)|(\s*$)/g, "");
+				g_assetAmount = data.record_amount;
+				if(data.record_status == 2) {
+					//已确认
+					$('#czxq_btn_status').hide();
+				} else {
+					$('#czxq_btn_status').show();
+				}
+			}
+		});
+		//判断账号是否存在
+		address($('#czxq_account').text());
+	}
+
+	/*
+	 * 获取网关信息
+	 */
+	$(document).ready(function() {
+		gateway('{$mygateway.gateway_account}');
+	});
+
+	/*
+	 * 充值审核
+	 */
+	$('#czxq_btn_status').click(function() {
+		g_action = 2; //充值
+		$('#myModal').modal('show');
+	});
+
+	/**
+	 * 发行资产
+	 */
+	$('#btnIssuer').click(function() {
+		addloading();
+		if($('input[name="zc"]').get(1).checked) {
+			//限量资产，资产名称在所有网关之间不能重复
+			if($('#asset_amount').val() == ''){
+				alert('{$Think.lang.INDEX_GATEWAY_ASSET_EMPTY}！');
+				delloading();
+				return;
+			}
+			if(!isNumber($('#asset_amount').val())){
+				alert('{$Think.lang.INDEX_GATEWAY_ASSET_ERR}！');
+				delloading();
+				return;
+			}
+			if(parseFloat($('#asset_amount').val())<=0){
+				alert('{$Think.lang.INDEX_GATEWAY_ASSET_AMOUNT_LARGE}！');
+				delloading();
+				return;
+			}
+			var d = $.ajax({
+				type:"get",
+				url:"/checkAllAssetCount/assetCode/"+$('#asset_code').val(),
+				async:false,
+				success: function(data){
+					return data;
+				}
+			});
+			var data = JSON.parse(d.responseJSON);
+			if(data.count>0){
+				//该资产名称已经存在
+				alert('{$Think.lang.INDEX_GATEWAY_ASSET_EXISTS}！');
+				delloading();
+				return;
+			}
+			g_action = 1; //发行资产
+			$('#myModal').modal('show');
+		} else {
+			//货币资产，资产名称在当前网关之间不能重复，网管之间可以
+			if($('#asset_price').val() == ''){
+				alert('{$Think.lang.INDEX_GATEWAY_ASSET_PRICE_EMPTY}！');
+				delloading();
+				return;
+			}
+			if(!isNumber($('#asset_price').val())){
+				alert('{$Think.lang.INDEX_GATEWAY_ASSET_FORMAT_ERR}！');
+				delloading();
+				return;
+			}
+			if(parseFloat($('#asset_price').val())<=0){
+				alert('{$Think.lang.INDEX_GATEWAY_ASSET_AMOUNT_LARGE}！');
+				delloading();
+				return;
+			}
+			var d = $.ajax({
+				type:"get",
+				url:"/checkAssetCount/assetCode/"+$('#asset_code').val(),
+				async:false,
+				success: function(data){
+					return data;
+				}
+			});
+			var data = JSON.parse(d.responseJSON);
+			if(data.count>0){
+				//该资产名称已经存在
+				alert('{$Think.lang.INDEX_GATEWAY_ASSET_EXISTS}！');
+				delloading();
+				return;
+			}
+			$('#assetManage')[0].submit();
+		}
+	});
+	var form = $("#appGateway").Validform({
+		tiptype: function(msg, o, cssctl) {
+			if(!o.obj.is("form")) {
+				o.obj.parent().find('.s_tips_box').remove();
+				if(o.type == 3) {
+					//alert(msg);
+					o.obj.after('<div class="s_tips_box">*'+msg+'</div>');
+				}
+			}
+		},
+		datatype: {
+			"*10": /^.{2,10}$/,
+			"*30": /^.{2,30}$/,
+			"*60": /^.{2,60}$/,
+			"gwname": function(gets, obj, curform, datatype) {
+				var param = $('#gateway_name').val()
+				if(param == '') {
+					return false;
+				}
+				$.ajax({
+					type: "get",
+					async: false,
+					cache: false,
+					url: "index/gateway/checkGatewayName/name/" + param,
+					success: function(result) {
+						s = result;
+					},
+					error: function() {}
+				});
+				if(s == "false") {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		}
+	});
+	var form = $("#assetManage").Validform({
+		tiptype: function(msg, o, cssctl) {
+			if(!o.obj.is("form")) {
+				o.obj.parent().find('.s_tips_box').remove();
+				if(o.type == 3) {
+					//alert(msg);
+					//console.log(o.obj);
+					o.obj.after('<div class="s_tips_box">*'+msg+'</div>');
+				}
+			}
+		},
+		datatype: {
+			"*3": /^[A-Z0-9]{3,6}$/,
+			"*32": /^.{2,32}$/,
+			"amount": function(gets, obj, curform, datatype) {
+				if($('input[name="zc"]').get(1).checked) {
+					if($('#asset_amount').val() == "")
+						return false;
+					else if(parseInt($('#asset_amount').val()) <= 0)
+						return false;
+					else
+						return true;
+				} else {
+					return true;
+				}
+			}
+		}
+	});
+	
+	/**
+	 * 支付信息提交时候判断有无选择资产
+	 */
+	$('#bankManage').submit(function(){
+		var checked = $(":checkbox").is(":checked");
+		if(!checked){
+			alert('{$Think.lang.INDEX_GATEWAY_ASSET_ATLEAST}');
+			return false;
+		}
+	});
+	var form = $("#bankManage").Validform({
+		tiptype: function(msg, o, cssctl) {
+			if(!o.obj.is("form")) {
+				o.obj.parent().find('.s_tips_box').remove();
+				if(o.type == 3) {
+					//alert(msg);
+					o.obj.after('<div class="s_tips_box">*'+msg+'</div>');
+				}
+			}
+		},
+		datatype: {
+			"*4": /^.{2,4}$/,
+			"*32": /^.{2,32}$/,
+			"amount": function(gets, obj, curform, datatype) {
+				if($('input[name="zc"]').get(1).checked) {
+					if($('#asset_amount').val() == "")
+						return false;
+					else if(parseInt($('#asset_amount').val()) <= 0)
+						return false;
+					else
+						return true;
+				} else {
+					return true;
+				}
+			}
+		}
+	});
+</script>

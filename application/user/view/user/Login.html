@@ -1,0 +1,30 @@
+<!--Content-->
+	<section class="container-fluid">
+		<div class="container" >
+			<div class="col-md-5 login_box">
+				<form id="loginform" method="post">
+				<h3 class="login_tit"><span class="glyphicon glyphicon-log-in"></span> {$Think.lang.LOGIN_TITLE}</h3>
+				<div class="form-group">
+					<label>{$Think.lang.LOGIN_USER} : </label>
+					<input type="email" placeholder="{$Think.lang.LOGIN_USER_HINT}" class="form-control" name="email" required>
+				</div>
+				<div class="form-group">
+					<label>{$Think.lang.LOGIN_PASS} : </label>
+					<input type="password" placeholder="{$Think.lang.LOGIN_PASS_HINT}" class="form-control" name="password" required>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary login_btn">{$Think.lang.LOGIN_ACTION}</button>
+				</div>
+				<div class="form-group loginctl_box" style="color:red">
+					{$error_msg}
+				</div>
+				<div class="form-group text-right loginctl_box">
+					<a href="/register">{$Think.lang.LOGIN_REGISTER}</a>
+					<a href="/forgetpassword">{$Think.lang.LOGIN_FORGETPASSWORD}</a>
+				</div>
+				</form>
+			</div>
+		</div>
+		<!--<div style="font-size: 30px; text-align: center;margin: 17% 0;">系统维护升级中，暂无法使用!</div>-->
+	</section>
+<!--Content end-->

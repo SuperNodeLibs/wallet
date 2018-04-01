@@ -1,0 +1,307 @@
+<div class="easyui-layout" data-options="fit:true">
+	<!-- Begin of toolbar -->
+	<div id="wu-toolbar-menu-{$css_id}">
+		<div class="wu-toolbar-button">
+			<a href="#" class="easyui-linkbutton" iconCls="icon-add" onclick="openAdd{$css_id}()" plain="true">添加记录</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-edit" onclick="openEdit{$css_id}()" plain="true">修改记录</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-search" onclick="openSearch{$css_id}()" plain="true">搜索记录</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-remove" onclick="remove{$css_id}()" plain="true">删除所选</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-reload" onclick="reload{$css_id}()" plain="true">刷新记录</a>
+		</div>
+
+	</div>
+	<!-- End of toolbar -->
+	<table id="wu-datagrid-menu-{$css_id}" class="easyui-datagrid" toolbar="#wu-toolbar-menu-{$css_id}"></table>
+</div>
+<!-- Begin of easyui-dialog -->
+<div id="wu-dialog-menu-{$css_id}" class="easyui-dialog" data-options="closed:true,iconCls:'icon-save'" style="width:400px; padding:10px;">
+	<form id="wu-form-menu-{$css_id}" method="post">
+		<table>
+			<tr>
+				<td width="60" align="right">支付发起方:</td>
+				<td><input type="text" name="user_account_src" id="user_account_src" class="wu-text" datatype="s2-132" errormsg="至少2个字符,最多32个字符！"/></td>
+			</tr>
+			<tr>
+				<td align="right">支付接收方:</td>
+				<td><input type="text" name="user_account_obj" id="user_account_obj" class="wu-text" /></td>
+			</tr>
+			<tr>
+				<td align="right">支付信息:</td>
+				<td><input type="text" name="info_id" id="info_id" class="wu-text" /></td>
+			</tr>
+			<tr>
+				<td align="right">资产信息:</td>
+				<td><input type="text" name="asset_id" id="asset_id" class="wu-text" /></td>
+			</tr>
+			<tr>
+				<td align="right">支付金额:</td>
+				<td><input type="text" name="record_amount" id="record_amount" class="wu-text" /></td>
+			</tr>
+			<tr>
+				<td align="right">网关状态:</td>
+				<td><select name="record_status" id="record_status">
+					<option value="0">申请中</option>
+					<option value="1">处理中</option>
+					<option value="2">审核通过</option>
+					<option value="3">审核不通过</option>
+				</select></td>
+			</tr>
+		</table>
+	</form>
+</div>
+<!-- End of easyui-dialog -->
+<script type="text/javascript">
+	/**
+	 *刷新记录
+	 */
+	function reload{$css_id}(){
+		$('#wu-datagrid-menu-{$css_id}').datagrid('reload');
+	}
+	/**
+	 * Name 添加记录
+	 */
+	function add{$css_id}() {
+		$('#wu-form-menu-{$css_id}').form('submit', {
+			url: 'wallet/exchangerecord/addAction',
+			success: function(data) {
+				if(data) {
+					reload{$css_id}();
+					$.messager.alert('信息提示', '提交成功！', 'info');
+					$('#wu-dialog-menu-{$css_id}').dialog('close');
+
+				} else {
+					$.messager.alert('信息提示', '提交失败！', 'info');
+				}
+			}
+		});
+	}
+
+	/**
+	 * Name 修改记录
+	 */
+	function edit{$css_id}() {
+		$('#wu-form-menu-{$css_id}').form('submit', {
+			url: 'wallet/exchangerecord/editAction/record_id/' + item.record_id,
+			success: function(data) {
+				if(data) {
+					reload{$css_id}();
+					$.messager.alert('信息提示', '提交成功！', 'info');
+					$('#wu-dialog-menu-{$css_id}').dialog('close');
+				} else {
+					$.messager.alert('信息提示', '提交失败！', 'info');
+				}
+			}
+		});
+	}
+
+	/**
+	 * Name 删除记录
+	 */
+	function remove{$css_id}() {
+		$.messager.confirm('信息提示', '确定要删除该记录？', function(result) {
+			if(result) {
+				var items = $('#wu-datagrid-menu-{$css_id}').datagrid('getSelections');
+				var ids = [];
+				$(items).each(function() {
+					ids.push(this.record_id);
+				});
+				$.ajax({
+					url: 'wallet/exchangerecord/delAction/ids/'+ids,
+					data: '',
+					success: function(data) {
+						if(data) {
+							reload{$css_id}();
+							$.messager.alert('信息提示', '删除成功！', 'info');
+						} else {
+							$.messager.alert('信息提示', '删除失败！', 'info');
+						}
+					}
+				});
+			}
+		});
+	}
+
+	/**
+	 * Name 打开添加窗口
+	 */
+	function openAdd{$css_id}() {
+		$('#wu-form-menu-{$css_id}').form('clear');
+		$('#wu-dialog-menu-{$css_id}').dialog({
+			closed: false,
+			modal: true,
+			title: "添加信息",
+			buttons: [{
+				text: '确定',
+				iconCls: 'icon-ok',
+				handler: add{$css_id}
+			}, {
+				text: '取消',
+				iconCls: 'icon-cancel',
+				handler: function() {
+					$('#wu-dialog-menu-{$css_id}').dialog('close');
+				}
+			}]
+		});
+	}
+
+	/**
+	 * Name 打开修改窗口
+	 */
+	function openEdit{$css_id}() {
+		$('#wu-form-menu-{$css_id}').form('clear');
+		var item = $('#wu-datagrid-menu-{$css_id}').datagrid('getSelected');
+		//alert(item.menu_id);return;
+		$.ajax({
+			url: 'wallet/exchangerecord/edit/record_id/' + item.record_id,
+			data: '',
+			success: function(data) {
+				if(!data) {
+					$('#wu-dialog-menu-{$css_id}').dialog('close');
+				} else {
+					//绑定值
+					$('#wu-form-menu-{$css_id}').form('load', JSON.parse(data));
+				}
+			}
+		});
+		$('#wu-dialog-menu-{$css_id}').dialog({
+			closed: false,
+			modal: true,
+			title: "修改信息",
+			buttons: [{
+				text: '确定',
+				iconCls: 'icon-ok',
+				handler: function() {
+					$('#wu-form-menu-{$css_id}').form('submit', {
+						url: 'wallet/exchangerecord/editAction/record_id/' + item.record_id,
+						success: function(data) {
+							if(data) {
+								reload{$css_id}();
+								$.messager.alert('信息提示', '提交成功！', 'info');
+								$('#wu-dialog-menu-{$css_id}').dialog('close');
+							} else {
+								$.messager.alert('信息提示', '提交失败！', 'info');
+							}
+						}
+					});
+				}
+			}, {
+				text: '取消',
+				iconCls: 'icon-cancel',
+				handler: function() {
+					$('#wu-dialog-menu-{$css_id}').dialog('close');
+				}
+			}]
+		});
+	}
+
+	/**
+	 * Name 分页过滤器
+	 */
+	function pagerFilter{$css_id}(data) {
+		if(typeof data.length == 'number' && typeof data.splice == 'function') {
+			data = {
+				total: data.length,
+				rows: data
+			}
+		}
+
+		var dg = $(this);
+		var opts = dg.datagrid('options');
+		var pager = dg.datagrid('getPager');
+		pager.pagination({
+			onSelectPage: function(pageNum, pageSize) {
+				opts.pageNumber = pageNum;
+				opts.pageSize = pageSize;
+				pager.pagination('refresh', {
+					pageNumber: pageNum,
+					pageSize: pageSize
+				});
+				dg.datagrid('loadData', data);
+			}
+		});
+		if(!data.originalRows) {
+			data.originalRows = (data.rows);
+		}
+		var start = (opts.pageNumber - 1) * parseInt(opts.pageSize);
+		var end = start + parseInt(opts.pageSize);
+		data.rows = (data.originalRows.slice(start, end));
+		return data;
+	}
+
+	/**
+	 * Name 载入数据
+	 */
+	$('#wu-datagrid-menu-{$css_id}').datagrid({
+		url: 'wallet/exchangerecord/data',
+		loadFilter: pagerFilter{$css_id},
+		rownumbers: true,
+		singleSelect: false,
+		pageSize: 10,
+		pagination: true,
+		multiSort: true,
+		fitColumns: true,
+		fit: true,
+		columns: [
+			[{
+					checkbox: true
+				},
+				{
+					field: 'user_account_src',
+					title: '支付发起方',
+					width: 100,
+					sortable: true
+				},
+				{
+					field: 'user_account_obj',
+					title: '支付接收方',
+					width: 100,
+					sortable: true
+				},
+				{
+					field: 'record_amount',
+					title: '支付信息',
+					width: 100
+				},
+				{
+					field: 'record_status',
+					title: '支付状态',
+					width: 100
+				},
+				{
+					field: 'record_start',
+					title: '申请时间',
+					width: 100
+				},
+				{
+					field: 'record_end',
+					title: '审核时间',
+					width: 100
+				},
+				{
+					field: 'record_id',
+					title: '操作',
+					width: 50,
+					formatter: function(value, row) {
+						var str = "";
+						if(value != '' || value != null) {
+							str = "<img src='{$dir}css/icons/page_white_edit.png' onclick='openEdit{$css_id}()'/>";
+							str += "&nbsp;<img src='{$dir}css/icons/delete.png' onclick='remove{$css_id}()'/>";
+							return str;
+						}
+					}
+				}
+			]
+		]
+	});
+	$("#wu-form-menu-{$css_id}").Validform({
+				tiptype: function(msg, o, cssctl) {
+					if(!o.obj.is("form")) {
+						var objtip = o.obj.parent().parent().next().find("p");
+						cssctl(objtip, o.type);
+						objtip.text(msg);
+						if(o.type == 2) {
+							objtip.text('');
+						}
+					}
+				}});
+</script>

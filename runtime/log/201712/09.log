@@ -1,0 +1,175 @@
+[ 2017-12-09T08:07:12+08:00 ] 172.31.232.156 106.11.152.131 GET /register?lang=vi
+[ log ] wallet.2100w.cn/register?lang=vi [运行时间：0.022409s][吞吐率：44.63req/s] [内存消耗：3,589.07kb] [文件加载：47]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/vi.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'register',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-cn,en-us,zh-tw,en-gb,en;',
+  'host' => 'wallet.2100w.cn',
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'YisouSpider',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'vi',
+)
+[ info ] [ RUN ] app\user\controller\User->register[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Register.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-09T08:42:42+08:00 ] 172.31.232.156 106.11.154.157 GET /register
+[ log ] wallet.2100w.cn/register [运行时间：0.023584s][吞吐率：42.40req/s] [内存消耗：3,598.70kb] [文件加载：48]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'register',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-cn,en-us,zh-tw,en-gb,en;',
+  'host' => 'wallet.2100w.cn',
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'YisouSpider',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->register[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Register.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-09T09:33:12+08:00 ] 172.31.232.156 106.11.158.150 GET /register?lang=ja
+[ log ] wallet.2100w.cn/register?lang=ja [运行时间：0.021938s][吞吐率：45.58req/s] [内存消耗：3,589.05kb] [文件加载：47]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ja.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'register',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-cn,en-us,zh-tw,en-gb,en;',
+  'host' => 'wallet.2100w.cn',
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'YisouSpider',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'ja',
+)
+[ info ] [ RUN ] app\user\controller\User->register[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Register.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-09T19:25:47+08:00 ] 172.31.232.156 106.11.159.135 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.017191s][吞吐率：58.17req/s] [内存消耗：2,341.59kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-cn,en-us,zh-tw,en-gb,en;',
+  'host' => 'wallet.2100w.cn',
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'YisouSpider',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-09T21:07:48+08:00 ] 172.31.232.156 106.11.157.141 GET /register?lang=de
+[ log ] wallet.2100w.cn/register?lang=de [运行时间：0.022179s][吞吐率：45.09req/s] [内存消耗：3,588.95kb] [文件加载：47]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/de.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'register',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-cn,en-us,zh-tw,en-gb,en;',
+  'host' => 'wallet.2100w.cn',
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'YisouSpider',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'de',
+)
+[ info ] [ RUN ] app\user\controller\User->register[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Register.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

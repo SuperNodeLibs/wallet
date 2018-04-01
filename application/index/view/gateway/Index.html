@@ -1,0 +1,261 @@
+<div class="col-md-10 wallet_min">
+	<div class="col-md-8 mian_left gate_list">
+		<ul class="list-unstyled scroll_main">
+			<volist name="gateway" id="gw">
+				<li>
+					<h3>{$gw.gateway_name}</h3>
+					<p class="netgate">
+						{$gw.gateway_account}
+					</p>
+					<p>{$Think.lang.INDEX_GATEWAY_SUPPLY} : {$gw.gateway_company}</p>
+					<p>{$Think.lang.INDEX_CONTACT_PHONE} : {$gw.gateway_phone}</p>
+					<p>{$Think.lang.INDEX_CONTACT_EMAIL} : {$gw.gateway_email}</p>
+					<p>{$Think.lang.INDEX_TRADE_ASSET} : <i>{$Think.lang.INDEX_CLICK_TO_TRUST}</i>
+						<span class="form-group comp_btn_group" id="gw_{$gw.gateway_account}">
+									<volist name="gw.gateway_asset" id="asset">
+										<button type="button" class="btn btn-default" onclick="loadXRWG();setGatewayData('{$asset.asset_issuer}', '{$asset.asset_code}');" id="btn-{$asset.asset_code}-{$asset.asset_issuer}">{$asset.asset_code}</button>
+									</volist>
+								</span>
+					</p>
+
+					<!--<p class="wg_custom">{$Think.lang.INDEX_SERVICE_ONLINE} :
+						<span class="wallet_kf inline_kf">
+									<volist name="gw.gateway_service" id="serv">
+										<a href="/?qq={$serv.qq}"><img src="{$dir}static/images/qq.jpg"> {$serv.name}</a>
+									</volist>
+								</span>
+					</p>-->
+				</li>
+			</volist>
+
+		</ul>
+	</div>
+
+	<div class="col-md-4 main_right">
+		<div class="asset_control" style="display: block;">
+			<!--edit-->
+			<div class="asset_edit_box">
+				<h3 class="asset_h3tit"><span class="glyphicon glyphicon-pencil"></span>{$Think.lang.INDEX_TRUST_SET}
+							</h3>
+				<ul class="list-unstyled">
+					<li>
+						<h5>{$Think.lang.INDEX_ASSET_ISSUER}</h5><span class="xr_wg">--</span></li>
+					<li>
+						<h5>{$Think.lang.INDEX_GATEWAY_NAME}</h5><span class="xr_mc">--</span><input type="hidden" value="" id="current_gwaccount" /></li>
+					<li>
+						<h5>{$Think.lang.INDEX_CONTACT_PHONE}</h5><span class="xr_dh">--</span></li>
+					<li><b class="edit_tips">{$Think.lang.INDEX_TRUST_DESC}</b></li>
+					<li>
+						<form>
+							<div class="form-group xr_input">
+								<label>{$Think.lang.INDEX_TRUST_ASSET}</label>
+								<select class="xr_hb" id="trust_list">
+								</select>
+								<br>
+								<label>{$Think.lang.INDEX_MAX_VALUE}</label>
+								<input type="text" id="trustAmount" />
+								<button type="button" class="btn btn-primary" id="btn_trust_ok" data-toggle="modal" data-target="#myModal">{$Think.lang.INDEX_TRUST_OK}</button>
+							</div>
+						</form>
+					</li>
+				</ul>
+			</div>
+			<div class="trusted_table">
+				<h4>{$Think.lang.INDEX_ASSET_TRUSTED}<span class="showall">{$Think.lang.INDEX_TRUST_SHOWALL}<span class="glyphicon glyphicon-triangle-bottom showall_icon"></span></span></h4>
+				<table class="table table-bordered" id="trusted_list">
+					<tr>
+						<td>{$Think.lang.INDEX_ASSET}</td>
+						<td>{$Think.lang.INDEX_MAX_VALUE}</td>
+						<td>{$Think.lang.INDEX_OPTRATION}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!--create-->
+		<div class="asset_create_box">
+			<if condition="($mygateway !='') AND ($mygateway.gateway_status == '2')">
+				<h3 class="asset_h3tit"><span class="glyphicon glyphicon-pencil"></span>{$Think.lang.INDEX_IAM_GATEWAY}</h3>
+				<elseif condition="($mygateway == '') OR ($mygateway.gateway_status == '3')">
+					<eq name="mygateway.gateway_status" value="3">
+						<label>{$Think.lang.INDEX_APPLY_DENY}!</label>
+					</eq>
+					<!--<form name="appGateway" id="appGateway" method="post">
+						<div class="form-group">
+							<label>{$Think.lang.INDEX_GATEWAY_ACCOUNT_ADDRESS}</label>
+							<textarea rows="2" readonly="readonly" class="form-control" name="gateway_account">{$Think.session.USER_ACCOUNT}</textarea>
+						</div>
+						<div class="form-group">
+							<label>{$Think.lang.INDEX_GATEWAY_NAME}</label>
+							<input type="text" class="form-control" id="gateway_name" name="gateway_name" datatype="gwname" nullmsg="{$Think.lang.INDEX_GATEWAY_INPUT_NAME}" errormsg="{$Think.lang.INDEX_GATEWAY_EXIST}！" placeholder="{$Think.lang.INDEX_GATEWAY_INPUT_NAME}">-->
+							<!--<div class="input-group">
+								    <input type="text" class="form-control" name="gateway_name">
+								    <button type="button" class="btn btn-success">检测</button>
+							    </div>-->
+						<!--</div>
+
+						<div class="form-group">
+							<label>{$Think.lang.INDEX_GATEWAY_CORP}</label>
+							<input type="text" class="form-control" name="gateway_company" datatype="*30" nullmsg="{$Think.lang.INDEX_GATEWAY_CORP_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_CORP_RULE}">
+						</div>
+
+						<div class="form-group">
+							<label>{$Think.lang.INDEX_GATEWAY_AREA}</label>
+							<select class="form-control" name="gateway_area">
+								<option selected="selected">{$Think.lang.INDEX_GATEWAY_AREA_CHINA}</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label>{$Think.lang.INDEX_GATEWAY_CONTACT}</label>
+							<input type="text" class="form-control" name="gateway_contacts" datatype="*10" nullmsg="{$Think.lang.INDEX_GATEWAY_CONTACT_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_CONTACT_RULE}">
+						</div>
+
+						<div class="form-group">
+							<label>{$Think.lang.INDEX_GATEWAY_PHONE}</label>
+							<input type="text" class="form-control" name="gateway_phone" datatype="m" nullmsg="{$Think.lang.INDEX_GATEWAY_PHONE_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_PHONE_ERR}">
+						</div>
+
+						<div class="form-group">
+							<label>{$Think.lang.INDEX_CONTACT_EMAIL}</label>
+							<input type="text" class="form-control" name="gateway_email" datatype="e" nullmsg="{$Think.lang.INDEX_GATEWAY_EMAIL_INPUT}" errormsg="{$Think.lang.INDEX_GATEWAY_EMAIL_ERR}">
+						</div>-->
+
+						<!--<div class="form-group">
+							<label>{$Think.lang.INDEX_GATEWAY_SERVICES}</label>
+							<input type="text" class="form-control" placeholder="{$Think.lang.INDEX_GATEWAY_SERVICES_FORMAT}" name="gateway_service">
+						</div>-->
+
+						<!--<div class="form-group">
+							<button type="submit" class="btn btn-primary create_submit">{$Think.lang.INDEX_GATEWAY_SUBMIT}</button>
+						</div>
+
+					</form>-->
+					<else/>
+					<eq name="mygateway.gateway_status" value="0">
+						<label>{$Think.lang.INDEX_GATEWAY_APPLYING}!</label>
+					</eq>
+					<eq name="mygateway.gateway_status" value="1">
+						<label>{$Think.lang.INDEX_GATEWAY_VERIFY}!</label>
+					</eq>
+					<eq name="mygateway.gateway_status" value="2">
+						<label>{$Think.lang.INDEX_GATEWAY_APPLIED}!</label>
+					</eq>
+			</if>
+		</div>
+		<!--成为网关-->
+		<div class="cwwg_box">
+			<span>{$Think.lang.INDEX_GATEWAY_ASK}</span>
+			<neq name="mygateway.gateway_status" value="2">
+				<button type="button" class="btn btn-primary" onclick="createWG()">{$Think.lang.INDEX_GATEWAY_BECOME_GATEWAY}</button>
+				<else/>
+				<a class="btn btn-primary" href="/gatewayCenter"><span class="glyphicon glyphicon-hdd"></span> {$Think.lang.INDEX_GATEWAY_CENTER}</a>
+			</neq>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+<!--Content end-->
+
+<!--支付密码弹框-->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">{$Think.lang.MAIN_INPUT_PAYSET}</h4>
+			</div>
+			<div class="modal-body">
+				<b class="text-danger">*{$Think.lang.MAIN_INPUT_DESC}！</b>
+				<br>
+				<div class="form-group">
+					<label>{$Think.lang.MAIN_INPUT_PASSWORD}：</label>
+					<input type="password" class="form-control" id="pwd" />
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-primary pull-right" onclick="javascript:setTrustInfo()">{$Think.lang.MAIN_INPUT_OK}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--支付密码弹框 end-->
+<script>
+	/**
+	 * 获取资产最大值以便信任
+	 */
+	function updateTrust(assetCode, assetIssuer){
+		$.ajax({
+			type:"get",
+			url:"index/asset/getIssuerAmount/code/" + assetCode + "/issuer/" + assetIssuer,
+			async:true,
+			success: function(data){
+				$('#trustAmount').val(data.asset_amount);
+			}
+		});
+	}
+	/**
+	 * 设置信任
+	 */
+	function setTrustInfo(){
+		g_callbackSetTrust = function(seckey){
+			$('#myModal').modal('hide');
+			getTrust(seckey.publicKey());
+		}
+		setTrustLine($('#pwd').val(), '{$Think.session.USER_3DES}');
+	}
+	/**
+	 * 资产改变
+	 */
+	$('#trust_list').change(function() {
+			var gateway = $('#current_gwaccount').val();
+			var allBtn = $('#gw_' + gateway + ' button');
+			for(var i = 0; i < allBtn.length; i++) {
+				var btn = allBtn[i];
+				var sp = btn.id.split("-");
+				if(sp[1] == $('#trust_list').val()) {
+					setGatewayData(sp[2], sp[1]);
+				}
+			}
+			
+		});
+
+	var form = $("#appGateway").Validform({
+		tiptype: function(msg, o, cssctl) {
+			if(!o.obj.is("form")) {
+				if(o.type == 3) {
+					alert(msg);
+				}
+			}
+		},
+		datatype: {
+			"*10": /^.{2,10}$/,
+			"*30": /^.{2,30}$/,
+			"gwname": function(gets, obj, curform, datatype) {
+				var param = $('#gateway_name').val()
+				if(param == '') {
+					return false;
+				}
+				$.ajax({
+					type: "get",
+					async: false,
+					cache: false,
+					url: "index/gateway/checkGatewayName/name/" + param,
+					success: function(result) {
+						s = result;
+					},
+					error: function() {}
+				});
+				if(s == "false") {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		}
+	});
+	$(document).ready(function() {
+		getTrust('{$Think.session.USER_ACCOUNT}');
+		$('#'+'btn-{$asset.asset_code}-{$asset.asset_issuer}').click();
+	});
+</script>

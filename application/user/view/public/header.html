@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>{$Think.lang.MAIN_TITLE}</title>
+		<link rel="stylesheet" href="{$dir}static/css/bootstrap.min.css?v={:mt_rand()}" />
+		<link rel="stylesheet" href="{$dir}static/css/bootstrapValidator.min.css?v={:mt_rand()}" />
+		<link rel="stylesheet" href="{$dir}static/css/digitalstyle.css?v={:mt_rand()}" />
+		<link rel="stylesheet" href="{$dir}static/css/base.css?v={:mt_rand()}">
+		<script type="text/javascript" src="{$dir}static/js/jquery-1.12.2.min.js?v={:mt_rand()}" ></script>
+		<script type="text/javascript" src="{$dir}static/js/bootstrap.min.js?v={:mt_rand()}" ></script>
+		<script type="text/javascript" src="{$dir}static/js/DES3.js?v={:mt_rand()}"></script>
+		<script type="text/javascript" src="{$dir}static/js/bootstrapValidator.min.js?v={:mt_rand()}" ></script>
+		<script type="text/javascript" src="{$dir}static/js/bootstrap-datetimepicker.min.js?v={:mt_rand()}" ></script>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+	</head>
+	<script language="JavaScript">
+		var API_SERVER = '{$Think.config.node_default}';
+		var AUTO_TRUST = '{$Think.config.trust_on}';
+		var AUTO_ASSET_CODE = '{$Think.config.default_asset_code}';
+		var AUTO_ASSET_ISSUER = '{$Think.config.default_asset_issuer}';
+		
+		var OTHER_USER_LOGIN_ERR = '{$Think.lang.OTHER_USER_LOGIN_ERR}';
+		var OTHER_WAITTING = '{$Think.lang.OTHER_WAITTING}';
+		var OTHER_CONFIRM = '{$Think.lang.OTHER_CONFIRM}';
+		var OTHER_OP_MALFORMED = '{$Think.lang.OTHER_OP_MALFORMED}';
+		var OTHER_OP_UNDERFUNDED = '{$Think.lang.OTHER_OP_UNDERFUNDED}';
+		var OTHER_OP_LOW_RESERVE = '{$Think.lang.OTHER_OP_LOW_RESERVE}';
+		var OTHER_OP_LINE_FULL = '{$Think.lang.OTHER_OP_LINE_FULL}';
+		var OTHER_OP_NO_ISSUER = '{$Think.lang.OTHER_OP_NO_ISSUER}';
+		var OTHER_TX_FAILED = '{$Think.lang.OTHER_TX_FAILED}';
+		var OTHER_TX_BAD_SEQ = '{$Think.lang.OTHER_TX_BAD_SEQ}';
+		var OTHER_TX_TOO_EARLY = '{$Think.lang.OTHER_TX_TOO_EARLY}';
+		var OTHER_TX_TOO_LATE = '{$Think.lang.OTHER_TX_TOO_LATE}';
+		var OTHER_TX_MISSING_OPERATION = '{$Think.lang.OTHER_TX_MISSING_OPERATION}';
+		var OTHER_TX_BAD_AUTH = '{$Think.lang.OTHER_TX_BAD_AUTH}';
+		var OTHER_TX_INSUFFICIENT_BALANCE = '{$Think.lang.OTHER_TX_INSUFFICIENT_BALANCE}';
+		var OTHER_TX_NO_SOURCE_ACCOUNT = '{$Think.lang.OTHER_TX_NO_SOURCE_ACCOUNT}';
+		var OTHER_TX_INSUFFICIENT_FEE = '{$Think.lang.OTHER_TX_INSUFFICIENT_FEE}';
+		var OTHER_TX_BAD_AUTH_EXTRA = '{$Think.lang.OTHER_TX_BAD_AUTH_EXTRA}';
+		var OTHER_TX_INTERNAL_ERROR = '{$Think.lang.OTHER_TX_INTERNAL_ERROR}';
+		var OTHER_OP_INNER = '{$Think.lang.OTHER_OP_INNER}';
+		var OTHER_OP_BAD_AUTH = '{$Think.lang.OTHER_OP_BAD_AUTH}';
+		var OTHER_OP_NO_SOURCE_ACCOUNT = '{$Think.lang.OTHER_OP_NO_SOURCE_ACCOUNT}';
+		var OTHER_OP_ALREADY_EXISTS = '{$Think.lang.OTHER_OP_ALREADY_EXISTS}';
+		var OTHER_OP_SRC_NO_TRUST = '{$Think.lang.OTHER_OP_SRC_NO_TRUST}';
+		var OTHER_OP_SRC_NOT_AUTHORIZED = '{$Think.lang.OTHER_OP_SRC_NOT_AUTHORIZED}';
+		var OTHER_OP_NO_DESTINATION = '{$Think.lang.OTHER_OP_NO_DESTINATION}';
+		var OTHER_OP_NO_TRUST = '{$Think.lang.OTHER_OP_NO_TRUST}';
+		var OTHER_OP_NOT_AUTHORIZED = '{$Think.lang.OTHER_OP_NOT_AUTHORIZED}';
+		var OTHER_OP_TOO_FEW_OFFERS = '{$Think.lang.OTHER_OP_TOO_FEW_OFFERS}';
+		var OTHER_OP_CROSS_SELF = '{$Think.lang.OTHER_OP_CROSS_SELF}';
+		var OTHER_OP_OVER_SOURCE_MAX = '{$Think.lang.OTHER_OP_OVER_SOURCE_MAX}';
+		var OTHER_OP_SELL_NO_TRUST = '{$Think.lang.OTHER_OP_SELL_NO_TRUST}';
+		var OTHER_OP_BUY_NO_TRUST = '{$Think.lang.OTHER_OP_BUY_NO_TRUST}';
+		var OTHER_BUY_NOT_AUTHORIZED = '{$Think.lang.OTHER_BUY_NOT_AUTHORIZED}';
+		var OTHER_OP_SELL_NO_ISSUER = '{$Think.lang.OTHER_OP_SELL_NO_ISSUER}';
+		var OTHER_BUY_NO_ISSUER = '{$Think.lang.OTHER_BUY_NO_ISSUER}';
+		var OTHER_OP_OFFER_NOT_FOUND = '{$Think.lang.OTHER_OP_OFFER_NOT_FOUND}';
+		var OTHER_OP_TOO_MANY_SIGNERS = '{$Think.lang.OTHER_OP_TOO_MANY_SIGNERS}';
+		var OTHER_OP_BAD_FLAGS = '{$Think.lang.OTHER_OP_BAD_FLAGS}';
+		var OTHER_OP_INVALID_INFLATION = '{$Think.lang.OTHER_OP_INVALID_INFLATION}';
+		var OTHER_OP_CANT_CHANGE = '{$Think.lang.OTHER_OP_CANT_CHANGE}';
+		var OTHER_OP_CANT_CHANGE = '{$Think.lang.OTHER_OP_CANT_CHANGE}';
+		var OTHER_OP_UNKNOWN_FLAG = '{$Think.lang.OTHER_OP_UNKNOWN_FLAG}';
+		var OTHER_OP_THRESHOLD_OUT_OF_RANGE = '{$Think.lang.OTHER_OP_THRESHOLD_OUT_OF_RANGE}';
+		var OTHER_OP_BAD_SIGNER = '{$Think.lang.OTHER_OP_BAD_SIGNER}';
+		var OTHER_OP_INVALID_HOME_DOMAIN = '{$Think.lang.OTHER_OP_INVALID_HOME_DOMAIN}';
+		var OTHER_OP_INVALID_LIMIT = '{$Think.lang.OTHER_OP_INVALID_LIMIT}';
+		var OTHER_OP_NO_TRUSTLINE = '{$Think.lang.OTHER_OP_NO_TRUSTLINE}';
+		var OTHER_OP_NOT_REQUIRED = '{$Think.lang.OTHER_OP_NOT_REQUIRED}';
+		var OTHER_OP_CANT_REVOKE = '{$Think.lang.OTHER_OP_CANT_REVOKE}';
+		var OTHER_OP_NO_ACCOUNT = '{$Think.lang.OTHER_OP_NO_ACCOUNT}';
+		var OTHER_OP_IMMUTABLE_SET = '{$Think.lang.OTHER_OP_IMMUTABLE_SET}';
+		var OTHER_OP_HAS_SUB_ENTRIES = '{$Think.lang.OTHER_OP_HAS_SUB_ENTRIES}';
+		var OTHER_OP_NOT_TIME = '{$Think.lang.OTHER_OP_NOT_TIME}';
+		var OTHER_NOTFOUNDERROR = '{$Think.lang.OTHER_NOTFOUNDERROR}';
+		var OTHER_SUMMARY = '{$Think.lang.OTHER_SUMMARY}';
+		var OTHER_NO_RECORD = '{$Think.lang.OTHER_NO_RECORD}';
+		var OTHER_NO_ACTIVE = '{$Think.lang.OTHER_NO_ACTIVE}';
+		var OTHER_ACTIVE_FIRST = '{$Think.lang.OTHER_ACTIVE_FIRST}';
+		var OTHER_ACTIVE_BEACAUSE = '{$Think.lang.OTHER_ACTIVE_BEACAUSE}';
+		var OTHER_ACTIVE_USER = '{$Think.lang.OTHER_ACTIVE_USER}';
+		var OTHER_NOT_EXIST = '{$Think.lang.OTHER_NOT_EXIST}';
+		var OTHER_TRUST_DEL = '{$Think.lang.OTHER_TRUST_DEL}';
+		var OTHER_INIT_ISSUER = '{$Think.lang.OTHER_INIT_ISSUER}';
+		var OTHER_ACCOUNT_ACTIVED = '{$Think.lang.OTHER_ACCOUNT_ACTIVED}';
+		var OTHER_ACCOUNT_NOT_ACTIVED = '{$Think.lang.OTHER_ACCOUNT_NOT_ACTIVED}';
+		var OTHER_SELECT = '{$Think.lang.OTHER_SELECT}';
+		var OTHER_KNOW_GATEWAY = '{$Think.lang.OTHER_KNOW_GATEWAY}';
+		var OTHER_ISSUER = '{$Think.lang.OTHER_ISSUER}';
+		var OTHER_PRICE = '{$Think.lang.OTHER_PRICE}';
+		var OTHER_AMOUNT = '{$Think.lang.OTHER_AMOUNT}';
+		var OTHER_TRADE_ASSET = '{$Think.lang.OTHER_TRADE_ASSET}';
+		var OTHER_OPTRATION = '{$Think.lang.OTHER_OPTRATION}';
+		var OTHER_SELL = '{$Think.lang.OTHER_SELL}';
+		var OTHER_BUY = '{$Think.lang.OTHER_BUY}';
+		var OTHER_CANCEL = '{$Think.lang.OTHER_CANCEL}';
+		var OTHER_CREATE_USER = '{$Think.lang.OTHER_CREATE_USER}';
+		var OTHER_CREATED = '{$Think.lang.OTHER_CREATED}';
+		var OTHER_PAYTO = '{$Think.lang.OTHER_PAYTO}';
+		var OTHER_PAYMENT = '{$Think.lang.OTHER_PAYMENT}';
+		var OTHER_RECEIVE = '{$Think.lang.OTHER_RECEIVE}';
+		var OTHER_TIME = '{$Think.lang.OTHER_TIME}';
+		var OTHER_TRADE_OBJ = '{$Think.lang.OTHER_TRADE_OBJ}';
+		var OTHER_TRADE_TYPE = '{$Think.lang.OTHER_TRADE_TYPE}';
+		var OTHER_TRADE_AMOUNT = '{$Think.lang.OTHER_TRADE_AMOUNT}';
+		var OTHER_TRADE_TYPE = '{$Think.lang.OTHER_TRADE_TYPE}';
+		var OTHER_TRADE_TOTAL = '{$Think.lang.OTHER_TRADE_TOTAL}';
+		var OTHER_TRADE_NUMBER = '{$Think.lang.OTHER_TRADE_NUMBER}';
+		
+		var BOOTSTRAP_BASE64 = '{$Think.lang.BOOTSTRAP_BASE64}';
+		var BOOTSTRAP_CALLBACK = '{$Think.lang.BOOTSTRAP_CALLBACK}';
+		var BOOTSTRAP_CREDIT = '{$Think.lang.BOOTSTRAP_CREDIT}';
+		var BOOTSTRAP_CUSIP = '{$Think.lang.BOOTSTRAP_CUSIP}';
+		var BOOTSTRAP_CVV = '{$Think.lang.BOOTSTRAP_CVV}';
+		var BOOTSTRAP_DATE = '{$Think.lang.BOOTSTRAP_DATE}';
+		var BOOTSTRAP_DIFFERENT = '{$Think.lang.BOOTSTRAP_DIFFERENT}';
+		var BOOTSTRAP_DIGITS = '{$Think.lang.BOOTSTRAP_DIGITS}';
+		var BOOTSTRAP_EAN = '{$Think.lang.BOOTSTRAP_EAN}';
+		var BOOTSTRAP_EMAIL = '{$Think.lang.BOOTSTRAP_EMAIL}';
+		var BOOTSTRAP_FILE = '{$Think.lang.BOOTSTRAP_FILE}';
+		var BOOTSTRAP_GRID = '{$Think.lang.BOOTSTRAP_GRID}';
+		var BOOTSTRAP_HEX = '{$Think.lang.BOOTSTRAP_HEX}';
+		var BOOTSTRAP_HEXCOLOR = '{$Think.lang.BOOTSTRAP_HEXCOLOR}';
+		var BOOTSTRAP_IBAN = '{$Think.lang.BOOTSTRAP_IBAN}';
+		var BOOTSTRAP_ID = '{$Think.lang.BOOTSTRAP_ID}';
+		var BOOTSTRAP_IDENTICAL = '{$Think.lang.BOOTSTRAP_IDENTICAL}';
+		var BOOTSTRAP_IMEI = '{$Think.lang.BOOTSTRAP_IMEI}';
+		var BOOTSTRAP_IMO = '{$Think.lang.BOOTSTRAP_IMO}';
+		var BOOTSTRAP_INTEGER = '{$Think.lang.BOOTSTRAP_INTEGER}';
+		var BOOTSTRAP_IP = '{$Think.lang.BOOTSTRAP_IP}';
+		var BOOTSTRAP_IP4 = '{$Think.lang.BOOTSTRAP_IP4}';
+		var BOOTSTRAP_IP6 = '{$Think.lang.BOOTSTRAP_IP6}';
+		var BOOTSTRAP_ISBN = '{$Think.lang.BOOTSTRAP_ISBN}';
+		var BOOTSTRAP_ISIN = '{$Think.lang.BOOTSTRAP_ISIN}';
+		var BOOTSTRAP_ISMN = '{$Think.lang.BOOTSTRAP_ISMN}';
+		var BOOTSTRAP_ISSN = '{$Think.lang.BOOTSTRAP_ISSN}';
+		var BOOTSTRAP_MAC = '{$Think.lang.BOOTSTRAP_MAC}';
+		var BOOTSTRAP_MEID = '{$Think.lang.BOOTSTRAP_MEID}';
+		var BOOTSTRAP_NOTEMPTY = '{$Think.lang.BOOTSTRAP_NOTEMPTY}';
+		var BOOTSTRAP_NUMERIC = '{$Think.lang.BOOTSTRAP_NUMERIC}';
+		var BOOTSTRAP_PHONE = '{$Think.lang.BOOTSTRAP_PHONE}';
+		var BOOTSTRAP_REGEXP = '{$Think.lang.BOOTSTRAP_REGEXP}';
+		var BOOTSTRAP_RTN = '{$Think.lang.BOOTSTRAP_RTN}';
+		var BOOTSTRAP_SEDOL = '{$Think.lang.BOOTSTRAP_SEDOL}';
+		var BOOTSTRAP_SIREN = '{$Think.lang.BOOTSTRAP_SIREN}';
+		var BOOTSTRAP_SIRET = '{$Think.lang.BOOTSTRAP_SIRET}';
+		var BOOTSTRAP_STRINGCASE = '{$Think.lang.BOOTSTRAP_STRINGCASE}';
+		var BOOTSTRAP_STRINGCASE2 = '{$Think.lang.BOOTSTRAP_STRINGCASE2}';
+		var BOOTSTRAP_STRINGLENGTH = '{$Think.lang.BOOTSTRAP_STRINGLENGTH}';
+		var BOOTSTRAP_URI = '{$Think.lang.BOOTSTRAP_URI}';
+		var BOOTSTRAP_UUID = '{$Think.lang.BOOTSTRAP_UUID}';
+		var BOOTSTRAP_VAT = '{$Think.lang.BOOTSTRAP_VAT}';
+		var BOOTSTRAP_VIN = '{$Think.lang.BOOTSTRAP_VIN}';
+		var BOOTSTRAP_ZIPCODE = '{$Think.lang.BOOTSTRAP_ZIPCODE}';
+		var BOOTSTRAP_USERNAME_EMPTY = '{$Think.lang.BOOTSTRAP_USERNAME_EMPTY}';
+		var BOOTSTRAP_USERNAME_LENGTH = '{$Think.lang.BOOTSTRAP_USERNAME_LENGTH}';
+		var BOOTSTRAP_USERNAME_EXIST = '{$Think.lang.BOOTSTRAP_USERNAME_EXIST}';
+		var BOOTSTRAP_REGEMAIL_EMPTY = '{$Think.lang.BOOTSTRAP_REGEMAIL_EMPTY}';
+		var BOOTSTRAP_REGEMAIL_LENGTH = '{$Think.lang.BOOTSTRAP_REGEMAIL_LENGTH}';
+		var BOOTSTRAP_REGEMAIL_EXIST = '{$Think.lang.BOOTSTRAP_REGEMAIL_EXIST}';
+		var BOOTSTRAP_STATEMENT = '{$Think.lang.BOOTSTRAP_STATEMENT}';
+		var BOOTSTRAP_REGPASSWORD2 = '{$Think.lang.BOOTSTRAP_REGPASSWORD2}';
+		var BOOTSTRAP_LOGPASSWORD = '{$Think.lang.BOOTSTRAP_LOGPASSWORD}';
+		var BOOTSTRAP_PAYPASSWORD = '{$Think.lang.BOOTSTRAP_PAYPASSWORD}';
+		var BOOTSTRAP_PAYPASWORD_LENGTH = '{$Think.lang.BOOTSTRAP_PAYPASWORD_LENGTH}';
+		var BOOTSTRAP_PASSWORD_REG = '{$Think.lang.BOOTSTRAP_PASSWORD_REG}';
+		var BOOTSTRAP_SEED_EMPTY = '{$Think.lang.BOOTSTRAP_SEED_EMPTY}';
+		var BOOTSTRAP_SEED_LENGTH = '{$Think.lang.BOOTSTRAP_SEED_LENGTH}';
+		var BOOTSTRAP_SEED_REG = '{$Think.lang.BOOTSTRAP_SEED_REG}';
+		var ONLOADING_TXT = '{$Think.lang.ONLOADING_TXT}';
+		var BOOTSTRAP_LOGPASS_LENGTH = '{$Think.lang.BOOTSTRAP_LOGPASS_LENGTH}';
+		
+		var	LOGIN_PAYSET_PHONEVERIFY='{$Think.lang.LOGIN_PAYSET_PHONEVERIFY}';
+		var	LOGIN_PAYSET_INPUT_PHONEVERIFY='{$Think.lang.LOGIN_PAYSET_INPUT_PHONEVERIFY}';
+		var	LOGIN_PAYSET_WAITINGPHONECODE='{$Think.lang.LOGIN_PAYSET_WAITINGPHONECODE}';
+		var	LOGIN_PAYSET_PHONECODEERROR='{$Think.lang.LOGIN_PAYSET_PHONECODEERROR}';
+		var	LOGIN_PAYSET_INPUT_PHONENUMBER='{$Think.lang.LOGIN_PAYSET_INPUT_PHONENUMBER}';
+		var	LOGIN_PAYSET_INPUT_PHONEFORMAT='{$Think.lang.LOGIN_PAYSET_INPUT_PHONEFORMAT}';
+		var	LOGIN_PAYSET_INPUT_PHONE='{$Think.lang.LOGIN_PAYSET_INPUT_PHONE}';
+		var	LOGIN_PAYSET_INPUT_GETPHONECODE='{$Think.lang.LOGIN_PAYSET_INPUT_GETPHONECODE}';
+		var LOGIN_PAYSET_ERROR1='{$Think.lang.LOGIN_PAYSET_ERROR1}';
+		var LOGIN_PAYSET_ERROR2='{$Think.lang.LOGIN_PAYSET_ERROR2}';
+		var LOGIN_PAYSET_ERROR3='{$Think.lang.LOGIN_PAYSET_ERROR3}';
+		var LOGIN_PAYSET_RESEND='{$Think.lang.LOGIN_PAYSET_RESEND}';
+		
+		var	LOGIN_CREATETRUST_ACTIVE='{$Think.lang.LOGIN_CREATETRUST_ACTIVE}';
+		var	LOGIN_CREATETRUST_TIP='{$Think.lang.LOGIN_CREATETRUST_TIP}';
+		var	LOGIN_CREATETRUST_ENTER='{$Think.lang.LOGIN_CREATETRUST_ENTER}';
+		var	LOGIN_CREATETRUST_LOGOUT='{$Think.lang.LOGIN_CREATETRUST_LOGOUT}';
+		var	LOGIN_CREATETRUST_MESSAGE='{$Think.lang.LOGIN_CREATETRUST_MESSAGE}';
+	</script>
+	<script type="text/javascript" src="{$dir}static/js/bootstrapValidator.min_zh_CN.js?v={:mt_rand()}" ></script>
+	<script type="text/javascript" src="{$dir}static/js/digitalstyle.js?v={:mt_rand()}" ></script>
+	<body>
+<!--header-->
+	<header class="container-fluid">
+		<div class="container">
+			<div class="col-md-3 col-xs-12 Logo_box"><img src="{$dir}static/images/snblogo.png"></div>
+			<div class="col-md-9 col-xs-12 Header_txt"></div>
+		</div>
+	</header>
+<!--header end-->

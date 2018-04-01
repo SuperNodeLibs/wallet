@@ -1,0 +1,3036 @@
+[ 2018-01-11T05:33:49+08:00 ] 172.31.232.156 106.11.154.204 GET /forgetpassword
+[ log ] wallet.2100w.cn/forgetpassword [运行时间：0.022116s][吞吐率：45.22req/s] [内存消耗：2,420.45kb] [文件加载：41]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'forgetpassword',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-cn,en-us,zh-tw,en-gb,en;',
+  'host' => 'wallet.2100w.cn',
+  'accept-encoding' => 'gzip',
+  'accept' => '*/*',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'YisouSpider',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->forgetpassword[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Forgetpassword.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T16:24:17+08:00 ] 172.31.232.156 183.14.29.222 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.022231s][吞吐率：44.98req/s] [内存消耗：2,175.50kb] [文件加载：43]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T16:24:17+08:00 ] 172.31.232.156 183.14.29.222 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.023818s][吞吐率：41.99req/s] [内存消耗：2,342.08kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T16:24:31+08:00 ] 172.31.232.156 183.14.29.222 POST /login
+[ log ] wallet.2100w.cn/login [运行时间：0.030621s][吞吐率：32.66req/s] [内存消耗：3,710.29kb] [文件加载：50]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://wallet.2100w.cn',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://wallet.2100w.cn/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'email' => '9048914@qq.com',
+  'password' => 'jpy123jpy',
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000490s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_user` [ RunTime:0.001217s ]
+[ sql ] [ SQL ] SELECT `user_id`,`user_account`,`user_3des`,`user_name`,`user_setTrust` FROM `yuan_user` WHERE  `user_email` = '9048914@qq.com' LIMIT 1 [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SELECT `user_pass`,`user_confirm`,`user_3des`,`user_lock` FROM `yuan_user` WHERE  `user_email` = '9048914@qq.com' LIMIT 1 [ RunTime:0.000272s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T16:24:31+08:00 ] 172.31.232.156 183.14.29.222 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.020672s][吞吐率：48.37req/s] [内存消耗：2,151.15kb] [文件加载：42]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://wallet.2100w.cn/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/index/view/index/Index.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T16:24:33+08:00 ] 172.31.232.156 183.14.29.222 POST /index/gateway/alldata
+[ log ] wallet.2100w.cn/index/gateway/alldata [运行时间：0.082067s][吞吐率：12.19req/s] [内存消耗：3,803.70kb] [文件加载：53]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'gateway',
+    2 => 'alldata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '897',
+  'accept' => '*/*',
+  'origin' => 'http://wallet.2100w.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://wallet.2100w.cn/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'issuer' => 
+  array (
+    0 => 'GCXN2CDLEOQ5Z3JGSGZWZ3ZQ6MPDJWDBFN5MYRZXTYMAP6TZIZMCUYSY',
+    1 => 'GCV3PTG5D3RG2LFBZV3FC4LCVMYR5KJBHU567PSHUHBN56HIALZQZIJQ',
+    2 => 'GBFM33WO6ROOUD4ZZ4NYRAEKQKGHXDAFGJVZUR2LBU76OAVP4XGFMSN2',
+    3 => 'GB4U3D4DH44L3MDHX4RUGLQK7OXTN4POQGGGFHIDQU57NH4D3SMRHVCA',
+    4 => 'GDQZ2HAFUJXBXJJF4RHJD5GOZF7PCCNKKRW6JSXHPBHHTFUUR2RMYV2S',
+    5 => 'GAQSMLEAXM6LZWGFTINF3ZW56NFWG7MNVNODVCT4F66Z3P7FQLVIJ7NK',
+    6 => 'GDYTA6IF5VUT5DH4ULA57CMM4OYWVZF6ZQFWAVHSGCMOI2ZTXMMVEYIA',
+    7 => 'GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO',
+  ),
+  'asset' => 
+  array (
+    0 => 'IOT',
+    1 => 'CNY',
+    2 => 'LQSDT',
+    3 => 'LQSMJ',
+    4 => 'LQSTJ',
+    5 => 'LQSSJ',
+    6 => 'LQSHY',
+    7 => 'SNL',
+  ),
+  'balance' => 
+  array (
+    0 => '0.0000000',
+    1 => '0.0000000',
+    2 => '0.0000000',
+    3 => '0.0000000',
+    4 => '0.0000000',
+    5 => '0.0000000',
+    6 => '0.0000000',
+    7 => '500000000.0000000',
+  ),
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Gateway->alldata[ /home/www/snb_wallet/application/index/controller/Gateway.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000419s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.001030s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCXN2CDLEOQ5Z3JGSGZWZ3ZQ6MPDJWDBFN5MYRZXTYMAP6TZIZMCUYSY'  AND `asset_code` = 'IOT' LIMIT 1 [ RunTime:0.014351s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_gateway` [ RunTime:0.000938s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.023745s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCV3PTG5D3RG2LFBZV3FC4LCVMYR5KJBHU567PSHUHBN56HIALZQZIJQ'  AND `asset_code` = 'CNY' LIMIT 1 [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 2 LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GBFM33WO6ROOUD4ZZ4NYRAEKQKGHXDAFGJVZUR2LBU76OAVP4XGFMSN2'  AND `asset_code` = 'LQSDT' LIMIT 1 [ RunTime:0.000304s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GB4U3D4DH44L3MDHX4RUGLQK7OXTN4POQGGGFHIDQU57NH4D3SMRHVCA'  AND `asset_code` = 'LQSMJ' LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GDQZ2HAFUJXBXJJF4RHJD5GOZF7PCCNKKRW6JSXHPBHHTFUUR2RMYV2S'  AND `asset_code` = 'LQSTJ' LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GAQSMLEAXM6LZWGFTINF3ZW56NFWG7MNVNODVCT4F66Z3P7FQLVIJ7NK'  AND `asset_code` = 'LQSSJ' LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GDYTA6IF5VUT5DH4ULA57CMM4OYWVZF6ZQFWAVHSGCMOI2ZTXMMVEYIA'  AND `asset_code` = 'LQSHY' LIMIT 1 [ RunTime:0.000325s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO'  AND `asset_code` = 'SNL' LIMIT 1 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000241s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T16:27:26+08:00 ] 172.31.232.156 183.14.29.222 GET /gateway
+[ log ] wallet.2100w.cn/gateway [运行时间：0.033552s][吞吐率：29.80req/s] [内存消耗：3,818.36kb] [文件加载：53]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'gateway',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://wallet.2100w.cn/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Gateway->index[ /home/www/snb_wallet/application/index/controller/Gateway.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/index/view/gateway/Index.html [ array (
+  0 => 'dir',
+  1 => 'gateway',
+  2 => 'mygateway',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000355s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_gateway` [ RunTime:0.000695s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_status` = 2 LIMIT 10 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `gateway_id` = 6 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_account` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 1 [ RunTime:0.000288s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T16:27:26+08:00 ] 172.31.232.156 183.14.29.222 GET /index/gateway/data/account/GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO
+[ log ] wallet.2100w.cn/index/gateway/data/account/GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO [运行时间：0.034961s][吞吐率：28.60req/s] [内存消耗：3,802.28kb] [文件加载：53]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'gateway',
+    2 => 'data',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'referer' => 'http://wallet.2100w.cn/gateway',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Gateway->data[ /home/www/snb_wallet/application/index/controller/Gateway.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000355s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000931s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO' LIMIT 1 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_gateway` [ RunTime:0.000732s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `gateway_id` = 6 [ RunTime:0.000251s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T16:27:26+08:00 ] 172.31.232.156 183.14.29.222 GET /index/asset/getIssuerAmount/code/SNL/issuer/GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO
+[ log ] wallet.2100w.cn/index/asset/getIssuerAmount/code/SNL/issuer/GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO [运行时间：0.030548s][吞吐率：32.74req/s] [内存消耗：3,500.52kb] [文件加载：51]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'asset',
+    2 => 'getIssuerAmount',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'referer' => 'http://wallet.2100w.cn/gateway',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'code' => 'SNL',
+  'issuer' => 'GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Asset->getIssuerAmount[ /home/www/snb_wallet/application/index/controller/Asset.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000391s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000724s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO'  AND `asset_code` = 'SNL' LIMIT 1 [ RunTime:0.000333s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T16:28:54+08:00 ] 172.31.232.156 183.14.29.222 GET /gatewayCenter
+[ log ] wallet.2100w.cn/gatewayCenter [运行时间：0.085714s][吞吐率：11.67req/s] [内存消耗：4,325.65kb] [文件加载：62]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'gatewayCenter',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://wallet.2100w.cn/gateway',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\GatewayCenter->index[ /home/www/snb_wallet/application/index/controller/GatewayCenter.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/index/view/gateway_center/Index.html [ array (
+  0 => 'dir',
+  1 => 'mygateway',
+  2 => 'assetlist',
+  3 => 'page0',
+  4 => 'incharge',
+  5 => 'total1',
+  6 => 'undeal1',
+  7 => 'page1',
+  8 => 'outcharge',
+  9 => 'total2',
+  10 => 'undeal2',
+  11 => 'page2',
+  12 => 'banklist',
+  13 => 'accountlist',
+  14 => 'myassetlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000295s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_gateway` [ RunTime:0.000605s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_account` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yuan_asset` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000255s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `gateway_id` = 6 LIMIT 0,7 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_record` [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yuan_exchange_record` WHERE  `user_account_src` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 1 [ RunTime:0.013907s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_record` WHERE  `user_account_src` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 0,8 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yuan_exchange_record` WHERE  `user_account_src` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6'  AND `record_status` = 0 LIMIT 1 [ RunTime:0.000271s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_id` = 16 LIMIT 1 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_id` = 16 LIMIT 1 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_id` = 16 LIMIT 1 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yuan_exchange_record` WHERE  `user_account_obj` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 1 [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_record` WHERE  `user_account_obj` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 0,8 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yuan_exchange_record` WHERE  `user_account_obj` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6'  AND `record_status` = 0 LIMIT 1 [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_id` = 16 LIMIT 1 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_bank` [ RunTime:0.000732s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_bank` [ RunTime:0.011116s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_info` [ RunTime:0.000737s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_info` WHERE  `user_account` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' [ RunTime:0.012897s ]
+[ sql ] [ SQL ] SELECT `bank_name` FROM `yuan_bank` WHERE  `bank_id` = 2 LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_id` IN (16) [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' [ RunTime:0.000273s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T16:31:12+08:00 ] 172.31.232.156 183.14.29.222 GET /exchange
+[ log ] wallet.2100w.cn/exchange [运行时间：0.040573s][吞吐率：24.65req/s] [内存消耗：4,155.39kb] [文件加载：60]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://wallet.2100w.cn/gatewayCenter',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->index[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/index/view/exchange/Index.html [ array (
+  0 => 'dir',
+  1 => 'gateway',
+  2 => 'allExchange',
+  3 => 'page',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000416s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_gateway` [ RunTime:0.000715s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_status` = 2 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000622s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `gateway_id` = 6  AND `asset_issuer` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_record` [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yuan_exchange_record` WHERE  ( `user_account_obj` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' OR `user_account_src` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' OR `user_account` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' ) LIMIT 1 [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_record` WHERE  ( `user_account_obj` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' OR `user_account_src` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' OR `user_account` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' ) ORDER BY record_datetime desc LIMIT 0,8 [ RunTime:0.000346s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_id` = 16 LIMIT 1 [ RunTime:0.000206s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_id` = 16 LIMIT 1 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_id` = 16 LIMIT 1 [ RunTime:0.000193s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T16:31:13+08:00 ] 172.31.232.156 183.14.29.222 POST /index/gateway/alldata
+[ log ] wallet.2100w.cn/index/gateway/alldata [运行时间：0.037298s][吞吐率：26.81req/s] [内存消耗：3,803.74kb] [文件加载：53]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'gateway',
+    2 => 'alldata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '897',
+  'accept' => '*/*',
+  'origin' => 'http://wallet.2100w.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'issuer' => 
+  array (
+    0 => 'GCXN2CDLEOQ5Z3JGSGZWZ3ZQ6MPDJWDBFN5MYRZXTYMAP6TZIZMCUYSY',
+    1 => 'GCV3PTG5D3RG2LFBZV3FC4LCVMYR5KJBHU567PSHUHBN56HIALZQZIJQ',
+    2 => 'GBFM33WO6ROOUD4ZZ4NYRAEKQKGHXDAFGJVZUR2LBU76OAVP4XGFMSN2',
+    3 => 'GB4U3D4DH44L3MDHX4RUGLQK7OXTN4POQGGGFHIDQU57NH4D3SMRHVCA',
+    4 => 'GDQZ2HAFUJXBXJJF4RHJD5GOZF7PCCNKKRW6JSXHPBHHTFUUR2RMYV2S',
+    5 => 'GAQSMLEAXM6LZWGFTINF3ZW56NFWG7MNVNODVCT4F66Z3P7FQLVIJ7NK',
+    6 => 'GDYTA6IF5VUT5DH4ULA57CMM4OYWVZF6ZQFWAVHSGCMOI2ZTXMMVEYIA',
+    7 => 'GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO',
+  ),
+  'asset' => 
+  array (
+    0 => 'IOT',
+    1 => 'CNY',
+    2 => 'LQSDT',
+    3 => 'LQSMJ',
+    4 => 'LQSTJ',
+    5 => 'LQSSJ',
+    6 => 'LQSHY',
+    7 => 'SNL',
+  ),
+  'balance' => 
+  array (
+    0 => '0.0000000',
+    1 => '0.0000000',
+    2 => '0.0000000',
+    3 => '0.0000000',
+    4 => '0.0000000',
+    5 => '0.0000000',
+    6 => '0.0000000',
+    7 => '500000000.0000000',
+  ),
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Gateway->alldata[ /home/www/snb_wallet/application/index/controller/Gateway.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000435s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000695s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCXN2CDLEOQ5Z3JGSGZWZ3ZQ6MPDJWDBFN5MYRZXTYMAP6TZIZMCUYSY'  AND `asset_code` = 'IOT' LIMIT 1 [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_gateway` [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000207s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCV3PTG5D3RG2LFBZV3FC4LCVMYR5KJBHU567PSHUHBN56HIALZQZIJQ'  AND `asset_code` = 'CNY' LIMIT 1 [ RunTime:0.000196s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 2 LIMIT 1 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GBFM33WO6ROOUD4ZZ4NYRAEKQKGHXDAFGJVZUR2LBU76OAVP4XGFMSN2'  AND `asset_code` = 'LQSDT' LIMIT 1 [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GB4U3D4DH44L3MDHX4RUGLQK7OXTN4POQGGGFHIDQU57NH4D3SMRHVCA'  AND `asset_code` = 'LQSMJ' LIMIT 1 [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000193s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GDQZ2HAFUJXBXJJF4RHJD5GOZF7PCCNKKRW6JSXHPBHHTFUUR2RMYV2S'  AND `asset_code` = 'LQSTJ' LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GAQSMLEAXM6LZWGFTINF3ZW56NFWG7MNVNODVCT4F66Z3P7FQLVIJ7NK'  AND `asset_code` = 'LQSSJ' LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000190s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GDYTA6IF5VUT5DH4ULA57CMM4OYWVZF6ZQFWAVHSGCMOI2ZTXMMVEYIA'  AND `asset_code` = 'LQSHY' LIMIT 1 [ RunTime:0.000194s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO'  AND `asset_code` = 'SNL' LIMIT 1 [ RunTime:0.000212s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000191s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T16:31:23+08:00 ] 172.31.232.156 183.14.29.222 GET /transaction
+[ log ] wallet.2100w.cn/transaction [运行时间：0.034916s][吞吐率：28.64req/s] [内存消耗：3,819.49kb] [文件加载：53]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'transaction',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Transaction->index[ /home/www/snb_wallet/application/index/controller/Transaction.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/index/view/transaction/Index.html [ array (
+  0 => 'dir',
+  1 => 'gateway',
+  2 => 'mygateway',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000411s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_gateway` [ RunTime:0.000793s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_status` = 2 LIMIT 10 [ RunTime:0.000288s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `gateway_id` = 6 [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_account` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 1 [ RunTime:0.000226s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T16:31:23+08:00 ] 172.31.232.156 183.14.29.222 POST /index/transaction/getMyissueAsset/
+[ log ] wallet.2100w.cn/index/transaction/getMyissueAsset/ [运行时间：0.031885s][吞吐率：31.36req/s] [内存消耗：3,800.94kb] [文件加载：53]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'transaction',
+    2 => 'getMyissueAsset',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '63',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://wallet.2100w.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://wallet.2100w.cn/transaction',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'issuer' => 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Transaction->getMyissueAsset[ /home/www/snb_wallet/application/index/controller/Transaction.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000391s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000946s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_gateway` [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_account` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' [ RunTime:0.000303s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T16:31:23+08:00 ] 172.31.232.156 183.14.29.222 POST /index/transaction/convert/
+[ log ] wallet.2100w.cn/index/transaction/convert/ [运行时间：0.055574s][吞吐率：17.99req/s] [内存消耗：3,807.50kb] [文件加载：53]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'transaction',
+    2 => 'convert',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '926',
+  'accept' => '*/*',
+  'origin' => 'http://wallet.2100w.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://wallet.2100w.cn/transaction',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  'asset' => 
+  array (
+    0 => 'IOT',
+    1 => 'CNY',
+    2 => 'LQSDT',
+    3 => 'LQSMJ',
+    4 => 'LQSTJ',
+    5 => 'LQSSJ',
+    6 => 'LQSHY',
+    7 => 'SNL',
+  ),
+  'issuer' => 
+  array (
+    0 => 'GCXN2CDLEOQ5Z3JGSGZWZ3ZQ6MPDJWDBFN5MYRZXTYMAP6TZIZMCUYSY',
+    1 => 'GCV3PTG5D3RG2LFBZV3FC4LCVMYR5KJBHU567PSHUHBN56HIALZQZIJQ',
+    2 => 'GBFM33WO6ROOUD4ZZ4NYRAEKQKGHXDAFGJVZUR2LBU76OAVP4XGFMSN2',
+    3 => 'GB4U3D4DH44L3MDHX4RUGLQK7OXTN4POQGGGFHIDQU57NH4D3SMRHVCA',
+    4 => 'GDQZ2HAFUJXBXJJF4RHJD5GOZF7PCCNKKRW6JSXHPBHHTFUUR2RMYV2S',
+    5 => 'GAQSMLEAXM6LZWGFTINF3ZW56NFWG7MNVNODVCT4F66Z3P7FQLVIJ7NK',
+    6 => 'GDYTA6IF5VUT5DH4ULA57CMM4OYWVZF6ZQFWAVHSGCMOI2ZTXMMVEYIA',
+    7 => 'GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO',
+  ),
+  'type' => 
+  array (
+    0 => 'credit_alphanum4',
+    1 => 'credit_alphanum4',
+    2 => 'credit_alphanum12',
+    3 => 'credit_alphanum12',
+    4 => 'credit_alphanum12',
+    5 => 'credit_alphanum12',
+    6 => 'credit_alphanum12',
+    7 => 'credit_alphanum4',
+  ),
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Transaction->convert[ /home/www/snb_wallet/application/index/controller/Transaction.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000369s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000651s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCXN2CDLEOQ5Z3JGSGZWZ3ZQ6MPDJWDBFN5MYRZXTYMAP6TZIZMCUYSY'  AND `asset_code` = 'IOT' LIMIT 1 [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_gateway` [ RunTime:0.000534s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCV3PTG5D3RG2LFBZV3FC4LCVMYR5KJBHU567PSHUHBN56HIALZQZIJQ'  AND `asset_code` = 'CNY' LIMIT 1 [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 2 LIMIT 1 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GBFM33WO6ROOUD4ZZ4NYRAEKQKGHXDAFGJVZUR2LBU76OAVP4XGFMSN2'  AND `asset_code` = 'LQSDT' LIMIT 1 [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GB4U3D4DH44L3MDHX4RUGLQK7OXTN4POQGGGFHIDQU57NH4D3SMRHVCA'  AND `asset_code` = 'LQSMJ' LIMIT 1 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GDQZ2HAFUJXBXJJF4RHJD5GOZF7PCCNKKRW6JSXHPBHHTFUUR2RMYV2S'  AND `asset_code` = 'LQSTJ' LIMIT 1 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GAQSMLEAXM6LZWGFTINF3ZW56NFWG7MNVNODVCT4F66Z3P7FQLVIJ7NK'  AND `asset_code` = 'LQSSJ' LIMIT 1 [ RunTime:0.000195s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GDYTA6IF5VUT5DH4ULA57CMM4OYWVZF6ZQFWAVHSGCMOI2ZTXMMVEYIA'  AND `asset_code` = 'LQSHY' LIMIT 1 [ RunTime:0.000204s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000189s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCGHXLCUHGGUDEFGUDB7OD3KB74PQUS5ZYIJJLCFZCMXODP4RAXTLPPO'  AND `asset_code` = 'SNL' LIMIT 1 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_id` = 6 LIMIT 1 [ RunTime:0.000189s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T16:32:21+08:00 ] 172.31.232.156 183.14.29.222 GET /member
+[ log ] wallet.2100w.cn/member [运行时间：0.020475s][吞吐率：48.84req/s] [内存消耗：2,358.56kb] [文件加载：43]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://wallet.2100w.cn/transaction',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => '_ga=GA1.2.365346836.1513654267; PHPSESSID=va2vcor498p16467ebatg3tf50; think_var=zh-cn',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Member->index[ /home/www/snb_wallet/application/index/controller/Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/index/view/member/Index.html [ array (
+  0 => 'dir',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T19:36:40+08:00 ] 172.31.232.156 77.88.5.5 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.017282s][吞吐率：57.86req/s] [内存消耗：2,162.65kb] [文件加载：41]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ru.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-language' => 'ru, uk;q=0.8, be;q=0.8, en;q=0.7, *;q=0.01',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T19:36:40+08:00 ] 172.31.232.156 93.158.161.100 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.018289s][吞吐率：54.68req/s] [内存消耗：2,162.67kb] [文件加载：41]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ru.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-language' => 'ru, uk;q=0.8, be;q=0.8, en;q=0.7, *;q=0.01',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T19:36:44+08:00 ] 172.31.232.156 5.255.250.75 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.019102s][吞吐率：52.35req/s] [内存消耗：2,332.88kb] [文件加载：39]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ru.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-language' => 'ru, uk;q=0.8, be;q=0.8, en;q=0.7, *;q=0.01',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T19:36:45+08:00 ] 172.31.232.156 141.8.144.2 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.022531s][吞吐率：44.38req/s] [内存消耗：2,333.19kb] [文件加载：39]
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/ru.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'Keep-Alive',
+  'user-agent' => 'Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)',
+  'from' => 'support@search.yandex.ru',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-language' => 'ru, uk;q=0.8, be;q=0.8, en;q=0.7, *;q=0.01',
+  'accept' => '*/*',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:53:17+08:00 ] 172.31.232.156 112.119.53.44 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.018228s][吞吐率：54.86req/s] [内存消耗：2,175.66kb] [文件加载：43]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:53:18+08:00 ] 172.31.232.156 112.119.53.44 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.019472s][吞吐率：51.36req/s] [内存消耗：2,342.12kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; think_var=zh-cn; PHPSESSID=tpvjgnu2cersd9449frpuu5d21',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:53:43+08:00 ] 172.31.232.156 112.119.53.44 POST /login
+[ log ] wallet.2100w.cn/login [运行时间：0.032045s][吞吐率：31.21req/s] [内存消耗：3,681.73kb] [文件加载：49]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://wallet.2100w.cn',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/login',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; think_var=zh-cn; PHPSESSID=tpvjgnu2cersd9449frpuu5d21',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '39',
+)
+[ info ] [ PARAM ] array (
+  'email' => 'japleak@163.com',
+  'password' => 'jpy123',
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000723s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_user` [ RunTime:0.001225s ]
+[ sql ] [ SQL ] SELECT `user_id`,`user_account`,`user_3des`,`user_name`,`user_setTrust` FROM `yuan_user` WHERE  `user_email` = 'japleak@163.com' LIMIT 1 [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SELECT `user_pass`,`user_confirm`,`user_3des`,`user_lock` FROM `yuan_user` WHERE  `user_email` = 'japleak@163.com' LIMIT 1 [ RunTime:0.000267s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T21:53:47+08:00 ] 172.31.232.156 112.119.53.44 GET /register
+[ log ] wallet.2100w.cn/register [运行时间：0.029520s][吞吐率：33.88req/s] [内存消耗：3,599.25kb] [文件加载：48]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'register',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/login',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; think_var=zh-cn; PHPSESSID=tpvjgnu2cersd9449frpuu5d21',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->register[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Register.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:53:55+08:00 ] 172.31.232.156 112.119.53.44 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.024241s][吞吐率：41.25req/s] [内存消耗：2,342.12kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; think_var=zh-cn; PHPSESSID=tpvjgnu2cersd9449frpuu5d21',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:53:57+08:00 ] 172.31.232.156 112.119.53.44 GET /forgetpassword
+[ log ] wallet.2100w.cn/forgetpassword [运行时间：0.019775s][吞吐率：50.57req/s] [内存消耗：2,421.21kb] [文件加载：41]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'forgetpassword',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/login',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; think_var=zh-cn; PHPSESSID=tpvjgnu2cersd9449frpuu5d21',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->forgetpassword[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Forgetpassword.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:53:58+08:00 ] 172.31.232.156 112.119.53.44 GET /captcha.html
+[ log ] wallet.2100w.cn/captcha.html [运行时间：0.015198s][吞吐率：65.80req/s] [内存消耗：1,851.80kb] [文件加载：34]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/forgetpassword',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; think_var=zh-cn; PHPSESSID=tpvjgnu2cersd9449frpuu5d21',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /home/www/snb_wallet/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:54:26+08:00 ] 172.31.232.156 112.119.53.44 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.017663s][吞吐率：56.62req/s] [内存消耗：2,175.57kb] [文件加载：43]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; think_var=zh-cn; PHPSESSID=tpvjgnu2cersd9449frpuu5d21',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:54:26+08:00 ] 172.31.232.156 112.119.53.44 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.020465s][吞吐率：48.86req/s] [内存消耗：2,342.13kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; think_var=zh-cn; PHPSESSID=tpvjgnu2cersd9449frpuu5d21',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:54:31+08:00 ] 172.31.232.156 112.119.53.44 GET /login?lang=zh-cn
+[ log ] wallet.2100w.cn/login?lang=zh-cn [运行时间：0.024693s][吞吐率：40.50req/s] [内存消耗：2,343.83kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/login',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; think_var=zh-cn; PHPSESSID=tpvjgnu2cersd9449frpuu5d21',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'zh-cn',
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:54:34+08:00 ] 172.31.232.156 112.119.53.44 GET /register
+[ log ] wallet.2100w.cn/register [运行时间：0.028944s][吞吐率：34.55req/s] [内存消耗：3,599.31kb] [文件加载：48]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'register',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/login?lang=zh-cn',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->register[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Register.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:54:48+08:00 ] 172.31.232.156 112.119.53.44 POST /login?lang=zh-cn
+[ log ] wallet.2100w.cn/login?lang=zh-cn [运行时间：0.031241s][吞吐率：32.01req/s] [内存消耗：3,712.43kb] [文件加载：50]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://wallet.2100w.cn',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/login?lang=zh-cn',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '41',
+)
+[ info ] [ PARAM ] array (
+  'lang' => 'zh-cn',
+  'email' => 'kky2001@21cn.com',
+  'password' => 'kky2001',
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000413s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_user` [ RunTime:0.000717s ]
+[ sql ] [ SQL ] SELECT `user_id`,`user_account`,`user_3des`,`user_name`,`user_setTrust` FROM `yuan_user` WHERE  `user_email` = 'kky2001@21cn.com' LIMIT 1 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT `user_pass`,`user_confirm`,`user_3des`,`user_lock` FROM `yuan_user` WHERE  `user_email` = 'kky2001@21cn.com' LIMIT 1 [ RunTime:0.000336s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T21:54:48+08:00 ] 172.31.232.156 112.119.53.44 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.021184s][吞吐率：47.21req/s] [内存消耗：2,151.89kb] [文件加载：42]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/login?lang=zh-cn',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/index/view/index/Index.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:54:49+08:00 ] 172.31.232.156 112.119.53.44 GET /create
+[ log ] wallet.2100w.cn/create [运行时间：0.024644s][吞吐率：40.58req/s] [内存消耗：2,345.19kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'create',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->create[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Create.html [ array (
+  0 => 'dir',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:55:03+08:00 ] 172.31.232.156 112.119.53.44 POST /user/user/checkAccountStatus/
+[ log ] wallet.2100w.cn/user/user/checkAccountStatus/ [运行时间：0.029464s][吞吐率：33.94req/s] [内存消耗：3,690.13kb] [文件加载：49]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'checkAccountStatus',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://wallet.2100w.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/create',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '38',
+)
+[ info ] [ PARAM ] array (
+  'action' => '2',
+  'user_email' => 'kky2001@21cn.com',
+)
+[ info ] [ RUN ] app\user\controller\User->checkAccountStatus[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000351s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_user` [ RunTime:0.001002s ]
+[ sql ] [ SQL ] UPDATE `yuan_user`  SET `user_activate`=1,`user_datetime`='2018-01-11 21:55:03'  WHERE  `user_email` = 'kky2001@21cn.com' [ RunTime:0.000474s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T21:59:25+08:00 ] 172.31.232.156 112.119.53.44 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.019392s][吞吐率：51.57req/s] [内存消耗：2,151.57kb] [文件加载：42]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/create',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/index/view/index/Index.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T21:59:27+08:00 ] 172.31.232.156 112.119.53.44 POST /index/gateway/alldata
+[ log ] wallet.2100w.cn/index/gateway/alldata [运行时间：0.030501s][吞吐率：32.79req/s] [内存消耗：3,717.68kb] [文件加载：52]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'gateway',
+    2 => 'alldata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://wallet.2100w.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '109',
+)
+[ info ] [ PARAM ] array (
+  'issuer' => 
+  array (
+    0 => 'GCMSVCVBPUR4KAIPLLGN4YX3CCTDWOYOJ6H2M3TNYJJ77LH2IBFO75DU',
+  ),
+  'asset' => 
+  array (
+    0 => 'UKC',
+  ),
+  'balance' => 
+  array (
+    0 => '0.0000000',
+  ),
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Gateway->alldata[ /home/www/snb_wallet/application/index/controller/Gateway.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000320s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.001336s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCMSVCVBPUR4KAIPLLGN4YX3CCTDWOYOJ6H2M3TNYJJ77LH2IBFO75DU'  AND `asset_code` = 'UKC' LIMIT 1 [ RunTime:0.000511s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T21:59:47+08:00 ] 172.31.232.156 112.119.53.44 GET /exchange
+[ log ] wallet.2100w.cn/exchange [运行时间：0.039061s][吞吐率：25.60req/s] [内存消耗：4,145.70kb] [文件加载：60]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->index[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/index/view/exchange/Index.html [ array (
+  0 => 'dir',
+  1 => 'gateway',
+  2 => 'allExchange',
+  3 => 'page',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000290s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_gateway` [ RunTime:0.001403s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_gateway` WHERE  `gateway_status` = 2 [ RunTime:0.000507s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000511s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `gateway_id` = 6  AND `asset_issuer` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_record` [ RunTime:0.000906s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yuan_exchange_record` WHERE  ( `user_account_obj` = 'GD4VCFTP6ZEX2KGCKR3VWVN56HHVUTNMHIJ2I7WTC4IJIXW5276LINL2' OR `user_account_src` = 'GD4VCFTP6ZEX2KGCKR3VWVN56HHVUTNMHIJ2I7WTC4IJIXW5276LINL2' OR `user_account` = 'GD4VCFTP6ZEX2KGCKR3VWVN56HHVUTNMHIJ2I7WTC4IJIXW5276LINL2' ) LIMIT 1 [ RunTime:0.000516s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_record` WHERE  ( `user_account_obj` = 'GD4VCFTP6ZEX2KGCKR3VWVN56HHVUTNMHIJ2I7WTC4IJIXW5276LINL2' OR `user_account_src` = 'GD4VCFTP6ZEX2KGCKR3VWVN56HHVUTNMHIJ2I7WTC4IJIXW5276LINL2' OR `user_account` = 'GD4VCFTP6ZEX2KGCKR3VWVN56HHVUTNMHIJ2I7WTC4IJIXW5276LINL2' ) ORDER BY record_datetime desc LIMIT 0,8 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_id` = 1 LIMIT 1 [ RunTime:0.000266s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T21:59:48+08:00 ] 172.31.232.156 112.119.53.44 POST /index/gateway/alldata
+[ log ] wallet.2100w.cn/index/gateway/alldata [运行时间：0.029852s][吞吐率：33.50req/s] [内存消耗：3,717.85kb] [文件加载：52]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'gateway',
+    2 => 'alldata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://wallet.2100w.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '109',
+)
+[ info ] [ PARAM ] array (
+  'issuer' => 
+  array (
+    0 => 'GCMSVCVBPUR4KAIPLLGN4YX3CCTDWOYOJ6H2M3TNYJJ77LH2IBFO75DU',
+  ),
+  'asset' => 
+  array (
+    0 => 'UKC',
+  ),
+  'balance' => 
+  array (
+    0 => '0.0000000',
+  ),
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Gateway->alldata[ /home/www/snb_wallet/application/index/controller/Gateway.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000324s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000644s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCMSVCVBPUR4KAIPLLGN4YX3CCTDWOYOJ6H2M3TNYJJ77LH2IBFO75DU'  AND `asset_code` = 'UKC' LIMIT 1 [ RunTime:0.000265s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:00:02+08:00 ] 172.31.232.156 112.119.53.44 GET /index/exchange/cxtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/CNY
+[ log ] wallet.2100w.cn/index/exchange/cxtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/CNY [运行时间：0.034793s][吞吐率：28.74req/s] [内存消耗：3,901.62kb] [文件加载：55]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'cxtype',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6',
+  'asset' => 'CNY',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->cxtype[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000343s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000770s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_code` = 'CNY'  AND `asset_issuer` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 1 [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_info` [ RunTime:0.001111s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_info` WHERE  (  FIND_IN_SET(16, `asset_id`) ) [ RunTime:0.000434s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_bank` [ RunTime:0.000789s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_bank` WHERE  `bank_id` IN (2) [ RunTime:0.000381s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:00:02+08:00 ] 172.31.232.156 112.119.53.44 POST /index/gateway/alldata
+[ log ] wallet.2100w.cn/index/gateway/alldata [运行时间：0.029823s][吞吐率：33.53req/s] [内存消耗：3,717.85kb] [文件加载：52]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'gateway',
+    2 => 'alldata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://wallet.2100w.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '109',
+)
+[ info ] [ PARAM ] array (
+  'issuer' => 
+  array (
+    0 => 'GCMSVCVBPUR4KAIPLLGN4YX3CCTDWOYOJ6H2M3TNYJJ77LH2IBFO75DU',
+  ),
+  'asset' => 
+  array (
+    0 => 'UKC',
+  ),
+  'balance' => 
+  array (
+    0 => '0.0000000',
+  ),
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Gateway->alldata[ /home/www/snb_wallet/application/index/controller/Gateway.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000310s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000555s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCMSVCVBPUR4KAIPLLGN4YX3CCTDWOYOJ6H2M3TNYJJ77LH2IBFO75DU'  AND `asset_code` = 'UKC' LIMIT 1 [ RunTime:0.000261s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:00:05+08:00 ] 172.31.232.156 112.119.53.44 GET /index/exchange/cxinfo/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/bank/2
+[ log ] wallet.2100w.cn/index/exchange/cxinfo/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/bank/2 [运行时间：0.031570s][吞吐率：31.68req/s] [内存消耗：3,739.90kb] [文件加载：52]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'cxinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6',
+  'bank' => '2',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->cxinfo[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000409s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_info` [ RunTime:0.000749s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_info` WHERE  `user_account` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6'  AND `bank_id` = 2 LIMIT 1 [ RunTime:0.000351s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:00:30+08:00 ] 172.31.232.156 112.119.53.44 GET /index/exchange/cxinfo/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/bank/2
+[ log ] wallet.2100w.cn/index/exchange/cxinfo/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/bank/2 [运行时间：0.030285s][吞吐率：33.02req/s] [内存消耗：3,739.90kb] [文件加载：52]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'cxinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6',
+  'bank' => '2',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->cxinfo[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000274s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_info` [ RunTime:0.000637s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_info` WHERE  `user_account` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6'  AND `bank_id` = 2 LIMIT 1 [ RunTime:0.000260s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:00:43+08:00 ] 172.31.232.156 112.119.53.44 GET /index/exchange/txtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/CNY
+[ log ] wallet.2100w.cn/index/exchange/txtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/CNY [运行时间：0.031789s][吞吐率：31.46req/s] [内存消耗：3,901.62kb] [文件加载：55]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'txtype',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6',
+  'asset' => 'CNY',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->txtype[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000293s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000742s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_code` = 'CNY'  AND `asset_issuer` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 1 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_info` [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_info` WHERE  (  FIND_IN_SET(16, `asset_id`) ) [ RunTime:0.000197s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_bank` [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_bank` WHERE  `bank_id` IN (2) [ RunTime:0.000182s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:00:45+08:00 ] 172.31.232.156 112.119.53.44 GET /index/exchange/cxinfo/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/bank/2
+[ log ] wallet.2100w.cn/index/exchange/cxinfo/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/bank/2 [运行时间：0.030522s][吞吐率：32.76req/s] [内存消耗：3,739.90kb] [文件加载：52]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'cxinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6',
+  'bank' => '2',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->cxinfo[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000365s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_info` [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_info` WHERE  `user_account` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6'  AND `bank_id` = 2 LIMIT 1 [ RunTime:0.000273s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:00:55+08:00 ] 172.31.232.156 112.119.53.44 GET /index/exchange/txtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/%E8%AF%B7%E9%80%89%E6%8B%A9
+[ log ] wallet.2100w.cn/index/exchange/txtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/%E8%AF%B7%E9%80%89%E6%8B%A9 [运行时间：0.033776s][吞吐率：29.61req/s] [内存消耗：3,925.21kb] [文件加载：58]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'txtype',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6',
+  'asset' => '请选择',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->txtype[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000433s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000740s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_code` = '请选择'  AND `asset_issuer` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_info` [ RunTime:0.000511s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' `asset_id`) )' at line 1[/home/www/snb_wallet/thinkphp/library/think/db/Connection.php:399]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:00:56+08:00 ] 172.31.232.156 112.119.53.44 GET /index/exchange/txtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/YLQSDT
+[ log ] wallet.2100w.cn/index/exchange/txtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/YLQSDT [运行时间：0.032482s][吞吐率：30.79req/s] [内存消耗：3,899.86kb] [文件加载：55]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'txtype',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6',
+  'asset' => 'YLQSDT',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->txtype[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000365s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000672s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_code` = 'YLQSDT'  AND `asset_issuer` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_info` [ RunTime:0.000493s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_info` WHERE  (  FIND_IN_SET(19, `asset_id`) ) [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_bank` [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_bank` WHERE  `bank_id` IN ('') [ RunTime:0.000223s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:00:58+08:00 ] 172.31.232.156 112.119.53.44 GET /index/exchange/txtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/YLQSMJ
+[ log ] wallet.2100w.cn/index/exchange/txtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/YLQSMJ [运行时间：0.031812s][吞吐率：31.43req/s] [内存消耗：3,899.86kb] [文件加载：55]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'txtype',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6',
+  'asset' => 'YLQSMJ',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->txtype[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000319s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000667s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_code` = 'YLQSMJ'  AND `asset_issuer` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_info` [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_info` WHERE  (  FIND_IN_SET(20, `asset_id`) ) [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_bank` [ RunTime:0.000415s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_bank` WHERE  `bank_id` IN ('') [ RunTime:0.000190s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:01:01+08:00 ] 172.31.232.156 112.119.53.44 GET /index/exchange/txtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/YLQSSJ
+[ log ] wallet.2100w.cn/index/exchange/txtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/YLQSSJ [运行时间：0.032536s][吞吐率：30.74req/s] [内存消耗：3,899.86kb] [文件加载：55]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'txtype',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6',
+  'asset' => 'YLQSSJ',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->txtype[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000315s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000676s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_code` = 'YLQSSJ'  AND `asset_issuer` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 1 [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_info` [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_info` WHERE  (  FIND_IN_SET(26, `asset_id`) ) [ RunTime:0.000273s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_bank` [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_bank` WHERE  `bank_id` IN ('') [ RunTime:0.000215s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:01:03+08:00 ] 172.31.232.156 112.119.53.44 GET /index/exchange/txtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/YLQSTJ
+[ log ] wallet.2100w.cn/index/exchange/txtype/account/GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6/asset/YLQSTJ [运行时间：0.034286s][吞吐率：29.17req/s] [内存消耗：3,899.86kb] [文件加载：55]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'txtype',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'account' => 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6',
+  'asset' => 'YLQSTJ',
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->txtype[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000441s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000732s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_code` = 'YLQSTJ'  AND `asset_issuer` = 'GBTTTIS53XG3UX2UEXJQDPCITTEDQYBVXJ5MLN4QQTRRFMX45ZJTBIN6' LIMIT 1 [ RunTime:0.000380s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_exchange_info` [ RunTime:0.000544s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_exchange_info` WHERE  (  FIND_IN_SET(25, `asset_id`) ) [ RunTime:0.000263s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_bank` [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_bank` WHERE  `bank_id` IN ('') [ RunTime:0.000179s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:01:04+08:00 ] 172.31.232.156 112.119.53.44 GET /address
+[ log ] wallet.2100w.cn/address [运行时间：0.040357s][吞吐率：24.78req/s] [内存消耗：3,834.49kb] [文件加载：55]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'address',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Address->index[ /home/www/snb_wallet/application/index/controller/Address.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/index/view/address/Index.html [ array (
+  0 => 'dir',
+  1 => 'address',
+  2 => 'page',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000285s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_address` [ RunTime:0.001126s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yuan_address` WHERE  `user_id` = 21 LIMIT 1 [ RunTime:0.006972s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_address` WHERE  `user_id` = 21 LIMIT 0,7 [ RunTime:0.000287s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:01:10+08:00 ] 172.31.232.156 112.119.53.44 GET /member
+[ log ] wallet.2100w.cn/member [运行时间：0.020086s][吞吐率：49.79req/s] [内存消耗：2,359.52kb] [文件加载：43]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'member',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/address',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Member->index[ /home/www/snb_wallet/application/index/controller/Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/index/view/member/Index.html [ array (
+  0 => 'dir',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T22:01:26+08:00 ] 172.31.232.156 112.119.53.44 GET /logout
+[ log ] wallet.2100w.cn/logout [运行时间：0.017864s][吞吐率：55.98req/s] [内存消耗：2,369.29kb] [文件加载：41]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'logout',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/member',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->logout[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T22:01:26+08:00 ] 172.31.232.156 112.119.53.44 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.017291s][吞吐率：57.83req/s] [内存消耗：2,175.87kb] [文件加载：43]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/member',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T22:01:26+08:00 ] 172.31.232.156 112.119.53.44 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.020241s][吞吐率：49.40req/s] [内存消耗：2,342.63kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/member',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T22:01:30+08:00 ] 172.31.232.156 112.119.53.44 GET /register
+[ log ] wallet.2100w.cn/register [运行时间：0.027042s][吞吐率：36.98req/s] [内存消耗：3,599.25kb] [文件加载：48]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'register',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/login',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->register[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Register.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T22:01:42+08:00 ] 172.31.232.156 112.119.53.44 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.020506s][吞吐率：48.77req/s] [内存消耗：2,342.78kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/register',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T22:02:02+08:00 ] 172.31.232.156 112.119.53.44 POST /login
+[ log ] wallet.2100w.cn/login [运行时间：0.030648s][吞吐率：32.63req/s] [内存消耗：3,711.23kb] [文件加载：50]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://wallet.2100w.cn',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/login',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '41',
+)
+[ info ] [ PARAM ] array (
+  'email' => 'kky2001@21cn.com',
+  'password' => 'kky2001',
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000389s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_user` [ RunTime:0.000760s ]
+[ sql ] [ SQL ] SELECT `user_id`,`user_account`,`user_3des`,`user_name`,`user_setTrust` FROM `yuan_user` WHERE  `user_email` = 'kky2001@21cn.com' LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT `user_pass`,`user_confirm`,`user_3des`,`user_lock` FROM `yuan_user` WHERE  `user_email` = 'kky2001@21cn.com' LIMIT 1 [ RunTime:0.000243s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:02:02+08:00 ] 172.31.232.156 112.119.53.44 GET /
+[ log ] wallet.2100w.cn/ [运行时间：0.019103s][吞吐率：52.35req/s] [内存消耗：2,151.91kb] [文件加载：42]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/login',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/www/snb_wallet/application/index/controller/Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/index/view/index/Index.html [ array (
+  0 => 'dir',
+  1 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T22:02:03+08:00 ] 172.31.232.156 112.119.53.44 POST /index/gateway/alldata
+[ log ] wallet.2100w.cn/index/gateway/alldata [运行时间：0.031061s][吞吐率：32.19req/s] [内存消耗：3,717.68kb] [文件加载：52]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'gateway',
+    2 => 'alldata',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'origin' => 'http://wallet.2100w.cn',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/',
+  'accept-language' => 'zh-CN',
+  'cookie' => '_ga=GA1.2.1592429102.1503550708; PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '109',
+)
+[ info ] [ PARAM ] array (
+  'issuer' => 
+  array (
+    0 => 'GCMSVCVBPUR4KAIPLLGN4YX3CCTDWOYOJ6H2M3TNYJJ77LH2IBFO75DU',
+  ),
+  'asset' => 
+  array (
+    0 => 'UKC',
+  ),
+  'balance' => 
+  array (
+    0 => '0.0000000',
+  ),
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Gateway->alldata[ /home/www/snb_wallet/application/index/controller/Gateway.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000428s ] mysql:dbname=wallet;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yuan_asset` [ RunTime:0.000679s ]
+[ sql ] [ SQL ] SELECT * FROM `yuan_asset` WHERE  `asset_issuer` = 'GCMSVCVBPUR4KAIPLLGN4YX3CCTDWOYOJ6H2M3TNYJJ77LH2IBFO75DU'  AND `asset_code` = 'UKC' LIMIT 1 [ RunTime:0.000275s ]
+
+---------------------------------------------------------------
+[ 2018-01-11T22:29:09+08:00 ] 172.31.232.156 112.119.53.44 GET /exchange
+[ log ] wallet.2100w.cn/exchange [运行时间：0.018503s][吞吐率：54.05req/s] [内存消耗：2,401.02kb] [文件加载：44]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn; _ga=GA1.2.1592429102.1503550708; _gid=GA1.2.1302962632.1515679368',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->index[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/www/snb_wallet/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T22:29:12+08:00 ] 172.31.232.156 112.119.53.44 GET /login
+[ log ] wallet.2100w.cn/login [运行时间：0.019571s][吞吐率：51.10req/s] [内存消耗：2,342.82kb] [文件加载：40]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/exchange',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn; _ga=GA1.2.1592429102.1503550708; _gid=GA1.2.1302962632.1515679368',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\User->login[ /home/www/snb_wallet/application/user/controller/User.php ]
+[ info ] [ VIEW ] /home/www/snb_wallet/public/../application/user/view/user/Login.html [ array (
+  0 => 'dir',
+  1 => 'title',
+  2 => 'error_msg',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-01-11T22:29:13+08:00 ] 172.31.232.156 112.119.53.44 GET /exchange
+[ log ] wallet.2100w.cn/exchange [运行时间：0.020024s][吞吐率：49.94req/s] [内存消耗：2,401.02kb] [文件加载：44]
+[ info ] [ LANG ] /home/www/snb_wallet/thinkphp/lang/zh-cn.php
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'exchange',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'wallet.2100w.cn',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://wallet.2100w.cn/',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'PHPSESSID=tpvjgnu2cersd9449frpuu5d21; think_var=zh-cn; _ga=GA1.2.1592429102.1503550708; _gid=GA1.2.1302962632.1515679368',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/www/snb_wallet/public/../application/index/lang/zh-cn.php
+[ info ] [ RUN ] app\index\controller\Exchange->index[ /home/www/snb_wallet/application/index/controller/Exchange.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/www/snb_wallet/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

@@ -1,0 +1,35 @@
+<div class="col-md-10 wallet_min">
+				<div class="col-md-2">
+					<div class="sidebar_menu" id="accordion">
+						<div class="panel">
+							<a href="##" class="active">{$Think.lang.INDEX_HELP_TITLE}</a>
+						</div>
+						<volist name="type_list" id="type">
+							<div class="panel">
+							<a href="#info{$type.type_id}" class="nav-header collapse" data-toggle="collapse" data-parent="#accordion">{$type.type_name}</a>
+							<div id="info{$type.type_id}" class="collapse">
+								<ul class="nav nav-list menu_second">
+									<volist name="type.helpList" id="list">
+										<li><a href="/help/read/id/{$list.help_id}">{$list.help_title}</a></li>
+									</volist>
+							    </ul>
+							</div>
+						</div>
+						</volist>
+						
+				    </div>
+				</div>
+				<neq name="help_info" value="">
+					<div class="col-md-10">
+					<h3 class="article_tit">{$help_info.help_title}</h3>
+					<div class="edit_txtbox">
+						<!--文本编辑输出框-->
+						{$help_info.help_content}
+					</div>
+				</div>
+				</neq>
+				
+			</div>
+		</div>
+	</section>
+<!--Content end-->

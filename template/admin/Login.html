@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>{$Think.lang.LANG_COM_SYSTEM_NAME}</title>
+		<link rel="stylesheet" href="{$dir}css/login.css" />
+		<script src="{$dir}js/Validform_v5.3.2_min.js?v={:mt_rand()}"></script>
+		<script src="{$dir}js/jquery-1.8.0.min.js?v={:mt_rand()}"></script>
+		<script src="{$dir}js/Validform_v5.3.2_min.js?v={:mt_rand()}"></script>
+	</head>
+
+	<body>
+		<div class="bodydiv">
+			<div class="loginbox">
+				<form id="ff" method="post">
+					<div class="log_tit"><img src="{$dir}images/logo.png">
+						<h2>{$Think.lang.LANG_COM_SYSTEM_NAME}<small>Investigation Services</small></h2></div>
+					<div class="form_group">
+						<label>{$Think.lang.LANG_INDEX_USER_LOGIN_NAME}：</label><input type="text" class="user" id="username" name="username" datatype="s2-132" errormsg="至少2个字符,最多32个字符！"></div>
+<!--					<div class="form_group">
+							<p class="help-block red"></p>
+						</div>-->
+
+					<div class="form_group">
+						<label style="word-spacing: 12px;">{$Think.lang.LANG_INDEX_USER_LOGIN_PASS}：</label><input type="password" class="pass" id="password" name="password"></div>
+					<div class="form_group">
+						<label>{$Think.lang.LANG_INDEX_USER_LOGIN_CODE}：</label><input type="text" class="yzm"><img id="captcha_img" src="{:captcha_src()}" alt="captcha" class="yzm_img" onclick="javascript:reload_captcha()" /></div>
+					<!--<div class="form_group"></span><label class="rmb_box"><input type="checkbox">记住密码</label></div>-->
+					<div class="form_group"><button type="submit" class="submitbtn">{$Think.lang.LANG_INDEX_USER_LOGIN_ACTION}</button></div>
+				</form>
+			</div>
+			<!--<div class="bottom">
+				个人版权所有
+			</div>-->
+		</div>
+		<script>
+			function reload_captcha() {
+				$("#captcha_img").attr('src', '/captcha?' + Math.random());
+			}
+			$("#ff").Validform({
+				tiptype: function(msg, o, cssctl) {
+					if(!o.obj.is("form")) {
+						var objtip = o.obj.parent().next().find("p");
+						cssctl(objtip, o.type);
+						objtip.text(msg);
+						if(o.type == 2) {
+							objtip.text('');
+						}
+					}
+				}});
+
+		</script>
+	</body>
+
+</html>

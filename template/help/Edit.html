@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>内容编辑</title>
+		<link rel="stylesheet" type="text/css" href="{$dir}easyui/1.3.4/themes/default/easyui.css" />
+<link rel="stylesheet" type="text/css" href="{$dir}css/wu.css" />
+<link rel="stylesheet" type="text/css" href="{$dir}css/icon.css" />
+<link rel="stylesheet" type="text/css" href="{$dir}js/kindeditor/examples/index.css" />
+<script type="text/javascript" src="{$dir}js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="{$dir}easyui/1.3.4/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="{$dir}easyui/1.3.4/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="{$dir}js/kindeditor/kindeditor.js"></script>
+<script type="text/javascript" src="{$dir}js/kindeditor/kindeditor-all.js"></script>
+<script type="text/javascript" src="{$dir}js/kindeditor/kindeditor-all-min.js"></script>
+<script type="text/javascript" src="{$dir}js/kindeditor/kindeditor-min.js"></script>
+<script type="text/javascript" src="{$dir}js/kindeditor/lang/zh_CN.js"></script>
+<script type="text/javascript" src="{$dir}js/kindeditor/easyui_kindeditor.js"></script>
+	</head>
+	<body>
+	<form id="wu-form-menu-{$css_id}" method="post">
+		<table>
+			<tr>
+				<td width="60" align="right">帮助类型:</td>
+				<td><select name="type_id">
+					<volist name="typeList" id="tl">
+						<option value="{$tl.type_id}" <eq name="help.type_id" value="tl.type_id">selected</eq>>{$tl.type_name}</option>
+					</volist>
+				</select></td>
+			</tr>
+			<tr>
+				<td align="right">帮助标题:</td>
+				<td><input type="text" name="help_title" id="help_title" class="wu-text" value="{$help.help_title}" /></td>
+			</tr>
+			<tr>
+				<td align="right">内容:</td>
+				<td><textarea id="content" name="content" class="easyui-kindeditor" style="width: 90%; height: 240px;visibility: hidden;" options="validType:'length[0,500]'" >{$help.help_content}</textarea></td>
+			</tr>
+		</table>
+	</form>
+
+		<script>
+			var editor;
+         KindEditor.ready(function (K) {
+             editor = K.create('textarea[name="content"]', {
+                 allowFileManager: true,
+                 resizeType: 1,
+                 allowPreviewEmoticons: false,
+                 items: [
+                     'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                     'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                     'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+             });
+         });
+		
+		</script>
+	</body>
+</html>

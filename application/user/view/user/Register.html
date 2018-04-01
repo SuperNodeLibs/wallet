@@ -1,0 +1,55 @@
+<!--Content-->
+	<section class="container-fluid">
+		<div class="container">
+			<div class="col-md-5 login_box">
+				<form id="loginform" method="post" action="/registerAction">
+				<h3 class="login_tit"><span class="glyphicon glyphicon-log-in"></span> {$Think.lang.LOGIN_REGISTER}</h3>
+				<div class="form-group">
+					<label>{$Think.lang.LOGIN_USERNAME} : </label>
+					<input type="text" placeholder="{$Think.lang.LOGIN_USERNAME_HINT}" class="form-control" name="username">
+				</div>
+				<div class="form-group">
+					<label>{$Think.lang.LOGIN_USER} : </label>
+					<input type="email" placeholder="{$Think.lang.LOGIN_USER_HINT}" class="form-control" name="regemail" required>
+				</div>
+				<div class="form-group">
+					<label>{$Think.lang.LOGIN_PASS} : </label>
+					<input type="password" placeholder="{$Think.lang.LOGIN_PASSWORD_HINT}" class="form-control" name="password" required>
+				</div>
+				<div class="form-group">
+					<label>{$Think.lang.LOGIN_PASSWORD_CONFIRM} : </label>
+					<input type="password" placeholder="{$Think.lang.LOGIN_PASSWORD_CONFIRM_OK}" class="form-control" name="relog_pass" required>
+				</div>
+				<div class="form-group" style="overflow:hidden;">
+						<div class="col-sm-5 form-control" style="height: 100px;overflow-y: auto; padding:0px 10px">
+							<h4><span style="font-size:22;color:#707271">{$Think.lang.LOGIN_PAYSET_TITLE}</span></h4>
+							<p style="line-height:24px;color:#707271">{$Think.lang.LOGIN_PAYSET_DEAR} : </p>
+							<p style="text-indent:2em;line-height:24px;color:#707271">{$Think.lang.LOGIN_PAYSET_PART1}</p>
+							<p style="text-indent:2em;line-height:24px;color:#707271">{$Think.lang.LOGIN_PAYSET_PART2}</p>
+								<p style="text-indent:2em;line-height:24px;color:#707271">{$Think.lang.LOGIN_PAYSET_PART3}</p>
+								<div style="text-align:right; padding:0px 10px 10px 0px;line-height:24px;line-height:24px;color:#707271">{$Think.lang.LOGIN_PAYSET_END}</div>
+						</div>
+				</div>
+				<div class="form-group">
+					<label>{$Think.lang.LOGIN_RESK_STATEMENT} : </label>
+					<input type="checkbox" id="statement" name="statement" value="1" style="width:13px"><span style="color:#707271;">{$Think.lang.LOGIN_RESK_AGREEMENT}</span>
+				</div>		
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary login_btn" id="btn_re">{$Think.lang.LOGIN_REGISTER_OK}</button>
+				</div>
+				<div class="form-group text-right loginctl_box">
+					<a href="/login">{$Think.lang.LOGIN_READY_LOGIN}</a>
+					<a href="/forgetpassword">{$Think.lang.LOGIN_FORGETPASSWORD}</a>
+				</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- <script>
+		//防止重复发送邮件
+		$("#btn_re").click(function(){
+			var self=$(this);
+			self.attr({"disabled":"disabled"});
+		});
+	</script> -->
+<!--Content end-->

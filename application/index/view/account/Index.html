@@ -1,0 +1,84 @@
+<div class="col-md-10 wallet_min">
+				<div class="col-md-12">
+					<h4>多账号管理</h4>
+					<table class="table table-bordered text-center">
+						<tr>
+							<td>账号名称</td>
+							<td>账号地址</td>
+							<td>操作</td>
+						</tr>
+						<volist name="address" id="add">
+							<tr>
+								<td>{$add.address_name}</td>
+								<td>{$add.address_account}</td>
+								<td><a href="#" onclick="javascript:editAddress('{$add.address_id}', '{$add.address_name}','{$add.address_account}')" class="btn btn-primary">{$Think.lang.INDEX_ADDRESS_MODIFY}</a><button type="button" class="btn btn-default" onclick="javascript:delAddress('{$add.address_id}')" >{$Think.lang.INDEX_ADDRESS_DELETE}</button></td>
+							</tr>
+						</volist>
+						
+					</table>
+					<div class="pagesbox">
+	    				{$page}
+	    			</div><!--end pagebox-->
+    			</div>
+    			<div class="col-md-12">
+    				<form name="address" id="address" method="post">
+	    					<input type="hidden" id="address_id" name="address_id"/>
+	    				<h4>{$Think.lang.INDEX_ADDRESS_ADDMODIFY_CONTACT}<button name="new" value="新增" id="account_new" onclick="generateAddress()"></button></h4>
+	    				<div class="col-md-3 nopadding">
+	    					<div class="form-group lr_mode_group">
+	    						<label>{$Think.lang.INDEX_ADDRESS_NAME}</label>
+	    						<span class="r_control">
+	    							<input type="text" class="form-control" name="address_name" id="address_name" datatype="*30" nullmsg="{$Think.lang.INDEX_ADDRESS_NAME_INPUT}" errormsg="{$Think.lang.INDEX_ADDRESS_NAME_RULE}" />
+	    						</span>
+	    					</div>
+	    				</div>
+	    				<div class="col-md-9">
+	    					<div class="form-group lr_mode_group">
+	    						<label class="text-right">{$Think.lang.INDEX_ADDRESS_ADDRESS}： </label>
+	    						<span class="r_control" style="vertical-align: middle;">
+	    							<div class="input-group">
+	    								<input type="text" class="form-control" name="address_account" id="address_account" datatype="*56" nullmsg="{$Think.lang.INDEX_ADDRESS_ADDRESS_INPUT}" errormsg="{$Think.lang.INDEX_ADDRESS_ADDRESS_RULE}" placeholder="{$Think.lang.INDEX_ADDRESS_ADDRESS_INPUT_RULE}"/>
+	    								<span class="input-group-btn">
+	    								<button type="submit" class="btn btn-success">{$Think.lang.INDEX_ADDRESS_SAVE}</button>
+	    								</span>
+	    							</div>
+	    						</span>
+	    					</div>
+	    				</div>
+    				</form>
+    			</div>
+			</div>
+		</div>
+	</section>
+<!--Content end-->
+<script>
+	//生成账号
+	function generateAddress(){
+		var p = generateAccount();
+		$('#address_account').val(p);
+	}
+	function editAddress(id, name, account){
+		$('#address_id').val(id);
+		$('#address_name').val(name);
+		$('#address_account').val(account);
+	}
+	
+	function delAddress(id){
+		location.href="/deladdress/id/"+id;
+	}
+	var form = $("#address").Validform({
+		tiptype: function(msg, o, cssctl) {
+			if(!o.obj.is("form")) {
+				o.obj.parents('.form-group').find('.s_tips_box').remove();
+				if(o.type == 3) {
+					//alert(msg);
+					o.obj.parents('.form-group').append('<div class="s_tips_box" style="padding-left:50px;">*'+msg+'</div>');
+				}
+			}
+		},
+		datatype: {
+			"*30": /^.{2,30}$/,
+			"*56": /^G[A-Z|0-9]{55,55}$/
+		}
+	});
+</script>

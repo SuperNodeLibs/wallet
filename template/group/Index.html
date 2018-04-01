@@ -1,0 +1,354 @@
+<div class="easyui-layout" data-options="fit:true">
+	<!-- Begin of toolbar -->
+	<div id="wu-toolbar-menu-{$css_id}">
+		<div class="wu-toolbar-button">
+			<a href="#" class="easyui-linkbutton" iconCls="icon-add" onclick="openAdd{$css_id}()" plain="true">添加记录</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-edit" onclick="openEdit{$css_id}()" plain="true">修改记录</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-search" onclick="openSearch{$css_id}()" plain="true">搜索记录</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-remove" onclick="remove{$css_id}()" plain="true">删除所选</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-reload" onclick="reload{$css_id}()" plain="true">刷新记录</a>
+		</div>
+
+	</div>
+	<!-- End of toolbar -->
+	<table id="wu-datagrid-menu-{$css_id}" class="easyui-datagrid" toolbar="#wu-toolbar-menu-{$css_id}"></table>
+</div>
+<!-- Begin of easyui-dialog -->
+<div id="wu-dialog-menu-{$css_id}" class="easyui-dialog" data-options="closed:true,iconCls:'icon-save'" style="width:750px; padding:10px;">
+	<form id="wu-form-menu-{$css_id}" method="post">
+		<table width="100%">
+			<tr>
+				<td width="60" align="right">角色名称:</td>
+				<td><input type="text" name="group_name" id="group_name" class="wu-text" datatype="s2-132" errormsg="至少2个字符,最多32个字符！"/></td>
+			</tr>
+			<tr>
+				<td align="right">角色权限:</td>
+				<td><input type="hidden" name="group_permission" id="group_permission"/>
+					<table width="100%" cellpadding="4" cellspacing="1" border="0" class="forumline"  align="left"><tr style="background-color: #EEE"><td colspan="20" class="row2"><input type="checkbox" id="chkall" name='chkall'><strong>全选/反选</strong></td></tr>
+						<tr style="background-color: #EEE"><td valign="top" class="row2" width="50%">
+							<volist name="menu" id="m1" mod="2">
+								<input type="checkbox" name="group_main" value="{$m1.menu_id}">{$m1.menu_name}<br/>
+								<volist name="m1.sub_menu" id="m2">
+									&nbsp;&nbsp;<input type="checkbox" name="group_sub" value="{$m2.menu_id}">{$m2.menu_name} 权限=> 
+										<input type="checkbox" name="C{$m2.menu_id}" value="8">添加 
+										<input type="checkbox" name="U{$m2.menu_id}" value="4">修改 
+										<input type="checkbox" name="R{$m2.menu_id}" value="2">查看 
+										<input type="checkbox" name="D{$m2.menu_id}" value="1">删除<br/>
+								</volist>
+								<eq name="mod" value="1"></td><td valign="top" class="row2" width="50%"></eq>
+							</volist>
+						</td></tr></table>
+					
+				</td>
+			</tr>
+			<tr>
+				<td align="right">角色锁定:</td>
+				<td><select name="group_lock" id="group_lock">
+					<option value='0'>正常</option>
+					<option value='1'>隐藏</option>
+				</select></td>
+			</tr>
+		</table>
+	</form>
+</div>
+<!-- End of easyui-dialog -->
+<script type="text/javascript">
+	/**
+	 * 全选/反选
+	 */
+	$("#chkall").click(function(){   
+	    if(this.checked){   
+	        $(".forumline input[type='checkbox']").prop("checked", true);  
+	    }else{   
+			$(".forumline input[type='checkbox']").prop("checked", false);
+	    }   
+	});
+	/**
+	 *刷新记录
+	 */
+	function reload{$css_id}(){
+		$('#wu-datagrid-menu-{$css_id}').datagrid('reload');
+	}
+	
+	function getPermission(){
+		var permi = "";
+		var subtotal=0;
+		var count = 0;
+		var start = false;
+		$(".forumline input[type='checkbox']").each(function(){
+			
+			if($(this).attr('name') == "group_main" && $(this).prop("checked")){
+				permi += $(this).val()+":0;";
+			}
+			if($(this).attr('name') == "group_sub" && $(this).prop("checked")){
+				permi += $(this).val()+":";	
+				start = true;
+			}
+			if(start && $(this).attr('name') != "group_sub" && count < 5){
+				if($(this).prop("checked"))
+					subtotal += parseInt($(this).val());
+				count++;
+			}
+			if(count == 4){
+				permi += subtotal+";";
+				start = false;
+				subtotal = 0;
+				count = 0;
+			}
+		});
+		return permi;
+	}
+	
+	function setPermission(permi){
+		var pArray = permi.split(';');
+		for (i=0;i < pArray.length ;i++ ) 
+		{
+			var gArray = pArray[i].split(':');
+			$(".forumline input[type='checkbox'][name='group_main'][value='"+gArray[0]+"']").prop('checked', true);
+			$(".forumline input[type='checkbox'][name='group_sub'][value='"+gArray[0]+"']").prop('checked', true);
+			if((gArray[1] & 8)>>3)
+				$(".forumline input[type='checkbox'][name='C"+gArray[0]+"']").prop('checked', true);
+			if((gArray[1] & 4)>>2)
+				$(".forumline input[type='checkbox'][name='U"+gArray[0]+"']").prop('checked', true);
+			if((gArray[1] & 2)>>1)
+				$(".forumline input[type='checkbox'][name='R"+gArray[0]+"']").prop('checked', true);
+			if((gArray[1] & 1)>>0)
+				$(".forumline input[type='checkbox'][name='D"+gArray[0]+"']").prop('checked', true);
+		} 
+	}
+	/**
+	 * Name 添加记录
+	 */
+	function add{$css_id}() {	
+		$('#group_permission').val(getPermission());
+		$('#wu-form-menu-{$css_id}').form('submit', {
+			url: 'index/group/addAction',
+			success: function(data) {
+				if(data) {
+					reload{$css_id}();
+					$.messager.alert('信息提示', '提交成功！', 'info');
+					$('#wu-dialog-menu-{$css_id}').dialog('close');
+
+				} else {
+					$.messager.alert('信息提示', '提交失败！', 'info');
+				}
+			}
+		});
+	}
+
+	/**
+	 * Name 修改记录
+	 */
+	function edit{$css_id}() {
+		$('#wu-form-menu-{$css_id}').form('submit', {
+			url: 'index/group/editAction/group_id/' + item.group_id,
+			success: function(data) {
+				if(data) {
+					reload{$css_id}();
+					$.messager.alert('信息提示', '提交成功！', 'info');
+					$('#wu-dialog-menu-{$css_id}').dialog('close');
+				} else {
+					$.messager.alert('信息提示', '提交失败！', 'info');
+				}
+			}
+		});
+	}
+
+	/**
+	 * Name 删除记录
+	 */
+	function remove{$css_id}() {
+		$.messager.confirm('信息提示', '确定要删除该记录？', function(result) {
+			if(result) {
+				var items = $('#wu-datagrid-menu-{$css_id}').datagrid('getSelections');
+				var ids = [];
+				$(items).each(function() {
+					ids.push(this.group_id);
+				});
+				$.ajax({
+					url: 'index/group/delAction/ids/'+ids,
+					data: '',
+					success: function(data) {
+						if(data) {
+							reload{$css_id}();
+							$.messager.alert('信息提示', '删除成功！', 'info');
+						} else {
+							$.messager.alert('信息提示', '删除失败！', 'info');
+						}
+					}
+				});
+			}
+		});
+	}
+
+	/**
+	 * Name 打开添加窗口
+	 */
+	function openAdd{$css_id}() {
+		$('#wu-form-menu-{$css_id}').form('clear');
+		$('#wu-dialog-menu-{$css_id}').dialog({
+			closed: false,
+			modal: true,
+			title: "添加信息",
+			buttons: [{
+				text: '确定',
+				iconCls: 'icon-ok',
+				handler: add{$css_id}
+			}, {
+				text: '取消',
+				iconCls: 'icon-cancel',
+				handler: function() {
+					$('#wu-dialog-menu-{$css_id}').dialog('close');
+				}
+			}]
+		});
+	}
+
+	/**
+	 * Name 打开修改窗口
+	 */
+	function openEdit{$css_id}() {
+		$('#wu-form-menu-{$css_id}').form('clear');
+		var item = $('#wu-datagrid-menu-{$css_id}').datagrid('getSelected');
+		//alert(item.group_id);return;
+		$.ajax({
+			url: 'index/group/edit/group_id/' + item.group_id,
+			data: '',
+			success: function(data) {
+				if(!data) {
+					$('#wu-dialog-menu-{$css_id}').dialog('close');
+				} else {
+					//绑定值
+					$('#wu-form-menu-{$css_id}').form('load', JSON.parse(data));
+					setPermission($('#group_permission').val());
+				}
+			}
+		});
+		$('#wu-dialog-menu-{$css_id}').dialog({
+			closed: false,
+			modal: true,
+			title: "修改信息",
+			buttons: [{
+				text: '确定',
+				iconCls: 'icon-ok',
+				handler: function() {
+					$('#group_permission').val(getPermission());
+					$('#wu-form-menu-{$css_id}').form('submit', {
+						url: 'index/group/editAction/group_id/' + item.group_id,
+						success: function(data) {
+							if(data) {
+								reload{$css_id}();
+								$.messager.alert('信息提示', '提交成功！', 'info');
+								$('#wu-dialog-menu-{$css_id}').dialog('close');
+							} else {
+								$.messager.alert('信息提示', '提交失败！', 'info');
+							}
+						}
+					});
+				}
+			}, {
+				text: '取消',
+				iconCls: 'icon-cancel',
+				handler: function() {
+					$('#wu-dialog-menu-{$css_id}').dialog('close');
+				}
+			}]
+		});
+	}
+
+	/**
+	 * Name 分页过滤器
+	 */
+	function pagerFilter{$css_id}(data) {
+		if(typeof data.length == 'number' && typeof data.splice == 'function') {
+			data = {
+				total: data.length,
+				rows: data
+			}
+		}
+
+		var dg = $(this);
+		var opts = dg.datagrid('options');
+		var pager = dg.datagrid('getPager');
+		pager.pagination({
+			onSelectPage: function(pageNum, pageSize) {
+				opts.pageNumber = pageNum;
+				opts.pageSize = pageSize;
+				pager.pagination('refresh', {
+					pageNumber: pageNum,
+					pageSize: pageSize
+				});
+				dg.datagrid('loadData', data);
+			}
+		});
+		if(!data.originalRows) {
+			data.originalRows = (data.rows);
+		}
+		var start = (opts.pageNumber - 1) * parseInt(opts.pageSize);
+		var end = start + parseInt(opts.pageSize);
+		data.rows = (data.originalRows.slice(start, end));
+		return data;
+	}
+
+	/**
+	 * Name 载入数据
+	 */
+	$('#wu-datagrid-menu-{$css_id}').datagrid({
+		url: 'index/group/data',
+		loadFilter: pagerFilter{$css_id},
+		rownumbers: true,
+		singleSelect: false,
+		pageSize: 10,
+		pagination: true,
+		multiSort: true,
+		fitColumns: true,
+		fit: true,
+		columns: [
+			[{
+					checkbox: true
+				},
+				{
+					field: 'group_name',
+					title: '角色名称',
+					width: 100,
+					sortable: true
+				},
+				{
+					field: 'group_permission',
+					title: '角色权限',
+					width: 100,
+					sortable: true
+				},
+				{
+					field: 'group_lock',
+					title: '角色锁定',
+					width: 100
+				},
+				{
+					field: 'group_id',
+					title: '操作',
+					width: 50,
+					formatter: function(value, row) {
+						var str = "";
+						if(value != '' || value != null) {
+							str = "<img src='{$dir}css/icons/page_white_edit.png' onclick='openEdit{$css_id}()'/>";
+							str += "&nbsp;<img src='{$dir}css/icons/delete.png' onclick='remove{$css_id}()'/>";
+							return str;
+						}
+					}
+				}
+			]
+		]
+	});
+	$("#wu-form-menu-{$css_id}").Validform({
+				tiptype: function(msg, o, cssctl) {
+					if(!o.obj.is("form")) {
+						var objtip = o.obj.parent().parent().next().find("p");
+						cssctl(objtip, o.type);
+						objtip.text(msg);
+						if(o.type == 2) {
+							objtip.text('');
+						}
+					}
+				}});
+</script>

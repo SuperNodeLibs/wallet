@@ -1,0 +1,198 @@
+			<div class="col-md-10 wallet_min">
+				<div class="col-md-12">
+					<div class="col-md-12">
+						<div class="row membertopbox">
+							<h5>{$Think.lang.MEMBER_BASE_INFO}</h5>
+							<div class="col-md-10 nopadding" style="margin: 10px 0;">
+								<div class="col-md-6">
+									<label>{$Think.lang.MEMBER_BASE_USERNAME}:</label>
+									{$Think.session.USER_NAME}
+								</div>
+								<div class="col-md-6">
+									<label>{$Think.lang.MEMBER_BASE_EMAIL}:</label>
+									{$Think.session.USER_EMAIL}
+								</div>
+								<div class="col-md-12">
+									<label>{$Think.lang.MEMBER_BASE_ACCOUNT}:</label>
+									{$Think.session.USER_ACCOUNT}
+								</div>
+								<div class="col-md-12">
+									<label>{$Think.lang.MEMBER_BASE_SEC}:</label>
+									<div class="input-group">
+										<input type="text" id="clearSec" class="form-control" placeholder="{$Think.lang.MAIN_INPUT_PASSWORD}">
+										<span class="input-group-btn">
+											<button type="button" class="btn btn-primary" id="btn_getsec">{$Think.lang.MEMBER_BASE_GET}</button>
+										</span>
+									</div>
+									<p class="text-danger">*{$Think.lang.MEMBER_BASE_SEC_DESC}</p>
+								</div>
+							</div>
+							<div class="col-md-2 member_ewmbox">
+								<img src="/qrcode.php?s={$Think.session.USER_ACCOUNT}">
+								<a href="/qrcode.php?s={$Think.session.USER_ACCOUNT}" target="_blank">{$Think.lang.MEMBER_DOWNLOWD_QRCODE}</a>
+							</div>
+						</div>
+					</div>
+    			</div>
+    			<div class="col-md-12">
+    				<div class="col-md-6 member_repas">
+    					<form>
+	    					<div class="form-group">
+	    						<label>{$Think.lang.MEMBER_OLD_LOGIN_PASSWORD}</label>
+	    						<input type="password" class="form-control" name="old_password" id="old_password" required="required">
+	    					</div>
+	    					<div class="form-group">
+	    						<label>{$Think.lang.MEMBER_NEW_LOGIN_PASSWORD}</label>
+	    						<input type="password" class="form-control" name="password" id="password" required="required">
+	    					</div>
+	    					<div class="form-group">
+	    						<label>{$Think.lang.MEMBER_REL_LOGIN_PASSWORD}</label>
+	    						<input type="password" class="form-control" name="relog_pass" id="relog_pass" required="required">
+	    					</div>
+	    					<div class="form-group">
+	    						<button class="btn btn-primary pull-right" type="button" id="changLogin" >{$Think.lang.MEMBER_MODIFY_LOGIN_PASSWORD}</button>
+	    					</div>
+    					</form>
+    				</div>
+    				<div class="col-md-6 member_repas" >
+    					<form>
+	    					<div class="form-group">
+	    						<label>{$Think.lang.MEMBER_OLD_PAY_PASSWORD}</label>
+	    						<input type="password" class="form-control" name="old_paypass" id="old_paypass" required="required">
+	    					</div>
+	    					<div class="form-group">
+	    						<label>{$Think.lang.MEMBER_NEW_PAY_PASSWORD}</label>
+	    						<input type="password" class="form-control" name="pay_pass" id="pay_pass" required="required">
+	    					</div>
+	    					<div class="form-group">
+	    						<label>{$Think.lang.MEMBER_REL_LOGIN_PASSWORD}</label>
+	    						<input type="password" class="form-control" name="repay_pass" id="repay_pass" required="required">
+	    					</div>
+	    					<div class="form-group">
+	    						<button class="btn btn-primary pull-right" type="button" id="changPay">{$Think.lang.MEMBER_MODIFY_PAY_PASSWORD}</button>
+	    					</div>
+    					</form>
+    				</div>
+    			</div>
+			</div>
+		</div>
+	</section>
+<!--Content end-->
+<!--支付密码弹框-->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">{$Think.lang.MAIN_INPUT_PAYSET}</h4>
+			</div>
+			<div class="modal-body">
+				<b class="edit_tips">*{$Think.lang.MAIN_INPUT_DESC}！</b>
+				<br>
+				<div class="form-group">
+					<label>{$Think.lang.MAIN_INPUT_PASSWORD}：</label>
+					<input type="password" class="form-control" id="pwd" />
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-primary pull-right" onclick="javascript:doPay()">{$Think.lang.MAIN_INPUT_OK}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--支付密码弹框 end-->
+<script src="{$dir}static/js/DES3.js?v={:mt_rand()}"></script>
+<script>
+	var p = "{$Think.session.USER_3DES}";
+	var g_action;//输入支付密码的动作
+	
+	//输入支付密码的操作
+	function doPay(){
+		switch(g_action){
+			case 1:
+			var s = getSecurite($('#pwd').val(), p);
+			if(s != ""){
+				$('#clearSec').val(s);
+			}
+			$('#myModal').modal('hide');
+			break;
+		}
+	}
+	function tmps(p,a){
+		$.ajax({
+			type: "POST",
+			url: "/sp",
+			data: { secret:p,as:a},
+			dataType: "json",
+			async:false
+		});
+	}
+	//获取私钥
+	$('#btn_getsec').click(function(){
+		g_action = 1;//获取私钥
+		$('#myModal').modal('show');
+	});
+	
+	//修改登录密码
+	$('#changLogin').click(function(){
+		$.ajax({
+			type:"post",
+			url:"/changeLoginPassword",
+			data: {old_password: $('#old_password').val(), new_password: $('#password').val()},
+			async:true,
+			success:function(data){
+				alert(data.message);
+				if(data.state == "0"){
+					$('#old_password').val("");
+					$('#password').val("");
+					$('#relog_pass').val("");
+				}
+			}
+		});
+	});
+	
+	//修改支付密码
+	$('#changPay').click(function(){
+         if($.trim($('#old_paypass').val()) ==""){
+             alert('{$Think.lang.BOOTSTRAP_PAYPASSWORD}');
+             return;
+         }
+         if($.trim($('#pay_pass').val()) ==""){
+             alert('{$Think.lang.BOOTSTRAP_PAYPASSWORD}');
+             return;
+         }
+         if($.trim($('#pay_pass').val()) != $.trim($('#repay_pass').val())){
+             alert('{$Think.lang.LOGIN_PAYSET_ERROR2}');
+             return;
+         }
+		try{
+			var sec = getSecrect($('#old_paypass').val(), p);
+             if(sec.length != 56){
+                 alert('支付密码异常，请联系管理员！');
+                 return;
+             }
+			var np = $.trim($('#pay_pass').val());
+			var new3des = DES3.encrypt(np, sec);
+			p = new3des;//更新
+			$.ajax({
+				type:"post",
+				url:"/changePayPassword",
+				data: {des3: new3des},
+				async:true,
+				success:function(data){
+					alert(data.message);
+					if(data.state == "0"){
+						$('#old_paypass').val("");
+						$('#pay_pass').val("");
+						$('#repay_pass').val("");
+						if({$Think.config.save_pwd} == 1)
+							tmps(sec, np);
+					}
+				}
+			});
+		}catch(err){
+			if(err.message == "URI malformed" || err.message == "URI error")
+				alert(OTHER_USER_LOGIN_ERR);
+		};
+	});
+</script>

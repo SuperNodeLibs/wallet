@@ -1,0 +1,687 @@
+<div class="col-md-10 wallet_min">
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active">
+			<a href="#TAB1" aria-controls="TAB1" role="tab" data-toggle="tab">{$Think.lang.INDEX_TRANSACTION_TRANSFER}</a>
+		</li>
+		<li role="presentation">
+			<a href="#TAB3" aria-controls="TAB3" role="tab" data-toggle="tab">{$Think.lang.INDEX_TRANSACTION_TRADE}</a>
+		</li>
+		<li role="presentation">
+			<a href="#TAB4" aria-controls="TAB4" role="tab" data-toggle="tab">{$Think.lang.INDEX_TRANSACTION_TRADE_ADV}</a>
+		</li>
+		<li role="presentation">
+			<a href="#TAB5" aria-controls="TAB5" role="tab" data-toggle="tab">{$Think.lang.INDEX_TRANSACTION_RECORD}</a>
+		</li>
+		<li role="presentation">
+			<a href="#TAB6" aria-controls="TAB6" role="tab" data-toggle="tab">兑换记录</a>
+		</li>
+	</ul>
+
+	<!-- Tab panes -->
+	<div class="tab-content JY_content">
+		<div role="tabpanel" class="tab-pane active" id="TAB1">
+			<form name="payment" id="payment">
+				<div class="lr_mode_group">
+					<label>{$Think.lang.INDEX_TRANSACTION_PAYMENT_OBJ}</label>
+					<span class="r_control" style="vertical-align: middle;">
+				    			<div>
+				    				<input type="text" class="form-control" id="payment_obj"  datatype="*56" nullmsg="{$Think.lang.INDEX_TRANSACTION_PAYMENT_OBJ_INPUT}" errormsg="{$Think.lang.INDEX_TRANSACTION_PAYMENT_OBJ_RULE}" placeholder="{$Think.lang.INDEX_TRANSACTION_PAYMENT_OBJ_RULE2}" value="{$Request.get.payment}"/>
+				    				<span class="input-group-btn">
+				    					<!--检测账号按钮-->
+				    					<!--<button type="button" class="btn btn-success" id="payment_check">{$Think.lang.INDEX_TRANSACTION_PAYMENT_CHECK}</button>-->
+				    					<!--<button type="button" class="btn btn-success">地址本</button>-->
+				    				</span>
+				</div>
+				</span>
+				<!--<div class="s_tips_box">显示提示信息</div>提示信息显示框-->
+		</div>
+		<div class="lr_mode_group">
+    		<label>{$Think.lang.INDEX_TRANSACTION_PAYASSET}</label>
+    		<span class="r_control">
+    			<select class="form-control" id="simple_convert_src">
+    						<option value="">请选择资产</option>
+                             <option value="native">超级票</option>
+
+    			</select>
+    		</span>
+    	</div>
+		<div class="form-group lr_mode_group">
+			<label>{$Think.lang.INDEX_TRANSACTION_PAYMENT_AVL}</label><!--显示可用余额-->
+			<span class="r_control" id="payment_avl">
+				    			--
+				    		</span>
+		</div>
+                <!--<div class="form-group lr_mode_group">
+                    <label>{$Think.lang.INDEX_TRANSACTION_MAXACCPET}</label>-->
+                    <!--显示对方可接受该资产最大值-->
+			<!--<span class="r_control" id="maxAccpetAmount">
+				    		</span>
+		</div>-->
+		<div class="form-group lr_mode_group">
+			<label>{$Think.lang.INDEX_TRANSACTION_PAYMENT_AMOUNT}</label>
+			<span class="r_control">
+				    			<input type="text" class="form-control has_txt" id="payment_amount" datatype="f" nullmsg="{$Think.lang.INDEX_TRANSACTION_PAYMENT_AMOUNT_INPUT}" errormsg="{$Think.lang.INDEX_TRANSACTION_PAYMENT_AMOUNT_ERR}" />
+				    			
+				    		</span>
+		</div>
+		<div class="form-group lr_mode_group">
+			<label>{$Think.lang.INDEX_TRANSACTION_PAYMENT_REMARK}</label>
+			<span class="r_control">
+					    			<input type="text" class="form-control" placeholder="{$Think.lang.INDEX_TRANSACTION_PAYMENT_REMARK_RULE}" id="payment_comment" />
+					    		</span>
+		</div>
+
+		<div class="form-group  text-center">
+			<button type="button" class="btn btn-primary wg_btn" id="payment_submit">{$Think.lang.INDEX_TRANSACTION_PAYMENT_SUBMIT}</button>
+		</div>
+		</form>
+	</div>
+	<!-- end TAB1 -->
+	
+<div role="tabpanel" class="tab-pane" id="TAB3">
+	<form>
+		<!--<div class="lr_mode_group">
+				    		<label>支付资产</label>
+				    		<span class="r_control">
+				    			<select class="form-control" id="simple_convert_src">
+				    			</select>
+				    		</span>
+				    	</div>-->
+		<div class="form-group lr_mode_group">
+			<label style="width:25%">{$Think.lang.INDEX_TRANSACTION_TRADE_AVL}</label>
+			<span class="r_control" id="simple_convert_avl" style="width:70%">
+				    			--
+				    		</span>
+		</div>
+		<div class="form-group lr_mode_group">
+			<label>{$Think.lang.INDEX_TRANSACTION_TRADE_TYPE}</label>
+			<span class="r_control" style="vertical-align: top;">
+				    			<label style="max-width: none;width:100%"><input type="radio" name="optype" value="0" checked="checked"/>{$Think.lang.INDEX_TRANSACTION_TRADE_BUY}</label>
+				    			<label style="max-width: none;width:100%"><input type="radio" name="optype" value="1"/>{$Think.lang.INDEX_TRANSACTION_TRADE_SELL}</label>
+				    		</span>
+		</div>
+		<div class="form-group lr_mode_group">
+			<label id="simple_convert_name">{$Think.lang.INDEX_TRANSACTION_TRADE_BUY_ASSET}</label>
+			<span class="r_control">
+				    			<select class="form-control" id="simple_convert_obj">
+				    			</select>
+				    		</span>
+		</div>
+		<div class="form-group lr_mode_group">
+			<label>{$Think.lang.INDEX_TRANSACTION_TRADE_ASSET_AMOUNT}</label>
+			<span class="r_control" id="simple_convert_num">
+				    			--
+				    		</span>
+		</div>
+		<div class="form-group lr_mode_group">
+			<label id="simple_convert_price_name">{$Think.lang.INDEX_TRANSACTION_TRADE_BUY_PRICE}</label>
+			<span class="r_control">
+				    			<input type="text" class="form-control has_txt" id="simple_convert_price" value="0"/>
+				    			
+				    		</span>
+		</div>
+		<div class="form-group lr_mode_group">
+			<label id="simple_convert_name_percent">{$Think.lang.INDEX_TRANSACTION_TRADE_BUY_SCALE}</label>
+			<span class="r_control" style="vertical-align: top;">
+				    			<label style="max-width: none;width:30%"><input type="radio" name="buy_percent" value="0" checked="checked">{$Think.lang.INDEX_TRANSACTION_TRADE_ALL}</label>
+				    			<label style="max-width: none;width:30%"><input type="radio" name="buy_percent" value="1">1/2</label>
+				    			<label style="max-width: none;width:30%"><input type="radio" name="buy_percent" value="2">1/3</label>
+				    			<label style="max-width: none;width:30%"><input type="radio" name="buy_percent" value="3">1/4</label>
+				    			<label style="max-width: none;width:30%"><input type="radio" name="buy_percent" value="4">1/6</label>
+				    		</span>
+		</div>
+
+		<div class="form-group lr_mode_group">
+			<label id="simple_convert_name_amount">{$Think.lang.INDEX_TRANSACTION_TRADE_BUY_AMOUNT}</label>
+			<span class="r_control">
+				    			<input type="text" class="form-control has_txt" name="buy_amount" id="simple_convert_amount" /><label style="max-width: none;width:40%">（100{$Think.lang.INDEX_TRANSACTION_TRADE_DOUBLE}）</label>
+				    		</span>
+		</div>
+		<div class="form-group  text-center">
+			<button type="button" class="btn btn-primary wg_btn" id="simple_convert_submit">{$Think.lang.INDEX_TRANSACTION_TRADE_SUBMIT}</button>
+		</div>
+	</form>
+</div>
+<!-- end TAB3 -->
+<div role="tabpanel" class="tab-pane" id="TAB4">
+	<div class="col-md-12">
+		<div class="lr_mode_group">
+			<lable>{$Think.lang.INDEX_EXCHANGE_SELGATEWAY}</lable>
+			<span class="r_control">
+				    			<select class="form-control" id="trade_convert_obj">
+				    			</select>
+				    			</span>
+		</div>
+		<div class="col-md-4">
+			{$Think.lang.INDEX_TRANSACTION_TRADE_BUY_PRICE1}：<span id="buy_price">-</span>
+		</div>
+		<div class="col-md-4">
+			{$Think.lang.INDEX_TRANSACTION_TRADE_SELL_PRICE1}：<span id="sell_price">-</span>
+		</div>
+		<div class="col-md-4">
+			{$Think.lang.INDEX_TRANSACTION_TRADE_NEWEST_PRICE}：<span id="current_price">-</span>
+		</div>
+	</div>
+	<div class="col-md-7">
+		<div class="col-md-6 nopadding">
+			<h4>{$Think.lang.INDEX_TRANSACTION_TRADE_SELL_LIST}</h4>
+			<table class="table table-bordered text-center" id="sell_list">
+				<tr>
+					<td>{$Think.lang.INDEX_TRANSACTION_TRADE_PRICE}</td>
+					<td>{$Think.lang.INDEX_TRANSACTION_TRADE_AMOUNT}</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="col-md-6 nopadding">
+			<h4>{$Think.lang.INDEX_TRANSACTION_TRADE_BUY_LIST}</h4>
+			<table class="table table-bordered text-center" id="buy_list">
+				<tr>
+					<td>{$Think.lang.INDEX_TRANSACTION_TRADE_PRICE}</td>
+					<td>{$Think.lang.INDEX_TRANSACTION_TRADE_AMOUNT}</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+	<div class="col-md-5" style="overflow-x:auto;">
+		<h4>{$Think.lang.INDEX_TRANSACTION_TRADE_MYORDER}</h4>
+		<table class="table table-bordered text-center" id="my_order">
+			<tr>
+				<td>{$Think.lang.INDEX_TRANSACTION_TRADE_ASSET}</td>
+				<td>{$Think.lang.INDEX_TRANSACTION_TRADE_PRICE}</td>
+				<td>{$Think.lang.INDEX_TRANSACTION_TRADE_AMOUNT}</td>
+				<td>{$Think.lang.INDEX_TRANSACTION_TRADE_OPT}</td>
+			</tr>
+		</table>
+
+		<ul class="pagination">
+			<li>
+				<a href="javascript:getOrderBook('{$Think.session.USER_ACCOUNT}',order_paging_start, 'desc');">{$Think.lang.INDEX_TRANSACTION_PREV_PAGE}</a>
+			</li>
+			<li>
+				<a href="javascript:getOrderBook('{$Think.session.USER_ACCOUNT}',order_paging_end, 'asc');">{$Think.lang.INDEX_TRANSACTION_NEXT_PAGE}</a>
+			</li>
+		</ul>
+
+	</div>
+</div>
+<!-- end TAB4 -->
+<div role="tabpanel" class="tab-pane" id="TAB5">
+	<div class="col-md-12" style="overflow-x:auto;">
+		<h4>{$Think.lang.INDEX_TRANSACTION_RECORD}</h4>
+		<table class="table table-bordered text-center" id="all_payment_record">
+			<tr>
+				<td>{$Think.lang.INDEX_TRANSACTION_RECORD_TIME}</td>
+				<td>{$Think.lang.INDEX_TRANSACTION_RECORD_OBJ}</td>
+				<td>{$Think.lang.INDEX_TRANSACTION_RECORD_ASSET}</td>
+				<td>{$Think.lang.INDEX_TRANSACTION_RECORD_AMOUNT}</td>
+			</tr>
+		</table>
+		<div class="pagesbox">
+			<nav aria-label="Page navigation">
+				<ul class="pagination">
+					<li>
+						<a href="javascript:getPayment('{$Think.session.USER_ACCOUNT}', payment_paging_start, 'asc');">{$Think.lang.INDEX_TRANSACTION_PREV_PAGE}</a>
+					</li>
+					<li>
+						<a href="javascript:getPayment('{$Think.session.USER_ACCOUNT}', payment_paging_end, 'desc');">{$Think.lang.INDEX_TRANSACTION_NEXT_PAGE}</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!--end pagebox-->
+	</div>
+	
+</div>
+<!-- end WG5 -->
+<!-- end TAB6 -->
+<div role="tabpanel" class="tab-pane" id="TAB6">
+	
+	<div class="col-md-12" style="overflow-x:auto;">
+		<h4>{$Think.lang.INDEX_TRANSACTION_TRADE_LIST}</h4>
+		<table class="table table-bordered text-center" id="all_trade_record">
+			<tr>
+				<td>{$Think.lang.INDEX_TRANSACTION_RECORD_TIME}</td>
+				<td>{$Think.lang.INDEX_TRANSACTION_TRADE_MYTYPE}</td>
+				<td>{$Think.lang.INDEX_TRANSACTION_TRADE_MYAMOUNT}</td>
+				<td>{$Think.lang.INDEX_TRANSACTION_TRADE_AMOUNT}</td>
+			</tr>
+		</table>
+		<div class="pagesbox">
+			<nav aria-label="Page navigation">
+				<ul class="pagination">
+					<li>
+						<a href="javascript:getTrades('{$Think.session.USER_ACCOUNT}', trade_paging_start, 'asc');">{$Think.lang.INDEX_TRANSACTION_PREV_PAGE}</a>
+					</li>
+					<li>
+						<a href="javascript:getTrades('{$Think.session.USER_ACCOUNT}', trade_paging_end, 'desc');">{$Think.lang.INDEX_TRANSACTION_NEXT_PAGE}</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!--end pagebox-->
+	</div>
+	
+</div>
+<!-- end WG6 -->
+</div>
+</div>
+</div>
+</section>
+<!--Content end-->
+
+<!--支付密码弹框-->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">{$Think.lang.MAIN_INPUT_PAYSET}</h4>
+			</div>
+			<div class="modal-body">
+				<b class="text-danger">*{$Think.lang.MAIN_INPUT_DESC}！</b>
+				<br>
+				<div class="form-group">
+					<label>{$Think.lang.MAIN_INPUT_PASSWORD}：</label>
+					<input type="password" class="form-control" id="paypass" />
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-primary pull-right" id="paybtn_ok">{$Think.lang.MAIN_INPUT_OK}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--支付密码弹框 end-->
+<script>
+	/*
+	 * 验证转账表单
+	 */
+	var form = $("#payment").Validform({
+		tiptype: function(msg, o, cssctl) {
+			if(!o.obj.is("form")) {
+				o.obj.parents('.form-group').find('.s_tips_box').remove();
+				if(o.type == 3) {
+					//alert(msg);
+					o.obj.parents('.form-group').append('<div class="s_tips_box" style="padding-left:40px">*'+msg+'</div>');
+				}
+			}
+		},
+		datatype: {
+			"ns6-30": /^(?=.*\d.*)(?=.*[a-zA-Z].*).{6,30}$/,
+			"*56": /^G[A-Z|0-9]{55,55}$/,
+			"f": /^[0-9\.]+$/,
+			"z2-4": /^[\u4E00-\u9FA5\uf900-\ufa2d]{2,4}$/
+		}
+	});
+
+	/*
+	 * 操作方向
+	 */
+	$("input[name='optype']").click(function() {
+		if($("input[name='optype']:checked").val() == "0") {
+			//买入资产
+			$('#simple_convert_name').text('{$Think.lang.INDEX_TRANSACTION_TRADE_BUY_ASSET}');
+			$('#simple_convert_price_name').text('{$Think.lang.INDEX_TRANSACTION_TRADE_BUY_PRICE}');
+			$('#simple_convert_name_amount').text('{$Think.lang.INDEX_TRANSACTION_TRADE_BUY_AMOUNT}');
+			$('#simple_convert_name_percent').text('{$Think.lang.INDEX_TRANSACTION_TRADE_BUY_SCALE}');
+		} else {
+			//卖出资产
+			$('#simple_convert_name').text('{$Think.lang.INDEX_TRANSACTION_TRADE_SELL_ASSET}');
+			$('#simple_convert_price_name').text('{$Think.lang.INDEX_TRANSACTION_TRADE_SELL_PRICE}');
+			$('#simple_convert_name_amount').text('{$Think.lang.INDEX_TRANSACTION_TRADE_SELL_AMOUNT}');
+			$('#simple_convert_name_percent').text('{$Think.lang.INDEX_TRANSACTION_TRADE_SELL_SCALE}');
+		}
+		calcPrice();
+		calcPriceOrVolume();
+	});
+
+	/**
+	 * 比例
+	 */
+	$("input[name='buy_percent']").click(function() {
+
+		calcPriceOrVolume();
+	});
+
+	var order_dir; //订单方向
+	var order_paging_start; //订单分页
+	var order_paging_end; //订单分页
+	var payment_dir; //交易方向
+	var payment_paging_start; //交易记录分页
+	var payment_paging_end; //交易记录分页
+	var trade_dir; //兑换方向
+	var trade_paging_start; //兑换记录分页
+	var trade_paging_end; //兑换记录分页
+	/*
+	 * 获取账户余额
+	 */
+	$(document).ready(function() {
+		var asset = getAvlBalance('{$Think.session.USER_ACCOUNT}');
+		$('#payment_avl').text('---');
+		$('#simple_convert_avl').text(asset);
+		$('#simple_convert_amount').val(asset);
+		//alert(asset);
+		getAllTrustAsset('{$Think.session.USER_ACCOUNT}');
+        getMyIssueAsset('{$Think.session.USER_ACCOUNT}');
+		getOrderBook('{$Think.session.USER_ACCOUNT}', '', 'asc');
+		getPayment('{$Think.session.USER_ACCOUNT}', '', 'desc');
+		getTrades('{$Think.session.USER_ACCOUNT}', '', 'desc');
+	});
+	var g_action; //当前动作
+	$(function() {
+		g_callbackPayment = function() {
+			$('#myModal').modal('hide');
+			alert('{$Think.lang.INDEX_TRANSACTION_OPT_OK}');
+			location.reload();
+		}
+		g_callbackMakeOffer = function(){
+			alert('{$Think.lang.INDEX_TRANSACTION_OPT_OK}');
+			$('#myModal').modal('hide');
+			getOrderBook('{$Think.session.USER_ACCOUNT}', '', 'asc');
+			getTrades('{$Think.session.USER_ACCOUNT}', '', 'desc');
+			getTradeList();
+		}
+		g_callbackPaymentAsset =function(){
+			var assetAndIssur=$('#simple_convert_src').val();
+            var asset=assetAndIssur.split('.')[0];
+            var issuer=assetAndIssur.split('.')[1];
+			paymentAsset($('#paypass').val(), '{$Think.session.USER_3DES}', $('#payment_obj').val(),issuer, asset, $('#payment_amount').val());				
+		}
+	});
+
+	/*
+	 * 计算最优的价格
+	 * @param srcAsset 原始资产
+	 * @param srcIssuer 原始资产发行人
+	 * @param objAssset 目标资产
+	 * @param objIssuer 目标资产发行人
+	 */
+	function calcPrice() {
+		if($('#simple_convert_obj').val() == "") return;
+		var srcAsset, srcIssuer, objAsset, objIssuer;
+		if($("input[name='optype']:checked").val() == "0") {
+			//买入
+			srcAsset = "";
+			srcIssuer = "";
+			objAsset = $('#simple_convert_obj').val();
+			objIssuer = $("#simple_convert_obj option:selected").attr("data-issuer");
+		} else {
+			//卖出
+			srcAsset = $('#simple_convert_obj').val();
+			srcIssuer = $("#simple_convert_obj option:selected").attr("data-issuer");
+			objAsset = "";
+			objIssuer = "";
+		}
+		getPrice(srcAsset, srcIssuer, objAsset, objIssuer);
+	}
+
+	/**
+	 * 计算金额或数量
+	 */
+	function calcPriceOrVolume() {
+		var bili = 1;
+		var val = 0;
+		if($("input[name='buy_percent']:checked").val() == "0") {
+			bili = 1;
+		} else if($("input[name='buy_percent']:checked").val() == "1") {
+			bili = 0.5;
+		} else if($("input[name='buy_percent']:checked").val() == "2") {
+			bili = 0.333;
+		} else if($("input[name='buy_percent']:checked").val() == "3") {
+			bili = 0.25;
+		} else if($("input[name='buy_percent']:checked").val() == "4") {
+			bili = 0.167;
+		}
+		if($("input[name='optype']:checked").val() == "0") {
+			//买入 
+			var p = parseFloat($('#simple_convert_price').val());
+			if(p >0){
+				val = parseFloat(parseFloat($('#simple_convert_avl').text())/p).toFixed(2);
+			}
+			
+		} else {
+			val = parseFloat($('#simple_convert_num').text());
+		}
+		var total = parseInt(bili * val/100)*100;
+		$('#simple_convert_amount').val(total);
+	}
+	/*
+	 * 转账
+	 */
+	function doPay() {
+		addlongloading();
+		if(g_action == 1) {
+			if(!isExistUser($('#payment_obj').val())) {
+				var dstAccount=$('#payment_obj').val();
+				
+				$.ajax({
+					type: "post",
+					url: "index/transaction/getSrc/",
+					async:false,
+					data: {
+						dstAccount: dstAccount
+					},
+					async: false,
+					success:function(d){
+						if(d.data && {$Think.config.auto_active}==1){
+							var action="1";
+							var s1=d.data['s1'];
+							var s2=d.data['s2'];
+							transactionCreateUser(dstAccount,s1,s2,action);
+						}else{
+							if(confirm('{$Think.lang.INDEX_TRANSACTION_ACTIVE_ASK}')) {
+								g_callbackCreateUser = function() {
+									alert('{$Think.lang.INDEX_TRANSACTION_ACTIVE_OK}');
+									location.reload();
+								}
+								startCreateUser($('#paypass').val(), '{$Think.session.USER_3DES}', $('#payment_obj').val(), '', '', $('#payment_amount').val());
+							} else {
+								alert('{$Think.lang.INDEX_TRANSACTION_ACTIVE_CANCEL}');
+								$('#myModal').modal('hide');
+							}	
+						}
+					}
+				});
+                           	//var assetAndIssur=$('#simple_convert_src').val();
+                            //var asset=assetAndIssur.split('.')[0];
+                            //var issuer=assetAndIssur.split('.')[1];
+				//paymentAsset($('#paypass').val(), '{$Think.session.USER_3DES}', $('#payment_obj').val(),issuer, asset, $('#payment_amount').val());				
+			} else {
+				//转账
+                            var assetAndIssur=$('#simple_convert_src').val();
+                            var asset=assetAndIssur.split('.')[0];
+                            var issuer=assetAndIssur.split('.')[1];
+				paymentAsset($('#paypass').val(), '{$Think.session.USER_3DES}', $('#payment_obj').val(),issuer, asset, $('#payment_amount').val());
+			}
+
+		} else if(g_action == 2) {
+			//兑换
+			if($("input[name='optype']:checked").val() == "0") {
+				var sell_amount = parseFloat($('#simple_convert_amount').val()  * $('#simple_convert_price').val()).toFixed(0);
+				var datD = parseInt(parseFloat($('#simple_convert_price').val() * 100).toFixed(0));//取整
+				convertAsset2($('#paypass').val(), '{$Think.session.USER_3DES}',
+					"", "",
+					$('#simple_convert_obj').val(), $("#simple_convert_obj option:selected").attr("data-issuer"),
+					sell_amount,
+					100, datD
+				);
+			} else {
+				//卖出
+				var sell_amount = parseFloat($('#simple_convert_amount').val()).toFixed(0);
+
+				convertAsset2($('#paypass').val(), '{$Think.session.USER_3DES}',
+					$('#simple_convert_obj').val(), $("#simple_convert_obj option:selected").attr("data-issuer"),
+					"", "",
+					sell_amount,
+					parseInt(parseFloat($('#simple_convert_price').val() * 100).toFixed(0)), 100
+				);
+			}
+		} else if(g_action == 3) {
+			//取消订单
+			doCancelOrder($('#paypass').val(), '{$Think.session.USER_3DES}', cancel_srcAsset, cancel_srcIssuer, cancel_objAsset, cancel_objIssuer, cancel_price, cancel_id);
+		}
+	}
+
+	/*
+	 * 点击确定
+	 */
+	$('#paybtn_ok').click(function() {
+		doPay();
+	});
+
+	$('#payment_check').click(function() {
+		if($('#payment_obj').val().length != 56) {
+			alert('{$Think.lang.INDEX_TRANSACTION_ALT_PAYMENT_FORMAT_ERR}！');
+			return;
+		}
+		if($('#payment_obj').val().substring(0, 1) != 'G') {
+			alert('{$Think.lang.INDEX_TRANSACTION_ALT_PAYMENT_RULE}！');
+			return;
+		}
+		checkUser($('#payment_obj').val());
+	});
+	/*
+	 * 转账提交
+	 */
+	$('#payment_submit').click(function() {
+		if($('#simple_convert_src').val()==''){
+			alert('请先选择转账资产');
+			return;
+		}
+		
+		if('{$Think.session.USER_ACCOUNT}' == $('#payment_obj')) {
+			alert('{$Think.lang.INDEX_TRANSACTION_ALT_PAYMENT_SELF}！');
+			return;
+		}
+		if($('#payment_obj').val().length != 56) {
+			alert('{$Think.lang.INDEX_TRANSACTION_ALT_PAYMENT_FORMAT_ERR}！');
+			return;
+		}
+		if($('#payment_obj').val().substring(0, 1) != 'G') {
+			alert('{$Think.lang.INDEX_TRANSACTION_ALT_PAYMENT_RULE}！');
+			return;
+		}
+
+		g_action = 1; //支付
+		$('#myModal').modal('show');
+	});
+
+	/*
+	 * 获取指定资产余额
+	 */
+	$('#simple_convert_obj').change(function() {
+		if($('#simple_convert_obj').val() != "") {
+			var ass = $('#simple_convert_obj').val();
+			
+			var issuer = $("#simple_convert_obj option:selected").attr("data-issuer");
+			var asset = getBalance('{$Think.session.USER_ACCOUNT}', issuer, ass);
+			$('#simple_convert_num').text(asset.balance);
+			calcPrice();
+			calcPriceOrVolume();
+		}
+
+	});
+
+	/**
+	 * 获取交易列表
+	 */
+	function getTradeList() {
+		if($('#trade_convert_obj').val() != "") {
+			var ass = $('#trade_convert_obj').val();
+			var issuer = $("#trade_convert_obj option:selected").attr("data-issuer");
+			getCurrentPrice("", "", ass, issuer);
+		}
+	}
+	/**
+	 * 查询指定交易现价
+	 */
+	$('#trade_convert_obj').change(function() {
+		getTradeList();
+	});
+	/*
+	 * 简单兑换
+	 */
+	$('#simple_convert_submit').click(function() {
+		if($('#simple_convert_src').val() == $('#simple_convert_obj').val()) {
+			alert('{$Think.lang.INDEX_TRANSACTION_ALT_TRADE_SAME_ASSET}！');
+			return;
+		}
+		if(parseFloat($('#simple_convert_price').val()) <= 0) {
+			alert('{$Think.lang.INDEX_TRANSACTION_ALT_TRADE_PRICE_LARGE}0！');
+			return;
+		}
+		if(parseFloat($('#simple_convert_amount').val()) < 100) {
+			alert('{$Think.lang.INDEX_TRANSACTION_ALT_TRADE_AMOUNT_LESS}100！');
+			return;
+		}
+		if(parseInt($('#simple_convert_amount').val())%100) {
+			alert('{$Think.lang.INDEX_TRANSACTION_ALT_TRADE_DOUBLE100}！');
+			return;
+		}
+		g_action = 2; //兑换
+		$('#myModal').modal('show');
+	});
+
+	var cancel_id;
+	var cancel_srcAsset;
+	var cancel_srcIssuer;
+	var cancel_objAsset;
+	var cancel_objIssuer;
+	var cancel_price;
+	/*
+	 * 取消订单
+	 */
+	function cancelOrder(id, srcAsset, srcIssuer, objAsset, objIssuer, price) {
+		g_action = 3; //取消订单
+		cancel_id = id;
+		cancel_srcAsset = srcAsset;
+		cancel_srcIssuer = srcIssuer;
+		cancel_objAsset = objAsset;
+		cancel_objIssuer = objIssuer;
+		cancel_price = price;
+		$('#myModal').modal('show');
+	}
+        /*
+	 * 判断对方是否信任该资产
+         * 
+	 */
+        function ifTrustThisAsset(asset,issuer){
+            if($('#payment_obj').val()){
+             var acceptAddress=$('#payment_obj').val();
+             var canAccept=getAssetHaveAndTurst(acceptAddress,asset,issuer);
+             if(canAccept){
+             $('#maxAccpetAmount').text(canAccept);
+            }else{
+             $('#maxAccpetAmount').text('{$Think.lang.INDEX_TRANSACTION_NOTTRUST}'); 
+                    }
+                }
+             }
+ 
+        /*
+	 * 查看本账号的特定资产余额，及可转给对方最大数量
+         * 
+	 */
+        $('#simple_convert_src').change(function(){
+            var address='{$Think.session.USER_ACCOUNT}';
+            var assetAndIssur=$('#simple_convert_src').val();
+            var asset=assetAndIssur.split('.')[0];
+            var issuer=assetAndIssur.split('.')[1];
+            if(asset=='native'){
+                var asset = getAvlBalance('{$Think.session.USER_ACCOUNT}');
+		$('#payment_avl').text(asset);
+                $('#maxAccpetAmount').text('---');
+            }else if(address==issuer){
+                $('#payment_avl').text('{$Think.lang.INDEX_TRANSACTION_IAMTHEISSUER}');
+                ifTrustThisAsset(asset,issuer);
+            }else
+            {
+            var avl=getassetAvlBalance(address,asset,issuer);
+             $('#payment_avl').text(avl);
+             ifTrustThisAsset(asset,issuer);
+            }
+        });
+
+</script>

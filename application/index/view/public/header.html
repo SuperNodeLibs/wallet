@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>{$Think.lang.MAIN_TITLE}</title>
+		<link rel="stylesheet" href="{$dir}static/css/bootstrap.min.css?v={:mt_rand()}" />
+		<link rel="stylesheet" href="{$dir}static/css/bootstrapValidator.min.css?v={:mt_rand()}" />
+		<link rel="stylesheet" href="{$dir}static/css/bootstrap-datetimepicker.min.css?v={:mt_rand()}" />
+		<link rel="stylesheet" href="{$dir}static/css/digitalstyle.css?v={:mt_rand()}" />
+		<script type="text/javascript" src="{$dir}static/js/jquery-1.12.2.min.js?v={:mt_rand()}" ></script>
+		<script type="text/javascript" src="{$dir}static/js/bootstrap.min.js?v={:mt_rand()}" ></script>
+		<script type="text/javascript" src="{$dir}static/js/bootstrapValidator.min.js?v={:mt_rand()}" ></script>
+		<script type="text/javascript" src="{$dir}static/js/bootstrap-datetimepicker.min.js?v={:mt_rand()}" ></script>
+		<script type="text/javascript" src="{$dir}static/js/bootstrap-datetimepicker.zh-CN.js?v={:mt_rand()}" ></script>
+		<script type="text/javascript" src="{$dir}static/js/sdk.js?v={:mt_rand()}"></script>
+		<script type="text/javascript" src="{$dir}static/js/sdk-base.min.js?v={:mt_rand()}"></script>
+		<script type="text/javascript" src="{$dir}static/js/DES3.js?v={:mt_rand()}"></script>
+		<script type="text/javascript" src="{$dir}static/js/application.js?v={:mt_rand()}"></script>
+		<script type="text/javascript" src="{$dir}static/js/wallet.js?v={:mt_rand()}"></script>
+		<script type="text/javascript" src="{$dir}static/js/Validform_v5.3.2_min.js?v={:mt_rand()}"></script>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- <script>
+    // window.__lc = window.__lc || {};
+    // window.__lc.license = 8413431;
+    // window.__lc.hostname = 'secure-lc.livechatinc.com';
+</script> -->
+
+<!-- <script src="https://cdn.livechatinc.com/staging/tracking.js"></script> -->
+	</head>
+	<script language="JavaScript">
+		var API_SERVER = '{$Think.config.node_default}';
+		var AUTO_TRUST = '{$Think.config.trust_on}';
+		var AUTO_ASSET_CODE = '{$Think.config.default_asset_code}';
+		var AUTO_ASSET_ISSUER = '{$Think.config.default_asset_issuer}';
+		
+		var OTHER_USER_LOGIN_ERR = '{$Think.lang.OTHER_USER_LOGIN_ERR}';
+		var OTHER_WAITTING = '{$Think.lang.OTHER_WAITTING}';
+		var OTHER_CONFIRM = '{$Think.lang.OTHER_CONFIRM}';
+		var OTHER_OP_MALFORMED = '{$Think.lang.OTHER_OP_MALFORMED}';
+		var OTHER_OP_UNDERFUNDED = '{$Think.lang.OTHER_OP_UNDERFUNDED}';
+		var OTHER_OP_LOW_RESERVE = '{$Think.lang.OTHER_OP_LOW_RESERVE}';
+		var OTHER_OP_LINE_FULL = '{$Think.lang.OTHER_OP_LINE_FULL}';
+		var OTHER_OP_NO_ISSUER = '{$Think.lang.OTHER_OP_NO_ISSUER}';
+		var OTHER_TX_FAILED = '{$Think.lang.OTHER_TX_FAILED}';
+		var OTHER_TX_BAD_SEQ = '{$Think.lang.OTHER_TX_BAD_SEQ}';
+		var OTHER_TX_TOO_EARLY = '{$Think.lang.OTHER_TX_TOO_EARLY}';
+		var OTHER_TX_TOO_LATE = '{$Think.lang.OTHER_TX_TOO_LATE}';
+		var OTHER_TX_MISSING_OPERATION = '{$Think.lang.OTHER_TX_MISSING_OPERATION}';
+		var OTHER_TX_BAD_AUTH = '{$Think.lang.OTHER_TX_BAD_AUTH}';
+		var OTHER_TX_INSUFFICIENT_BALANCE = '{$Think.lang.OTHER_TX_INSUFFICIENT_BALANCE}';
+		var OTHER_TX_NO_SOURCE_ACCOUNT = '{$Think.lang.OTHER_TX_NO_SOURCE_ACCOUNT}';
+		var OTHER_TX_INSUFFICIENT_FEE = '{$Think.lang.OTHER_TX_INSUFFICIENT_FEE}';
+		var OTHER_TX_BAD_AUTH_EXTRA = '{$Think.lang.OTHER_TX_BAD_AUTH_EXTRA}';
+		var OTHER_TX_INTERNAL_ERROR = '{$Think.lang.OTHER_TX_INTERNAL_ERROR}';
+		var OTHER_OP_INNER = '{$Think.lang.OTHER_OP_INNER}';
+		var OTHER_OP_BAD_AUTH = '{$Think.lang.OTHER_OP_BAD_AUTH}';
+		var OTHER_OP_NO_SOURCE_ACCOUNT = '{$Think.lang.OTHER_OP_NO_SOURCE_ACCOUNT}';
+		var OTHER_OP_ALREADY_EXISTS = '{$Think.lang.OTHER_OP_ALREADY_EXISTS}';
+		var OTHER_OP_SRC_NO_TRUST = '{$Think.lang.OTHER_OP_SRC_NO_TRUST}';
+		var OTHER_OP_SRC_NOT_AUTHORIZED = '{$Think.lang.OTHER_OP_SRC_NOT_AUTHORIZED}';
+		var OTHER_OP_NO_DESTINATION = '{$Think.lang.OTHER_OP_NO_DESTINATION}';
+		var OTHER_OP_NO_TRUST = '{$Think.lang.OTHER_OP_NO_TRUST}';
+		var OTHER_OP_NOT_AUTHORIZED = '{$Think.lang.OTHER_OP_NOT_AUTHORIZED}';
+		var OTHER_OP_TOO_FEW_OFFERS = '{$Think.lang.OTHER_OP_TOO_FEW_OFFERS}';
+		var OTHER_OP_CROSS_SELF = '{$Think.lang.OTHER_OP_CROSS_SELF}';
+		var OTHER_OP_OVER_SOURCE_MAX = '{$Think.lang.OTHER_OP_OVER_SOURCE_MAX}';
+		var OTHER_OP_SELL_NO_TRUST = '{$Think.lang.OTHER_OP_SELL_NO_TRUST}';
+		var OTHER_OP_BUY_NO_TRUST = '{$Think.lang.OTHER_OP_BUY_NO_TRUST}';
+		var OTHER_BUY_NOT_AUTHORIZED = '{$Think.lang.OTHER_BUY_NOT_AUTHORIZED}';
+		var OTHER_OP_SELL_NO_ISSUER = '{$Think.lang.OTHER_OP_SELL_NO_ISSUER}';
+		var OTHER_BUY_NO_ISSUER = '{$Think.lang.OTHER_BUY_NO_ISSUER}';
+		var OTHER_OP_OFFER_NOT_FOUND = '{$Think.lang.OTHER_OP_OFFER_NOT_FOUND}';
+		var OTHER_OP_TOO_MANY_SIGNERS = '{$Think.lang.OTHER_OP_TOO_MANY_SIGNERS}';
+		var OTHER_OP_BAD_FLAGS = '{$Think.lang.OTHER_OP_BAD_FLAGS}';
+		var OTHER_OP_INVALID_INFLATION = '{$Think.lang.OTHER_OP_INVALID_INFLATION}';
+		var OTHER_OP_CANT_CHANGE = '{$Think.lang.OTHER_OP_CANT_CHANGE}';
+		var OTHER_OP_CANT_CHANGE = '{$Think.lang.OTHER_OP_CANT_CHANGE}';
+		var OTHER_OP_UNKNOWN_FLAG = '{$Think.lang.OTHER_OP_UNKNOWN_FLAG}';
+		var OTHER_OP_THRESHOLD_OUT_OF_RANGE = '{$Think.lang.OTHER_OP_THRESHOLD_OUT_OF_RANGE}';
+		var OTHER_OP_BAD_SIGNER = '{$Think.lang.OTHER_OP_BAD_SIGNER}';
+		var OTHER_OP_INVALID_HOME_DOMAIN = '{$Think.lang.OTHER_OP_INVALID_HOME_DOMAIN}';
+		var OTHER_OP_INVALID_LIMIT = '{$Think.lang.OTHER_OP_INVALID_LIMIT}';
+		var OTHER_OP_NO_TRUSTLINE = '{$Think.lang.OTHER_OP_NO_TRUSTLINE}';
+		var OTHER_OP_NOT_REQUIRED = '{$Think.lang.OTHER_OP_NOT_REQUIRED}';
+		var OTHER_OP_CANT_REVOKE = '{$Think.lang.OTHER_OP_CANT_REVOKE}';
+		var OTHER_OP_NO_ACCOUNT = '{$Think.lang.OTHER_OP_NO_ACCOUNT}';
+		var OTHER_OP_IMMUTABLE_SET = '{$Think.lang.OTHER_OP_IMMUTABLE_SET}';
+		var OTHER_OP_HAS_SUB_ENTRIES = '{$Think.lang.OTHER_OP_HAS_SUB_ENTRIES}';
+		var OTHER_OP_NOT_TIME = '{$Think.lang.OTHER_OP_NOT_TIME}';
+		var OTHER_NOTFOUNDERROR = '{$Think.lang.OTHER_NOTFOUNDERROR}';
+		var OTHER_SUMMARY = '{$Think.lang.OTHER_SUMMARY}';
+		var OTHER_NO_RECORD = '{$Think.lang.OTHER_NO_RECORD}';
+		var OTHER_NO_ACTIVE = '{$Think.lang.OTHER_NO_ACTIVE}';
+		var OTHER_ACTIVE_FIRST = '{$Think.lang.OTHER_ACTIVE_FIRST}';
+		var OTHER_ACTIVE_BEACAUSE = '{$Think.lang.OTHER_ACTIVE_BEACAUSE}';
+		var OTHER_ACTIVE_USER = '{$Think.lang.OTHER_ACTIVE_USER}';
+		var OTHER_NOT_EXIST = '{$Think.lang.OTHER_NOT_EXIST}';
+		var OTHER_TRUST_DEL = '{$Think.lang.OTHER_TRUST_DEL}';
+		var OTHER_INIT_ISSUER = '{$Think.lang.OTHER_INIT_ISSUER}';
+		var OTHER_ACCOUNT_ACTIVED = '{$Think.lang.OTHER_ACCOUNT_ACTIVED}';
+		var OTHER_ACCOUNT_NOT_ACTIVED = '{$Think.lang.OTHER_ACCOUNT_NOT_ACTIVED}';
+		var OTHER_SELECT = '{$Think.lang.OTHER_SELECT}';
+		var OTHER_KNOW_GATEWAY = '{$Think.lang.OTHER_KNOW_GATEWAY}';
+		var OTHER_ISSUER = '{$Think.lang.OTHER_ISSUER}';
+		var OTHER_PRICE = '{$Think.lang.OTHER_PRICE}';
+		var OTHER_AMOUNT = '{$Think.lang.OTHER_AMOUNT}';
+		var OTHER_TRADE_ASSET = '{$Think.lang.OTHER_TRADE_ASSET}';
+		var OTHER_OPTRATION = '{$Think.lang.OTHER_OPTRATION}';
+		var OTHER_SELL = '{$Think.lang.OTHER_SELL}';
+		var OTHER_BUY = '{$Think.lang.OTHER_BUY}';
+		var OTHER_CANCEL = '{$Think.lang.OTHER_CANCEL}';
+		var OTHER_CREATE_USER = '{$Think.lang.OTHER_CREATE_USER}';
+		var OTHER_CREATED = '{$Think.lang.OTHER_CREATED}';
+		var OTHER_PAYTO = '{$Think.lang.OTHER_PAYTO}';
+		var OTHER_PAYMENT = '{$Think.lang.OTHER_PAYMENT}';
+		var OTHER_RECEIVE = '{$Think.lang.OTHER_RECEIVE}';
+		var OTHER_TIME = '{$Think.lang.OTHER_TIME}';
+		var OTHER_TRADE_OBJ = '{$Think.lang.OTHER_TRADE_OBJ}';
+		var OTHER_TRADE_TYPE = '{$Think.lang.OTHER_TRADE_TYPE}';
+		var OTHER_TRADE_AMOUNT = '{$Think.lang.OTHER_TRADE_AMOUNT}';
+		var OTHER_TRADE_TYPE = '{$Think.lang.OTHER_TRADE_TYPE}';
+		var OTHER_TRADE_TOTAL = '{$Think.lang.OTHER_TRADE_TOTAL}';
+		var OTHER_TRADE_NUMBER = '{$Think.lang.OTHER_TRADE_NUMBER}';
+		
+		var BOOTSTRAP_BASE64 = '{$Think.lang.BOOTSTRAP_BASE64}';
+		var BOOTSTRAP_CALLBACK = '{$Think.lang.BOOTSTRAP_CALLBACK}';
+		var BOOTSTRAP_CREDIT = '{$Think.lang.BOOTSTRAP_CREDIT}';
+		var BOOTSTRAP_CUSIP = '{$Think.lang.BOOTSTRAP_CUSIP}';
+		var BOOTSTRAP_CVV = '{$Think.lang.BOOTSTRAP_CVV}';
+		var BOOTSTRAP_DATE = '{$Think.lang.BOOTSTRAP_DATE}';
+		var BOOTSTRAP_DIFFERENT = '{$Think.lang.BOOTSTRAP_DIFFERENT}';
+		var BOOTSTRAP_DIGITS = '{$Think.lang.BOOTSTRAP_DIGITS}';
+		var BOOTSTRAP_EAN = '{$Think.lang.BOOTSTRAP_EAN}';
+		var BOOTSTRAP_EMAIL = '{$Think.lang.BOOTSTRAP_EMAIL}';
+		var BOOTSTRAP_FILE = '{$Think.lang.BOOTSTRAP_FILE}';
+		var BOOTSTRAP_GRID = '{$Think.lang.BOOTSTRAP_GRID}';
+		var BOOTSTRAP_HEX = '{$Think.lang.BOOTSTRAP_HEX}';
+		var BOOTSTRAP_HEXCOLOR = '{$Think.lang.BOOTSTRAP_HEXCOLOR}';
+		var BOOTSTRAP_IBAN = '{$Think.lang.BOOTSTRAP_IBAN}';
+		var BOOTSTRAP_ID = '{$Think.lang.BOOTSTRAP_ID}';
+		var BOOTSTRAP_IDENTICAL = '{$Think.lang.BOOTSTRAP_IDENTICAL}';
+		var BOOTSTRAP_IMEI = '{$Think.lang.BOOTSTRAP_IMEI}';
+		var BOOTSTRAP_IMO = '{$Think.lang.BOOTSTRAP_IMO}';
+		var BOOTSTRAP_INTEGER = '{$Think.lang.BOOTSTRAP_INTEGER}';
+		var BOOTSTRAP_IP = '{$Think.lang.BOOTSTRAP_IP}';
+		var BOOTSTRAP_IP4 = '{$Think.lang.BOOTSTRAP_IP4}';
+		var BOOTSTRAP_IP6 = '{$Think.lang.BOOTSTRAP_IP6}';
+		var BOOTSTRAP_ISBN = '{$Think.lang.BOOTSTRAP_ISBN}';
+		var BOOTSTRAP_ISIN = '{$Think.lang.BOOTSTRAP_ISIN}';
+		var BOOTSTRAP_ISMN = '{$Think.lang.BOOTSTRAP_ISMN}';
+		var BOOTSTRAP_ISSN = '{$Think.lang.BOOTSTRAP_ISSN}';
+		var BOOTSTRAP_MAC = '{$Think.lang.BOOTSTRAP_MAC}';
+		var BOOTSTRAP_MEID = '{$Think.lang.BOOTSTRAP_MEID}';
+		var BOOTSTRAP_NOTEMPTY = '{$Think.lang.BOOTSTRAP_NOTEMPTY}';
+		var BOOTSTRAP_NUMERIC = '{$Think.lang.BOOTSTRAP_NUMERIC}';
+		var BOOTSTRAP_PHONE = '{$Think.lang.BOOTSTRAP_PHONE}';
+		var BOOTSTRAP_REGEXP = '{$Think.lang.BOOTSTRAP_REGEXP}';
+		var BOOTSTRAP_RTN = '{$Think.lang.BOOTSTRAP_RTN}';
+		var BOOTSTRAP_SEDOL = '{$Think.lang.BOOTSTRAP_SEDOL}';
+		var BOOTSTRAP_SIREN = '{$Think.lang.BOOTSTRAP_SIREN}';
+		var BOOTSTRAP_SIRET = '{$Think.lang.BOOTSTRAP_SIRET}';
+		var BOOTSTRAP_STRINGCASE = '{$Think.lang.BOOTSTRAP_STRINGCASE}';
+		var BOOTSTRAP_STRINGCASE2 = '{$Think.lang.BOOTSTRAP_STRINGCASE2}';
+		var BOOTSTRAP_STRINGLENGTH = '{$Think.lang.BOOTSTRAP_STRINGLENGTH}';
+		var BOOTSTRAP_URI = '{$Think.lang.BOOTSTRAP_URI}';
+		var BOOTSTRAP_UUID = '{$Think.lang.BOOTSTRAP_UUID}';
+		var BOOTSTRAP_VAT = '{$Think.lang.BOOTSTRAP_VAT}';
+		var BOOTSTRAP_VIN = '{$Think.lang.BOOTSTRAP_VIN}';
+		var BOOTSTRAP_ZIPCODE = '{$Think.lang.BOOTSTRAP_ZIPCODE}';
+		var BOOTSTRAP_USERNAME_EMPTY = '{$Think.lang.BOOTSTRAP_USERNAME_EMPTY}';
+		var BOOTSTRAP_USERNAME_LENGTH = '{$Think.lang.BOOTSTRAP_USERNAME_LENGTH}';
+		var BOOTSTRAP_USERNAME_EXIST = '{$Think.lang.BOOTSTRAP_USERNAME_EXIST}';
+		var BOOTSTRAP_REGEMAIL_EMPTY = '{$Think.lang.BOOTSTRAP_REGEMAIL_EMPTY}';
+		var BOOTSTRAP_REGEMAIL_LENGTH = '{$Think.lang.BOOTSTRAP_REGEMAIL_LENGTH}';
+		var BOOTSTRAP_REGEMAIL_EXIST = '{$Think.lang.BOOTSTRAP_REGEMAIL_EXIST}';
+		var BOOTSTRAP_STATEMENT = '{$Think.lang.BOOTSTRAP_STATEMENT}';
+		var BOOTSTRAP_REGPASSWORD2 = '{$Think.lang.BOOTSTRAP_REGPASSWORD2}';
+		var BOOTSTRAP_LOGPASSWORD = '{$Think.lang.BOOTSTRAP_LOGPASSWORD}';
+		var BOOTSTRAP_PAYPASSWORD = '{$Think.lang.BOOTSTRAP_PAYPASSWORD}';
+		var BOOTSTRAP_PAYPASWORD_LENGTH = '{$Think.lang.BOOTSTRAP_PAYPASWORD_LENGTH}';
+		var BOOTSTRAP_PASSWORD_REG = '{$Think.lang.BOOTSTRAP_PASSWORD_REG}';
+		var BOOTSTRAP_SEED_EMPTY = '{$Think.lang.BOOTSTRAP_SEED_EMPTY}';
+		var BOOTSTRAP_SEED_LENGTH = '{$Think.lang.BOOTSTRAP_SEED_LENGTH}';
+		var BOOTSTRAP_SEED_REG = '{$Think.lang.BOOTSTRAP_SEED_REG}';
+		var ONLOADING_TXT = '{$Think.lang.ONLOADING_TXT}';
+		var BOOTSTRAP_LOGPASS_LENGTH = '{$Think.lang.BOOTSTRAP_LOGPASS_LENGTH}';
+		
+		var JSAPP_YOU_FOR = '{$Think.lang.JSAPP_YOU_FOR}';
+		var JSAPP_CREATE_SUPPER_TICKET = '{$Think.lang.JSAPP_CREATE_SUPPER_TICKET}';
+		var JSAPP_CREATE_SUPPER_FOR_YOU = '{$Think.lang.JSAPP_CREATE_SUPPER_FOR_YOU}';
+		var JSAPP_YOU_DIR = '{$Think.lang.JSAPP_YOU_DIR}';
+		var JSAPP_PAY_SUPPER_TICKET = '{$Think.lang.JSAPP_PAY_SUPPER_TICKET}';
+		var JSAPP_UNKNOW_GATEWAY_NAME = '{$Think.lang.JSAPP_UNKNOW_GATEWAY_NAME}';
+		var JSAPP_AMOUNT_LIMIT = '{$Think.lang.JSAPP_AMOUNT_LIMIT}';
+		var JSAPP_AMOUNT_UNLIMIT = '{$Think.lang.JSAPP_AMOUNT_UNLIMIT}';
+		var JSAPP_ASSET_AMOUNT = '{$Think.lang.JSAPP_ASSET_AMOUNT}';
+		var JSAPP_ASSET_ISSUER = '{$Think.lang.JSAPP_ASSET_ISSUER}';
+		var INDEX_GATEWAY_ASSET_CODE_INPUT = '{$Think.lang.INDEX_GATEWAY_ASSET_CODE_INPUT}';
+		
+		var JSAPP_ = '{$Think.lang.JSAPP_}';
+		var APP_GATEWAY_MULT_ASSET ='{$Think.lang.APP_GATEWAY_MULT_ASSET}';
+        var APP_EXPIRE ='{$Think.lang.APP_EXPIRE}';
+        var APP_LOGIN ='{$Think.lang.APP_LOGIN}';
+        var APP_EMAIL_NOT_REGISTER ='{$Think.lang.APP_EMAIL_NOT_REGISTER}';
+        var APP_EMAIL_PASSWORD_ERR = '{$Think.lang.APP_EMAIL_PASSWORD_ERR}';
+        var APP_REGISTER ='{$Think.lang.APP_REGISTER}';
+        var APP_SENDMAIL = '{$Think.lang.APP_SENDMAIL}';
+        var APP_MAIL = '{$Think.lang.APP_MAIL}';
+        var APP_MAIL_PASS1 = '{$Think.lang.APP_MAIL_PASS1}';
+        var APP_MAIL_PASS2 = '{$Think.lang.APP_MAIL_PASS2}';
+	    var APP_MAIL_TIME = '{$Think.lang.APP_MAIL_TIME}';
+        var APP_MAIL_NO_REPLY = '{$Think.lang.APP_MAIL_NO_REPLY}';
+        var APP_MAIL_PASS_TITLE = '{$Think.lang.APP_MAIL_PASS_TITLE}';
+        var APP_MAIL_NOT_EXIST = '{$Think.lang.APP_MAIL_NOT_EXIST}';
+        var APP_MAIL_FORGET = '{$Think.lang.APP_MAIL_FORGET}';
+        var APP_MAIL_RESET ='{$Think.lang.APP_MAIL_RESET}';
+       	var APP_MAIL_SET_OK ='{$Think.lang.APP_MAIL_SET_OK}';
+        var APP_MAIL_CHECK ='{$Think.lang.APP_MAIL_CHECK}';
+        var APP_MAIL_EMAIL_CODE_ERR = '{$Think.lang.APP_MAIL_EMAIL_CODE_ERR}';
+        var APP_PAYSET_OK ='{$Think.lang.APP_PAYSET_OK}';
+        var APP_PAYSET_FAIL = '{$Think.lang.APP_PAYSET_FAIL}';
+        var APP_SET_PAYSET = '{$Think.lang.APP_SET_PAYSET}';
+        var APP_MAIL_ACTIVE ='{$Think.lang.APP_MAIL_ACTIVE}';
+        var APP_ACTIVE_OK = '{$Think.lang.APP_ACTIVE_OK}';
+        var APP_CHECK_FAIL_RETRY = '{$Think.lang.APP_CHECK_FAIL_RETRY}';
+        var APP_EMAIL_CHECK_TITLE ='{$Think.lang.APP_EMAIL_CHECK_TITLE}';
+        var APP_EMAIL_CHECKED_BACK ='{$Think.lang.APP_EMAIL_CHECKED_BACK}';
+        var APP_EMAIL_REGISTER = '{$Think.lang.APP_EMAIL_REGISTER}';
+        var APP_EMAIL_REGISTER_TITLE = '{$Think.lang.APP_EMAIL_REGISTER_TITLE}';
+        var APP_RETRY = '{$Think.lang.APP_RETRY}';
+        var APP_USER_REGISTERED = '{$Think.lang.APP_USER_REGISTERED}';
+        var APP_USER_UNREGISTER = '{$Think.lang.APP_USER_UNREGISTER}';
+        var APP_USER_EMAIL_REGISTERD = '{$Think.lang.APP_USER_EMAIL_REGISTERD}';
+        var APP_USER_EMAIL_NOT_REGISTERD = '{$Think.lang.APP_USER_EMAIL_NOT_REGISTERD}';
+        var APP_VCODE_ERR ='{$Think.lang.APP_VCODE_ERR}';
+        var APP_VCODE_OK = '{$Think.lang.APP_VCODE_OK}';
+		
+        var INDEX_EXCHANG_AMOUNT ='{$Think.lang.INDEX_EXCHANG_AMOUNT}';
+        var INDEX_EXCHANG_NOTCHOICEASSET ='{$Think.lang.INDEX_EXCHANG_NOTCHOICEASSET}';
+        var INDEX_EXCHANG_NOTTRUSHASSET ='{$Think.lang.INDEX_EXCHANG_NOTTRUSHASSET}';
+        var INDEX_MEMBER_SHOWPAYTIP ='{$Think.lang.INDEX_MEMBER_SHOWPAYTIP}';
+        var INDEX_MEMBER_SHOWPAYTIP2 ='{$Think.lang.INDEX_MEMBER_SHOWPAYTIP2}';
+        var LOGIN_PAYSET_TIP = '{$Think.lang.LOGIN_PAYSET_TIP}';
+        var LOGIN_PAYSET_TIP2='{$Think.lang.LOGIN_PAYSET_TIP2}';
+        var INDEX_TRANSACTION_TRANSFER ='{$Think.lang.INDEX_TRANSACTION_TRANSFER}';
+        var INDEX_TRANSACTION_PAYASSET='{$Think.lang.INDEX_TRANSACTION_PAYASSET}';
+        var INDEX_TRANSACTION_SUPERTICKET='{$Think.lang.INDEX_TRANSACTION_SUPERTICKET}';
+        var INDEX_TRANSACTION_MAXACCPET='{$Think.lang.INDEX_TRANSACTION_MAXACCPET}';
+        var INDEX_TRANSACTION_TRANSFERTIP='{$Think.lang.INDEX_TRANSACTION_TRANSFERTIP}';
+        var INDEX_MEMBER_NOMSG='{$Think.lang.INDEX_MEMBER_NOMSG}';
+        var INDEX_TRANSACTION_NOTTRUST='{$Think.lang.INDEX_TRANSACTION_NOTTRUST}';
+        var INDEX_TRANSACTION_IAMTHEISSUER='{$Think.lang.INDEX_TRANSACTION_IAMTHEISSUER}';
+        
+        var	LOGIN_CREATETRUST_ACTIVE='{$Think.lang.LOGIN_CREATETRUST_ACTIVE}';
+		var	LOGIN_CREATETRUST_TIP='{$Think.lang.LOGIN_CREATETRUST_TIP}';
+		var	LOGIN_CREATETRUST_ENTER='{$Think.lang.LOGIN_CREATETRUST_ENTER}';
+		var	LOGIN_CREATETRUST_LOGOUT='{$Think.lang.LOGIN_CREATETRUST_LOGOUT}';
+		var	LOGIN_CREATETRUST_MESSAGE='{$Think.lang.LOGIN_CREATETRUST_MESSAGE}';
+		
+	</script>
+		<script type="text/javascript" src="{$dir}static/js/bootstrapValidator.min_zh_CN.js?v={:mt_rand()}" ></script>
+		<script type="text/javascript" src="{$dir}static/js/digitalstyle.js?v={:mt_rand()}" ></script>
+	<body>
+<!--header-->
+	<header class="container-fluid">
+		<div class="container nopadding">
+			<div class="col-md-3 col-xs-12 nopadding Logo_box"><img src="{$dir}static/images/snblogo.png"></div>
+			<div class="col-md-9 col-xs-12 nopadding Header_txt">
+				<p>{$Think.lang.INDEX_ADDRESS} : <b id="current_account">{$Think.session.USER_ACCOUNT}</b></p>
+				<p>{$Think.lang.INDEX_HEIGHT} : <span id="seqnumber">--</span>  {$Think.lang.INDEX_BILL_TOTAL} : <span id="total">--</span>   {$Think.lang.INDEX_FEE_TOTAL} : <span id="fee_pool">--</span></p>
+				<a href="/logout" class="loginout"><span class="glyphicon glyphicon-log-out"></span></a>
+			</div>
+		</div>
+		<!--手机端导航-->
+		<div class="mobile_navshow">
+			<button type="button" class="btn navbar-toggle mnav_show" onclick="$('.Mwallet_nav').toggleClass('on')">
+	            <span class="sr-only">{$Think.lang.INDEX_SWITCH_NAV}</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	        </button>
+		</div>
+		<div class="Mwallet_nav mobile_navshow">
+			<button type="button" class="btn close_mnav" onclick="$('.Mwallet_nav').toggleClass('on')">&times;</button>
+			<div class="mnav_txt">
+				<p>{$Think.lang.INDEX_ADDRESS} : <b id="current_account">{$Think.session.USER_ACCOUNT}</b></p>
+				<p>{$Think.lang.INDEX_HEIGHT} : <span id="seqnumber_m">--</span>  {$Think.lang.INDEX_BILL_TOTAL} : <span id="total_m">--</span>   {$Think.lang.INDEX_FEE_TOTAL} : <span id="fee_pool_m">--</span></p>
+			</div>
+			<div class="list-group mnav_list">
+				<a class="list-group-item <if condition='($Request.path == "/")'>active</if>" href="/"><span class="glyphicon glyphicon-home"></span> {$Think.lang.INDEX_HOME_PAGE}</a>
+				<a class="list-group-item <if condition='($Request.path == "gateway") OR ($Request.path == "gatewayCenter")'>active</if>" href="/gateway"><span class="glyphicon glyphicon-list-alt"></span> {$Think.lang.INDEX_GATEWAY}</a>
+				<a class="list-group-item <if condition='($Request.path == "exchange")'>active</if>" href="/exchange"><span class="glyphicon glyphicon-piggy-bank"></span> {$Think.lang.INDEX_EXCHANGE}</a>
+				<a class="list-group-item <if condition='($Request.path == "transaction")'>active</if>" href="/transaction"><span class="glyphicon glyphicon-retweet"></span> {$Think.lang.INDEX_TRANSACTION}</a>
+				<a class="list-group-item <if condition='($Request.path == "address")'>active</if>" href="/address"><span class="glyphicon glyphicon-book"></span> {$Think.lang.INDEX_ADDRESS_BOOK}</a>
+				<!--<a class="list-group-item <if condition='($Request.path == "help")'>active</if>" href="/help"><span class="glyphicon glyphicon-question-sign"></span> {$Think.lang.INDEX_HELP}</a>-->
+				<a class="list-group-item <if condition='($Request.path == "member")'>active</if>" href="/member"><span class="glyphicon glyphicon-user"></span> {$Think.lang.INDEX_MEMBER}</a>
+			</div>
+			<div class="my_ewmbox mobile_navshow">
+				<div class="media">
+				</div>
+			</div>
+			<a href="/logout" class="loginout"><span>{$Think.lang.INDEX_EXIT} </span><span class="glyphicon glyphicon-log-out"></span></a>
+		</div>
+		<!--手机端导航end-->
+	</header>
+<!--header end-->
+<!--Content-->
+<section class="container-fluid">
+	<div class="container walletbox">
+		<div class="col-md-2 wallet_nav">
+			<div class="list-group">
+				<a class="list-group-item <if condition='($Request.path == "/")'>active</if>" href="/"><span class="glyphicon glyphicon-home"></span> {$Think.lang.INDEX_HOME_PAGE}</a>
+				<a class="list-group-item <if condition='($Request.path == "gateway") OR ($Request.path == "gatewayCenter")'>active</if>" href="/gateway"><span class="glyphicon glyphicon-list-alt"></span> {$Think.lang.INDEX_GATEWAY}</a>
+				<a class="list-group-item <if condition='($Request.path == "exchange")'>active</if>" href="/exchange"><span class="glyphicon glyphicon-piggy-bank"></span> {$Think.lang.INDEX_EXCHANGE}</a>
+				<!--<a class="list-group-item <if condition='($Request.path == "esports")'>active</if>" href="/esports"><span class="glyphicon glyphicon-knight"></span>电竞活动</a>-->
+				<a class="list-group-item <if condition='($Request.path == "transaction")'>active</if>" href="/transaction"><span class="glyphicon glyphicon-retweet"></span> {$Think.lang.INDEX_TRANSACTION}</a>
+				<a class="list-group-item <if condition='($Request.path == "address")'>active</if>" href="/address"><span class="glyphicon glyphicon-book"></span> {$Think.lang.INDEX_ADDRESS_BOOK}</a>
+				<!--<a class="list-group-item <if condition='($Request.path == "help")'>active</if>" href="/help"><span class="glyphicon glyphicon-question-sign"></span> {$Think.lang.INDEX_HELP}</a>-->
+				<a class="list-group-item <if condition='($Request.path == "member")'>active</if>" href="/member"><span class="glyphicon glyphicon-user"></span> {$Think.lang.INDEX_MEMBER}</a>
+			</div>
+			<div class="my_ewmbox">
+				<div class="media">
+				</div>
+			</div>
+		</div>

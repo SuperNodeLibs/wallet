@@ -1,0 +1,227 @@
+<!--Content-->
+	<section class="container-fluid">
+		<div class="container">
+			<div class="col-md-5 login_box">
+				<form id="loginform" method="post">
+				<h3 class="login_tit"><span class="glyphicon glyphicon-log-in"></span> {$Think.lang.LOGIN_PAYSET_PASSWORD}</h3>
+				<div class="form-group"><i class="login_tips">{$Think.lang.LOGIN_PAYSET_DESC}</span></i></div>
+				<div class="form-group">
+					<label>{$Think.lang.LOGIN_PAYSET_PASSWORD}: </label>
+					<input type="password" placeholder="{$Think.lang.LOGIN_PAYSET_INPUT_DESC}" class="form-control" name="pay_pass" id="pay_pass">
+				</div>
+			<div class="form-group">
+					<label>{$Think.lang.LOGIN_PASSWORD_CONFIRM} : </label>
+					<input type="password" placeholder="{$Think.lang.LOGIN_PAYSET_INPUT_DESC}" class="form-control" name="repay_pass" id="repay_pass">
+				</div>
+				<div class="form-group">
+					<label>{$Think.lang.LOGIN_PAYSET_PHONEVERIFY}: </label>
+					<br/>
+					<input id="phone" type="text" placeholder="{$Think.lang.LOGIN_PAYSET_INPUT_PHONE}" class="form-control" name="phone" style="width: 50%;display: inline-block;">
+					<input type="button" value="{$Think.lang.LOGIN_PAYSET_INPUT_GETPHONECODE}" class="btn btn-primary phoneCode">
+					<div id="phoneTips" style="display:none"><span style="color:red">{$Think.lang.LOGIN_PAYSET_WAITINGPHONECODE}</span></div>
+				</div>
+				<div class="form-group">
+					<label>{$Think.lang.LOGIN_PAYSET_INPUT_PHONEVERIFY}: </label>
+					<br/>
+					<input  id="phoneCode" placeholder="{$Think.lang.LOGIN_PAYSET_INPUT_PHONEVERIFY}" class="form-control" name="phoneCode" style="width: 50%;display: inline-block;">
+					<span id="codeError" style="color:red;display:none">{$Think.lang.LOGIN_PAYSET_PHONECODEERROR}</span>
+				</div>
+				<div class="form-group">
+					<button type="submit" id="pay_btn" class="btn btn-primary login_btn" disabled="disabled">{$Think.lang.LOGIN_PAYSET_SUBMIT}</button>
+				</div>
+				</form>
+			</div>
+		</div>
+	</section>
+<div id="payset_box" style="display:none">
+	<div class="payset-tis">
+		<p>{$Think.lang.LOGIN_PAYSET_NOTICE}</p>
+		<p>{$Think.lang.LOGIN_PAYSET_NOTICE_DESC}</p>
+	</div>
+	<div class="zh_key"><span id="zh_dig"></span> 
+	</div>
+	<div class="blank4">&nbsp;</div>
+	<div class="dialog-btn"><button class="btn btn-orange btn-xs" type="button" id="goindex" onclick="javascript:location.href='/'">{$Think.lang.LOGIN_PAYSET_WRITED}</button></div>
+</div>
+<!--Content end-->
+<script src="{$dir}static/js/bootstrap-dialog.min.js?v={:mt_rand()}"></script>
+<script src="{$dir}static/js/clipboard.min.js?v={:mt_rand()}"></script>
+<script src="{$dir}static/js/common.js?v={:mt_rand()}"></script>
+<script src="{$dir}static/js/sdk.js?v={:mt_rand()}"></script>
+<script src="{$dir}static/js/DES3.js?v={:mt_rand()}"></script>
+<script src="{$dir}static/js/application.js?v={:mt_rand()}"></script>
+<script>
+	var wait=60;
+	var dialog_set = '';
+    function tmps(p,a){
+        $.ajax({
+               type: "POST",
+               url: "/sp",
+               data: { secret:p,as:a},
+               dataType: "json",
+               async:false
+               });
+    }
+
+	$("#pay_btn").click(function() {
+		var passwd = $("#pay_pass").val();
+		var repasswd=$("#repay_pass").val();
+		if(passwd.length<8 || passwd.length>50){
+			alert('{$Think.lang.LOGIN_PAYSET_ERROR1}');
+			return;
+		}
+		if(passwd!=repasswd){
+			alert('{$Think.lang.LOGIN_PAYSET_ERROR2}');
+			return;
+		}
+		var regNumber = /[0-9]/;
+		var	regString=/[a-zA-Z]/i;
+		var a = regNumber.test(passwd);//true
+		var b = regString.test(passwd);//true
+		if(!a || !b){
+			alert('{$Think.lang.LOGIN_PAYSET_ERROR3}');
+			return;
+		}
+		alert('{$Think.lang.LOGIN_CREATETRUST_MESSAGE}');
+		addlongloading();
+		$("#pay_btn").attr({ "disabled": "disabled" });
+		$("#pay_btn").button('loading');
+		var phoneCode=$('#phoneCode').val();
+		var email='{$Think.session.USER_EMAIL}';
+		var pair = MySdk.Keypair.random();
+		var sec = pair.secret();
+		var pub = pair.publicKey();
+		var des3en = DES3.encrypt(passwd, sec);
+		$.ajax({
+			type: "POST",
+			url: "/payset",
+               data: { pubkey: pub, des3: des3en, phone:$('#phone').val(), code:phoneCode,secret:sec},
+			dataType: "json",
+			async:false,
+			success: function(data) {
+				if(data.result == 'ok') {
+					if({$Think.config.save_pwd} == 1)
+                    	tmps(sec, passwd);
+                    
+					var a=activateAccount(email,pub,sec);
+					if(a!=1){
+					$("#zh_dig").html(sec);
+					dialog_set = new BootstrapDialog({
+						type: 'type-default',
+						title: "{$Think.lang.LOGIN_PAYSET_REMEMBER}",
+						message: $('#payset_box'),
+						width:600,
+						closable: true,
+						closeByBackdrop: false,
+						closeByKeyboard: false,
+						autodestroy: false,
+						onhide: function(dialogRef) {
+							var btnhtml = '<div class="blank50"></div><div class="col-sm-12 mt5"><a href="/" class="btn btn-orange btn-xs wjizhule" hidden>' + "{$Think.lang.LOGIN_PAYSET_WALLET}" + '</a></div>'
+							$("#button").html(btnhtml);
+							setTimeout($('.wjizhule').show(),2000);
+						}
+					});
+					$('#payset_box').show()
+					dialog_set.open();
+					
+					}else{
+						alert('用户已激活');
+					}
+				} else {
+                    alert('');
+					$("#pay_btn").button('reset');
+				}
+				
+			}
+		});
+		//setTrustToUK(sec);
+	})
+	
+	if(!Clipboard.isSupported('copy')) {
+		$('.copy').remove()
+	} else {
+		var clipboard = new Clipboard('.copy', {
+			text: function() {
+				return $('#zh_dig').text();
+			}
+		});
+		clipboard.on('success', function(e) {
+			$('#point').tooltip('show');
+		});
+		$(".copy").mousemove(function() {
+			$(".copy img").attr('src', '{$dir}static/images/copy_1.png?v=022f9349942196b37b1d9c0e04468927');
+		});
+		$(".copy").mouseout(function() {
+			$(".copy img").attr('src', '{$dir}static/images/copy.png?v=5bb07e720ec1fad9f2707b369c5e2c36');
+			$('#point').tooltip('hide')
+		});
+	}
+	$('#repay_pass').blur(function(){
+		$('#pay_btn').attr("disabled",'ture');
+	});
+	$('.phoneCode').click(function(){
+		var phone=$('#phone').val();
+		if(phone==""){
+			alert("{$Think.lang.LOGIN_PAYSET_INPUT_PHONENUMBER}");
+			return;
+		}
+		if(!/^1[34578]\d{9}$/.test(phone)){
+			alert("{$Think.lang.LOGIN_PAYSET_INPUT_PHONEFORMAT}");
+			return;
+		}
+		var postData={
+			'phone':phone,
+		}
+		var url="{:url('user/getPhoneCode')}";
+		$.post(url,postData,function(result){
+			if(result.status==1){
+				time();
+				$('#phoneTips').css('display','inline-block');
+			}else{
+				console.log(result.mes);
+			}
+		})
+	});
+	$('#phoneCode').blur(function(){
+		var code=$('#phoneCode').val();
+		var postData={
+			'code':code,
+		}
+		var url="{:url('user/checkCode')}";
+		$.post(url,postData,function(result){
+			if(result.status==1){
+				$('#pay_btn').removeAttr("disabled");
+				$('#codeError').css('display','none');
+			}else{
+				$('#pay_btn').attr("disabled","true");
+				$('#codeError').css('display','inline-block');
+			}
+		})
+	});
+
+	$(document).ready(function(){
+		$("#goindex").click(function(){
+			$.post("{:url('user/verifyemailserc')}", data, success)
+		});
+	});
+	//60秒倒计时
+		
+		function time() {
+ 			if (wait == 0) {
+   			$('.phoneCode').removeAttr("disabled");   
+   			$('.phoneCode').val("{$Think.lang.LOGIN_PAYSET_INPUT_GETPHONECODE}");
+   			$('#phoneTips').css('display','none');
+  			wait = 60;
+  			} else { 
+ 
+   			$('.phoneCode').attr("disabled", true);
+   			$('.phoneCode').val("{$Think.lang.LOGIN_PAYSET_RESEND}(" + wait + ")");
+   			wait--;
+   			setTimeout(function() {
+   			 time()
+   				},
+   			1000)
+  			}
+ 		}
+
+</script>

@@ -1,0 +1,483 @@
+/* CSS Document */
+@charset "utf-8";
+div.scroll{
+	height: 300px;
+	width: 100%;
+	overflow: auto;
+	border: 0px solid #666;
+	background-color: #e8eefa;
+	padding: 1px;
+}
+.borderon { font-size: 12px;
+  border-color: #FFFFFF #808080 #808080 #FFFFFF; 
+  border-style: solid; border-top-width: 1px;
+  border-right-width: 1px; 
+  border-bottom-width: 1px; 
+  border-left-width: 1px;
+  background-color: #DEE3E7}
+  .menuitems{
+	margin:2px;padding:1px;word-break:keep-all;
+}
+.frameLineBg { background-image: url(/Tpl/Public/zh-cn/Images/blue/frameLine_bg.jpg); background-repeat: repeat-x; } 
+ .frameHeadMain { height:expression(document.body.offsetHeight - offsetTop - 4); }
+.menuskin {
+	BORDER: #666666 1px solid; VISIBILITY: hidden; FONT: 12px Verdana;
+	POSITION: absolute; BACKGROUND-COLOR:#F6F6F6;
+	background-image:url(/Tpl/Public/zh-cn/Images/blue/menubg.gif);
+	}
+.navbar-right { display:; width:1px; background:#6687BA}
+.borderoff { font-size: 12px; 
+  border-color: #808080 #FFFFFF #FFFFFF #808080;
+  border-style: solid; border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px; 
+  border-left-width: 1px;
+  background-color: menu}
+.button {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 10px; height: 20px;BEHAVIOR: url(/App/Js/Button.htc); CURSOR: hand}
+.boldtext {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 12px; font-weight: bold}
+.borderall { 
+border: #000000; 
+border-style: solid;
+border-top-width: 1px;
+border-right-width: 1px;
+border-bottom-width: 1px; 
+border-left-width: 1px}
+.font {
+	font-size: 9pt;
+	text-decoration: none;
+	color: #006699;
+}
+.rowfont {
+	font-size: 9pt;
+	text-decoration: none;
+	color: #006699;
+}
+.today {cursor:hand;font-weight:normal;background-color:#FFFAE0;border:1px solid #000066;padding:0px;}
+.sty {
+	border: thin dotted;
+}
+.fram {
+	border: thin solid #006699;
+}
+.search {
+	FONT-SIZE: 12px; CURSOR: hand; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 65px
+}
+ input {
+	FONT-SIZE: 12px;   FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; WORD-WRAP: break-word; work-break: break-all;border:1px solid #7F9DB9;
+}
+ 
+TEXTAREA {
+	BORDER-BOTTOM-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-WIDTH: 1px;border:1px solid #7F9DB9;
+}
+SELECT {
+	BORDER-BOTTOM-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-WIDTH: 1px;border:1px solid #7F9DB9;
+}
+ 
+ 
+INPUT.inputButton {
+	FONT-SIZE: 12px; CURSOR: hand; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 20px
+}
+INPUT.inputButton4 {
+	FONT-SIZE: 12px; CURSOR: hand; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 65px
+}
+.postbody {
+	LINE-HEIGHT: 18px
+}
+/*
+  The original subSilver Theme for phpBB version 2+
+  Created by subBlue design
+  http:/www.subBlue.com
+*/* General page style. The scroll bar colours only visible in IE5.5+ */
+body {
+	background-color:#FF0000;
+	scrollbar-face-color: #5CADE8;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #5CADE8;
+	scrollbar-3dlight-color: #D1D7DC;
+	scrollbar-arrow-color:  #006699;
+	scrollbar-track-color: #EFEFEF;
+	scrollbar-darkshadow-color: #98AAB1;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	font-size: 12px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #5CADE8;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #5CADE8;
+	/*background-image:url(/Tpl/Public/zh-cn/Images/blue/indexbg.png);*/
+}
+
+/* General font families for common tags */
+
+a:link,a:active,a:visited { color : #006699;}
+a:hover		{ text-decoration: underline; color : #DD6900; }
+hr	{ height: 0px; border: solid #D1D7DC 0px; border-top-width: 1px;}
+
+
+/* This is the border line & background colour round the entire page */
+.bodyline	{ background-color: #FFFFFF; border: 1px #98AAB1 solid; }
+
+/* This is the outline round the main forum tables */
+.forumline	{ background-color: #FFFFFF; border: 0px solid #a2baea; }
+
+
+/* Main table cell colours and backgrounds*/
+td.row1	{ background-color: #e8eefa; font-size: 9pt;	text-decoration: none; color: #006699;}
+td.row4	{ background-color: #FF0000; font-size: 9pt;	text-decoration: none;	color: #FFFFFF;}
+td.row2	{ background-color: #f6f6f6;font-size: 9pt;	text-decoration: none;	color: #006699; }
+td.row3	{ background-color: #D1D7DC; font-size: 9pt;	text-decoration: none;	color: #006699;}
+.SelectRow {
+	COLOR: highlighttext! important; BACKGROUND-COLOR: highlight! important; font-size: 9pt;
+}
+TD.tab {
+	BORDER-RIGHT: #666 1px solid; BORDER-TOP: #999 1px solid; BORDER-LEFT: #999 1px solid; BORDER-BOTTOM-STYLE: none; border-radius: 2px; moz-border-radius: 2px
+}
+TABLE.tabs {
+	BORDER-TOP-STYLE: none; BORDER-BOTTOM: #666 1px solid; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none
+}
+
+/*
+  This is for the table cell above the Topics, Post & Last posts on the index.php page
+  By default this is the fading out gradiated silver background.
+  However, you could replace this with a bitmap specific for each forum
+*/
+td.rowpic {
+		background-color: #FFFFFF;
+		background-image: url(/Tpl/Public/zh-cn/Images/blue/cellpic2.jpg);
+		background-repeat: repeat-y;
+}
+
+/* Header cells - the blue and silver gradient backgrounds */
+th	{
+	color: #006699; font-size: 12px; font-weight : bold;
+	background-color: #006699; height: 25px;
+	background-image: url(/Tpl/Public/zh-cn/Images/blue/cellpic3.gif);
+}
+
+td.cat,td.catHead,td.catSides,td.catLeft,td.catRight,td.catBottom {
+			background-image: url(/Tpl/Public/zh-cn/Images/blue/cellpic1.gif);
+			background-color:#D1D7DC; border: #FFFFFF; border-style: solid; height: 28px;
+}
+
+
+/*
+  Setting additional nice inner borders for the main table cells.
+  The names indicate which sides the border will be on.
+  Don't worry if you don't understand this, just ignore it :-)
+*/
+td.cat,td.catHead,td.catBottom {
+	height: 29px;
+	border-width: 0px 0px 0px 0px;
+}
+th.thHead,th.thSides,th.thTop,th.thLeft,th.thRight,th.thBottom,th.thCornerL,th.thCornerR {
+	font-weight: bold; border: #FFFFFF; border-style: solid; height: 24px; }
+td.row3Right,td.spaceRow {
+	background-color: #D1D7DC; border: #FFFFFF; border-style: solid; }
+
+th.thHead,td.catHead { font-size: 12px; border-width: 0px 0px 0px 0px; }
+th.thSides,td.catSides,td.spaceRow	 { border-width: 0px 1px 0px 1px; }
+th.thRight,td.catRight,td.row3Right	 { border-width: 0px 1px 0px 0px; }
+th.thLeft,td.catLeft	  { border-width: 0px 0px 0px 1px; }
+th.thBottom,td.catBottom  { border-width: 0px 1px 1px 1px; }
+th.thTop	 {
+	border-width: 1px 0px 0px 0px;
+	font-size: 12px;
+	color: #006699;
+}
+th.thCornerL {
+	border-width: 1px 0px 0px 1px;
+	font-size: 12px;
+	color: #006699;
+}
+th.thCornerR { border-width: 1px 1px 0px 0px; }
+
+
+/* The largest text used in the index page title and toptic title etc. */
+.maintitle,h1,h2	{
+			font-weight: bold; font-size: 12px; font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif;
+			text-decoration: none; line-height : 120%; color : #000000;
+}
+
+
+/* General text */
+.gen { font-size : 12px; }
+.genmed { font-size : 12px; }
+.gensmall { font-size : 9pt; color : #006699;}
+.gen,.genmed,.gensmall { color : #006699; }
+a.gen,a.genmed,a.gensmall { color: #006699; text-decoration: none; }
+a.gen:hover,a.genmed:hover,a.gensmall:hover	{ color: #DD6900; text-decoration: underline; }
+
+
+/* The register, login, search etc links at the top of the page */
+.mainmenu		{ font-size : 12px; color : #000000 }
+a.mainmenu		{ text-decoration: none; color : #006699;  }
+a.mainmenu:hover{ text-decoration: underline; color : #DD6900; }
+
+
+/* Forum category titles */
+.cattitle		{ font-weight: bold; font-size: 12px ; letter-spacing: 1px; color : #006699}
+a.cattitle		{ text-decoration: none; color : #006699; }
+a.cattitle:hover{ text-decoration: underline; }
+
+
+/* Forum title: Text and link to the forums used in: index.php */
+.forumlink		{ font-weight: bold; font-size: 12px; color : #006699; }
+a.forumlink 	{ text-decoration: none; color : #006699; }
+a.forumlink:hover{ text-decoration: underline; color : #DD6900; }
+
+
+/* Used for the navigation text, (Page 1,2,3 etc) and the navigation bar when in a forum */
+.nav			{ font-weight: bold; font-size: 12px; color : #006699;}
+a.nav			{ text-decoration: none; color : #006699; }
+a.nav:hover		{ text-decoration: underline; }
+
+
+/* titles for the topics: could specify viewed link colour too */
+.topictitle			{ font-weight: bold; font-size: 12px; color : #000000; }
+a.topictitle:link   { text-decoration: none; color : #006699; }
+a.topictitle:visited { text-decoration: none; color : #5493B4; }
+a.topictitle:hover	{ text-decoration: underline; color : #DD6900; }
+
+
+/* Name of poster in viewmsg.php and viewtopic.php and other places */
+.name			{ font-size : 12px; color : #000000;}
+
+/* Location, number of posts, post date etc */
+.postdetails		{ font-size : 10px; color : #000000; }
+
+
+/* The content of the posts (body of text) */
+.postbody { font-size : 12px;}
+a.postlink:link	{ text-decoration: none; color : #006699 }
+a.postlink:visited { text-decoration: none; color : #5493B4; }
+a.postlink:hover { text-decoration: underline; color : #DD6900}
+
+
+/* Quote & Code blocks */
+.code {
+	font-family: Courier, 'Courier New', sans-serif; font-size: 12px; color: #006600;
+	background-color: #FAFAFA; border: #D1D7DC; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+
+.quote {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #444444; line-height: 125%;
+	background-color: #FAFAFA; border: #D1D7DC; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+
+
+/* Copyright and bottom info */
+.copyright		{ font-size: 10px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #444444; letter-spacing: -1px;}
+a.copyright		{ color: #444444; text-decoration: none;}
+a.copyright:hover { color: #000000; text-decoration: underline;}
+
+
+/* Form elements */
+ textarea, select {
+	color : #000000;
+	font: normal 12px Verdana, Arial, Helvetica, sans-serif;
+	border-color : #000000;
+}
+
+/* The text input fields background colour */
+input.post, textarea.post, select {
+	background-color : #FFFFFF;
+}
+ 
+/* The buttons used for bbCode styling in message post */
+input.button {
+	background-color : #EFEFEF;
+	color : #000000;
+	font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* The main submit button option */
+input.mainoption {
+	background-color : #FAFAFA;
+	font-weight : bold;
+}
+
+/* None-bold submit button */
+input.liteoption {
+	background-color : #FAFAFA;
+	font-weight : normal;
+	color: #006699;
+}
+
+/* This is the line in the posting page which shows the rollover
+  help line. This is actually
+   a text box, but if set to be the same
+  colour as the background no one will know ;)
+*/
+.helpline { background-color: #DEE3E7; border-style: none; }
+
+
+/* Import the fancy styles for IE only (NS4.x doesn't use the @import function) */
+
+A {
+	COLOR: #000099; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+.A {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BACKGROUND-IMAGE: url(/Tpl/Public/zh-cn/Images/blue/bgcolor.gif); BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; HEIGHT: 20px; TEXT-DECORATION: none
+}
+.B {
+	BORDER-RIGHT: #8d8d8d 1px solid; BORDER-TOP: #8d8d8d 1px solid; BACKGROUND-IMAGE: url(/Tpl/Public/zh-cn/Images/blue/bgcolor.gif); BORDER-LEFT: #8d8d8d 1px solid; COLOR: #8d8d8d; BORDER-BOTTOM: #8d8d8d 1px solid; HEIGHT: 20px; TEXT-DECORATION: none
+}
+.C {
+	PADDING-LEFT: 2px
+}
+.D {
+	FONT-SIZE: 13.5pt; COLOR: #ffffff
+}
+.E {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #ffffff
+}
+.E:hover {
+	TEXT-DECORATION: none
+}
+.F {
+	FONT-WEIGHT: normal; COLOR: #ffffff
+}
+.G {
+	COLOR: #ffffff
+}
+.H2 {
+	COLOR: #800000
+}
+.I {
+	FONT-WEIGHT: normal; COLOR: #800000
+}
+.J {
+	COLOR: #000000
+}
+.K {
+	FONT-WEIGHT: normal; COLOR: #000000
+}
+.L {
+	FONT-WEIGHT: normal; FONT-SIZE: 13.5pt; COLOR: #000000
+}
+.M {
+	FONT-WEIGHT: normal; FONT-SIZE: 13.5pt; COLOR: #ffffff
+}
+.N {
+	BACKGROUND-IMAGE: url(/Tpl/Public/zh-cn/Images/blue/bgcolor.gif); HEIGHT: 24px
+}
+.O TD {
+	WHITE-SPACE: nowrap; HEIGHT: 20px
+}
+.O A {
+	COLOR: #000000; TEXT-DECORATION: none! important
+}
+.P {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; CURSOR: hand
+}
+.Q {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; CURSOR: hand; COLOR: #ffffff; BACKGROUND-COLOR: #4791c5
+}
+.Q A {
+	COLOR: #ffffff
+}
+.R {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; COLOR: #8d8d8d
+}
+.S {
+	BORDER-RIGHT: #336699 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #336699 1px solid; PADDING-LEFT: 3px; BORDER-LEFT: #336699 1px solid; COLOR: #8d8d8d; BORDER-BOTTOM: #336699 1px solid; BACKGROUND-COLOR: #e9f2f8
+}
+.T {
+	BORDER-RIGHT: #336699 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #336699 1px solid; PADDING-LEFT: 3px; BORDER-LEFT: #336699 1px solid; CURSOR: hand; BORDER-BOTTOM: #336699 1px solid; BACKGROUND-COLOR: #e9f2f8
+}
+.U {
+	BORDER-RIGHT: #4791c5 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #4791c5 1px solid; PADDING-LEFT: 1px; Z-INDEX: 100; LEFT: 0px; VISIBILITY: hidden; PADDING-BOTTOM: 1px; OVERFLOW: visible; BORDER-LEFT: #4791c5 1px solid; CURSOR: hand; PADDING-TOP: 1px; BORDER-BOTTOM: #4791c5 1px solid; WHITE-SPACE: nowrap; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: #e9f2f8; LAYER-BACKGROUND-COLOR: #e9f2f8
+}
+.V {
+	PADDING-RIGHT: 0px; BORDER-TOP: #4791c5 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; HEIGHT: 1px
+}
+.W {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+.X {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; BACKGROUND-COLOR: #ffffff
+}
+.y {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 1px; COLOR: #8d8d8d; PADDING-TOP: 1px
+}
+.Z {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 1px; COLOR: #8d8d8d; PADDING-TOP: 1px; BACKGROUND-COLOR: #ffffff
+}
+.AA {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-BOTTOM: #ffffff 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.BB {
+	FONT-WEIGHT: normal
+}
+.CC {
+	FONT-WEIGHT: normal; COLOR: #336699
+}
+.DD {
+	COLOR: #000099
+}
+.EE {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-BOTTOM: #ffffff 1px solid; BORDER-COLLAPSE: collapse; EMPTY-CELLS: show
+}
+.EE TD {
+	PADDING-RIGHT: 1px; BORDER-TOP: #c1cdd8 1px solid; PADDING-LEFT: 1px; HEIGHT: 23px
+}
+.FF {
+	COLOR: #10659e
+}
+TR.H {
+	BACKGROUND-COLOR: #c1cdd8
+}
+.GG {
+	BORDER-RIGHT: #96965e 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #96965e 1px solid; MARGIN-TOP: 12px; PADDING-LEFT: 5px; MARGIN-BOTTOM: 12px; PADDING-BOTTOM: 5px; BORDER-LEFT: #96965e 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #96965e 1px solid; BACKGROUND-COLOR: #ffffcc
+}
+.HH {
+	FONT-WEIGHT: normal; COLOR: #e9f2f8
+}
+.II {
+	COLOR: #800000; HEIGHT: 1px
+}
+TR.HL {
+	CURSOR: hand; BACKGROUND-COLOR: #e9f2f8
+}
+TR.SL {
+	BACKGROUND-COLOR: #c1cdd8
+}
+.JJ {
+	BORDER-RIGHT: #a0c6e5 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #a0c6e5 1px solid; OVERFLOW-Y: auto; PADDING-LEFT: 4px; OVERFLOW-X: hidden; PADDING-BOTTOM: 4px; VERTICAL-ALIGN: top; BORDER-LEFT: #a0c6e5 1px solid; WIDTH: 170px; PADDING-TOP: 4px; BORDER-BOTTOM: #a0c6e5 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.RTE {
+	FONT-SIZE: 9pt; FONT-FAMILY: 宋体,MS SONG,SimSun,tahoma,sans-serif
+}
+.KK {
+	MARGIN-LEFT: 5px; WIDTH: 15px; HEIGHT: 12px
+}
+.LL {
+	PADDING-LEFT: 1px
+}
+.MM {
+	MARGIN-TOP: 1px; VERTICAL-ALIGN: middle
+}
+.NN {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; Z-INDEX: 98; LEFT: 0px; VISIBILITY: hidden; BORDER-LEFT: medium none; WIDTH: 0px; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 0px; HEIGHT: 0px
+}
+.OO {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; MARGIN: 0px; BORDER-LEFT: 0px; WIDTH: 100%; BORDER-BOTTOM: 0px; cell-spacing: 0px
+}
+
+th.thHead { color: #FFFFFF}
+

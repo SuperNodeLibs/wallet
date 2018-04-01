@@ -1,0 +1,464 @@
+<div class="col-md-10 wallet_min">	
+	<div class="col-md-6 mian_left pl15">
+		<form name="exchangeForm" id="exchangeForm" method="post">
+			<div class="lr_mode_group">	
+				<label>{$Think.lang.INDEX_EXCHANGE_SELGATEWAY}</label>
+				<span class="r_control">
+							<select class="form-control" name="gateway_id" id="gateway_id">
+								<volist name="gateway" id="gw">
+									<option value='{$gw.gateway_account}'>{$gw.gateway_name}({$gw.gateway_account})</option>
+								</volist>
+								
+							</select>
+						</span>
+			</div>
+			<div class="lr_mode_group">
+				<label>{$Think.lang.INDEX_EXCHANGE_OPTTYPE}</label>
+				<span class="r_control tab_a">
+							<a href="#cz" class="btn btn-default active"  aria-controls="cz" role="tab" data-toggle="tab">{$Think.lang.INDEX_EXCHANGE_INCHARGE}</a>
+							<a href="#tx" class="btn btn-default"  aria-controls="tx" role="tab" data-toggle="tab">{$Think.lang.INDEX_EXCHANGE_OUTCHARGE}</a>
+						</span>
+			</div>
+			<div class="tab-content">
+				<!--充值单-->
+				<div class="tab-pane active cztx_form" role="tabpanel" id="cz">
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_EXCHANGE_INCHARGE_ACCOUNT}</label>
+						<span class="r_control">
+								<input type="text" class="form-control" id="cz_account" value="{$Think.session.USER_ACCOUNT}"/>
+							</span>
+					</div>
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_EXCHANGE_INCHARGE_ASSET}</label>
+						<span class="r_control">
+								<select class="form-control" name="zctype" id="cz_zctype">
+									<option value="">{$Think.lang.INDEX_GATEWAY_SUPPLY}</option>
+									<volist name="gateway" id="gw" offset="0" length="1"><!--第一个网关资产-->
+									<volist name="gw.gateway_asset" id="asset">
+										<option value="{$asset.asset_code}">{$asset.asset_code}</option>
+								</volist>
+								</volist>
+								</select>
+							</span>
+					</div>
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_EXCHANGE_INCHARGE_AMOUNT}</label>
+						<span class="r_control">
+								<input type="text" placeholder="{$Think.lang.INDEX_GATEWAY_SUPPLY}充值金额最小为100"  class="form-control" id="cz_amount"/>
+							</span>
+					</div>
+					<div class="lr_mode_group">
+						{$Think.lang.INDEX_EXCHANGE_INCHARGE_DESC1}<b class="edit_tips" id="true_pay">0</b>({$Think.lang.INDEX_EXCHANGE_INCHARGE_DESC2})！
+					</div>
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_EXCHANGE_INCHARGE_TYPE}</label>
+						<span class="r_control">
+								<select class="form-control" id="czlx">
+									<option value="">{$Think.lang.INDEX_EXCHANGE_SELECT}</option>
+								</select>
+							</span>
+					</div>
+
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_BANK_MEMBER}</label>
+						<span class="r_control" id="cz_bankmember">
+								--
+							</span>
+					</div>
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_BANK_ACCOUNT}</label>
+						<span class="r_control" id="cz_bankaccount">
+								--
+							</span>
+					</div>
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_BANK_NAME}</label>
+						<span class="r_control" id="cz_bankext">
+								--
+							</span>
+					</div>
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_EXCHANGE_INCHARGE_DESC}</label>
+						<span class="r_control" id="cz_bankcomment">
+								{$Think.lang.INDEX_EXCHANGE_NULL}
+							</span>
+					</div>
+					<div class="lr_mode_group" id="cz_active_comment">
+					</div>
+					<div class="form-group text-center">
+						<button type="button" class="btn btn-primary" id="btn_cz_submit">{$Think.lang.INDEX_EXCHANGE_INCHARGE_SUBMIT}</button>
+					</div>
+				</div>
+				<!--充值单end-->
+				<!--提现单-->
+				<div class="tab-pane cztx_form" role="tabpanel" id="tx">
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_EXCHANGE_OUTCHARGE_ASSET}</label>
+						<span class="r_control">
+								<select class="form-control" name="zctype" id="tx_zctype">
+									<option>{$Think.lang.INDEX_EXCHANGE_SELECT}</option>
+									<volist name="gateway" id="gw" offset="0" length="1"><!--第一个网关资产-->
+									<volist name="gw.gateway_asset" id="asset">
+										<option value="{$asset.asset_code}">{$asset.asset_code}</option>
+								</volist>
+								</volist>
+								</select>
+							</span>
+					</div>
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_EXCHANGE_OUTCHARGE_AVL}</label>
+						<span class="r_control">
+								<input type="text" class="form-control" readonly="readonly" id="tx_amountavl"/>
+							</span>
+					</div>
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_EXCHANGE_OUTCHARGE_TYPE}</label>
+						<span class="r_control">
+								<select class="form-control" id="txlx">
+									<option>{$Think.lang.INDEX_EXCHANGE_SELECT}</option>
+								</select>
+							</span>
+					</div>
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_EXCHANGE_OUTCHARGE_AMOUNT}</label>
+						<span class="r_control">
+								<input type="text" class="form-control" id="tx_amount"/>
+							</span>
+					</div>
+					
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_BANK_MEMBER}</label>
+						<span class="r_control">
+								<input type="text" class="form-control" id="tx_bankmember" />
+							</span>
+					</div>
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_BANK_ACCOUNT}</label>
+						<span class="r_control">
+								<input type="text" class="form-control" id="tx_bankaccount" />
+							</span>
+					</div>
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_GATEWAY_OUTCHARGE_BANK_NAME}</label>
+						<span class="r_control">
+								<input type="text" class="form-control" id="tx_bankext"/>
+							</span>
+					</div>
+					<div class="lr_mode_group">
+						<label>{$Think.lang.INDEX_EXCHANGE_OUTCHARGE_DESC}</label>
+						<span class="r_control" id="tx_bankcomment">
+								{$Think.lang.INDEX_EXCHANGE_NULL}
+							</span>
+					</div>
+					<div class="form-group text-center">
+						<button type="button" class="btn btn-primary" id="btn_tx_submit">{$Think.lang.INDEX_EXCHANGE_OUTCHARGE_SUBMIT}</button>
+					</div>
+				</div>
+				<!--提现单end-->
+		</form>
+		</div>
+	</div>
+	<div class="col-md-6 main_right">
+		<h4>{$Think.lang.INDEX_EXCHANGE_OUTCHARGE_RECORD}</h4>
+		<table class="table table-bordered text-center">
+			<tr>
+				<td>{$Think.lang.INDEX_EXCHANGE_TIME}</td>
+				<td>{$Think.lang.INDEX_EXCHANGE_OPT}</td>
+				<td>{$Think.lang.INDEX_EXCHANGE_AMOUNT}</td>
+				<td>{$Think.lang.INDEX_EXCHANGE_STATUS}</td>
+			</tr>
+			<volist name="allExchange" id="exc">
+				<tr>
+					<td>{$exc.dt[0]}<br>{$exc.dt[1]}</td>
+					<td>{$exc.dir}</td>
+					<td><if condition="(array_key_exists('asset', $exc))" >{$exc.asset.asset_code} {$exc.record_amount}<else/>[{$Think.lang.INDEX_EXCHANGE_UNKNOW}]</if></td>
+					<td><b <eq name="exc.record_status" value="2">class="text-success"<else/>class="edit_tips"</eq>>{$exc.status}</b></td>
+				</tr>
+			</volist>
+		</table>
+		<div class="pagesbox">
+			{$page}
+		</div>
+		<!--end pagebox-->
+	</div>
+</div>
+</div>
+</section>
+<!--Content end-->
+
+<!--支付密码弹框-->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">{$Think.lang.MAIN_INPUT_PAYSET}</h4>
+			</div>
+			<div class="modal-body">
+				<b class="text-danger">*{$Think.lang.MAIN_INPUT_DESC}</b>
+				<br>
+				<div class="form-group">
+					<label>{$Think.lang.MAIN_INPUT_PASSWORD}：</label>
+					<input type="password" class="form-control" id="paypass"/>
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn btn-primary pull-right" onclick="javascript:paymentAsset($('#paypass').val(), '{$Think.session.USER_3DES}', g_gatewayAccount, g_issuerAccount, g_assetCode, $('#tx_amount').val())">{$Think.lang.MAIN_INPUT_OK}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--支付密码弹框 end-->
+<script>
+	var g_gatewayAccount;
+	var g_issuerAccount;
+	var g_assetCode;
+	
+	$(document).ready(function(){
+		address('{$Think.session.USER_ACCOUNT}');//判断当前用户是否已经激活，并计算汇率
+	});
+	$(function(){
+		g_callbackPayment = function(){
+			$('#myModal').modal('hide');
+			//提交结果
+			$.ajax({
+				type: "post",
+				url: "index/exchange/txsave",
+				data: {
+					gateway_account: g_gatewayAccount,
+					account_src: '{$Think.session.USER_ACCOUNT}',
+					account: '{$Think.session.USER_ACCOUNT}',
+					asset: g_assetCode,
+					issuer: g_issuerAccount,
+					amount: $('#tx_amount').val(),
+					bank_id: $('#txlx').val(),
+					bank_member: $('#tx_bankmember').val(),
+					bank_account: $('#tx_bankaccount').val(),
+					bank_ext: $('#tx_bankext').val(),
+				},
+				async: true,
+				success: function(){
+					alert('{$Think.lang.INDEX_EXCHANGE_WAITING}！');
+					location.reload();
+				}
+			});
+			
+		}
+	});
+	
+	
+	/**
+	 * 网关改变
+	 */
+	$('#gateway_id').change(function() {
+		$('#cz_zctype').empty();
+		$('#tx_zctype').empty();
+		g_gatewayAccount = $('#gateway_id').val();
+		address('{$Think.session.USER_ACCOUNT}');//判断当前用户是否已经激活，并计算汇率
+		$.ajax({
+			type: "get",
+			url: "index/exchange/data/account/" + $('#gateway_id').val(),
+			async: true,
+			success: function(data) {
+				var data = JSON.parse(data);
+				$('#tx_zctype').append("<option value=''>{$Think.lang.INDEX_EXCHANGE_SELECT}</option>");
+				$('#cz_zctype').append("<option value=''>{$Think.lang.INDEX_EXCHANGE_SELECT}</option>");
+				for(i = 0; i < data.length; i++) {
+					$('#tx_zctype').append("<option value='" + data[i].asset_code + "' data-issuer='"+data[i].asset_issuer+"'>" + data[i].asset_code + "</option>");
+					$('#cz_zctype').append("<option value='" + data[i].asset_code + "' data-issuer='"+data[i].asset_issuer+"'>" + data[i].asset_code + "</option>");
+				}
+			}
+		});
+	});
+
+	/*
+	 * 充值资产改变
+	 */
+	$('#cz_zctype').change(function() {
+		if($('#cz_zctype').val() != "") {
+			$('#czlx').empty();
+			address('{$Think.session.USER_ACCOUNT}');//判断当前用户是否已经激活，并计算汇率
+			$.ajax({
+				type: "get",
+				url: "index/exchange/cxtype/account/" + $('#gateway_id').val() + "/asset/" + $('#cz_zctype').val(),
+				async: true,
+				success: function(data) {
+					var data = JSON.parse(data);
+					$('#czlx').append("<option value=''>{$Think.lang.INDEX_EXCHANGE_SELECT}</option>");
+					for(i = 0; i < data.length; i++) {
+						$('#czlx').append("<option value='" + data[i].bank_id + "'>" + data[i].bank_name + "</option>");
+					}
+				}
+			});
+		}
+
+	});
+	
+	/*
+	 * 提现资产改变
+	 */
+	$('#tx_zctype').change(function() {
+		g_issuerAccount = $("#tx_zctype option:selected").attr("data-issuer");//保存当前资产发行人
+		g_assetCode = $('#tx_zctype').val();
+		if($('#tx_zctype').val() != "") {
+			$('#txlx').empty();
+			$.ajax({
+				type: "get",
+				url: "index/exchange/txtype/account/" + $('#gateway_id').val() + "/asset/" + $('#tx_zctype').val(),
+				async: true,
+				success: function(data) {
+					var data = JSON.parse(data);
+					$('#txlx').append("<option value=''>{$Think.lang.INDEX_EXCHANGE_SELECT}</option>");
+					for(i = 0; i < data.length; i++) {
+						$('#txlx').append("<option value='" + data[i].bank_id + "'>" + data[i].bank_name + "</option>");
+					}
+				}
+			});
+		}
+
+	});
+
+	/*
+	 * 充值方式改变
+	 */
+	$('#czlx').change(function() {
+		if($('#czlx').val() != "") {
+			$.ajax({
+				type: "get",
+				url: "index/exchange/cxinfo/account/" + $('#gateway_id').val() + "/bank/" + $('#czlx').val(),
+				async: true,
+				success: function(data) {
+					var data = JSON.parse(data);
+					$('#cz_bankmember').text(data.bank_member);
+					$('#cz_bankaccount').text(data.bank_account);
+					$('#cz_bankext').text(data.bank_ext);
+					$('#cz_bankcomment').text(data.info_comment);
+				}
+			});
+		}
+	});
+	
+	/*
+	 * 提现方式改变
+	 */
+	$('#txlx').change(function() {
+		if($('#txlx').val() != "") {
+			$.ajax({
+				type: "get",
+				url: "index/exchange/cxinfo/account/" + $('#gateway_id').val() + "/bank/" + $('#txlx').val(),
+				async: true,
+				success: function(data) {
+					var data = JSON.parse(data);
+					$('#tx_bankcomment').text(data.info_comment);
+				}
+			});
+		}
+	});
+	
+
+	/**
+	 * 获取提现资产余额
+	 * @param {Object} Min
+	 */
+	$('#tx_zctype').change(function(){
+		if($('#tx_zctype').val() != ""){
+			var gw = $('#gateway_id').val();
+			var code = $('#tx_zctype').val();
+			var asset = getBalance('{$Think.session.USER_ACCOUNT}', gw, code);
+			$('#tx_amountavl').val(asset.balance);
+		}
+	});
+	
+	function GetRandomNum(Min) {
+		var rand = Math.random();
+		var result = Min+rand;
+		return result;
+	}
+	/*
+	 * 充值金额改变
+	 */
+	$('#cz_amount').keyup(function() {
+		var amount = parseInt($('#cz_amount').val());
+		if(amount > 0) {
+			var rand = GetRandomNum(amount);
+			$('#true_pay').text(rand.toFixed(2));
+		}
+	});
+
+	/*
+	 * 提现申请单
+	 */
+	$('#btn_tx_submit').click(function() {
+		if($('#gateway_id').val() == "") {
+			alert('{$Think.lang.INDEX_EXCHANGE_ALT_SELGATEWAY}!');
+			return;
+		}
+		if($('#tx_zctype').val() == "") {
+			alert('{$Think.lang.INDEX_EXCHANGE_ALT_SELASSET}!');
+			return;
+		}
+		if($('#txlx').val() ==""){
+			alert('{$Think.lang.INDEX_EXCHANGE_ALT_SELOUTCHARGE}!');
+			return;
+		}
+		if(parseInt($('#tx_amount').val()) ==0){
+			alert('{$Think.lang.INDEX_EXCHANGE_ALT_OUTCHARGE_AMOUNT}！');
+			return;
+		}
+		if($('#tx_bankmember').val() ==""){
+			alert('{$Think.lang.INDEX_EXCHANGE_ALT_MEMBER}!');
+			return;
+		}
+		if($('#tx_bankaccount').val() ==""){
+			alert('{$Think.lang.INDEX_EXCHANGE_ALT_BANK_ACCOUNT}!');
+			return;
+		}
+		$('#myModal').modal('show');
+	});
+	
+	/*
+	 * 提交充值单
+	 */
+	$('#btn_cz_submit').click(function() {
+		if($('#gateway_id').val() == "") {
+			alert('{$Think.lang.INDEX_EXCHANGE_ALT_SELGATEWAY}!');
+			return;
+		}
+		if($('#cz_account').val() == ""){
+			alert('{$Think.lang.INDEX_EXCHANGE_ALT_INPUT_INCHARGE}！');
+			return;
+		}
+		if($('#cz_zctype').val() == ""){
+			alert('{$Think.lang.INDEX_EXCHANGE_ALT_SELINCHARGE_ASSET}！');
+			return;
+		}
+		if($('#cz_amount').val() == "" || !isNumber($('#cz_amount').val()) || parseFloat($('#cz_amount').val()) ==0){
+			alert('{$Think.lang.INDEX_EXCHANGE_ALT_INCHARGE_AMOUNT}！');
+			return;
+		}
+		if(parseFloat($('#cz_amount').val()) <100){
+			alert('{$Think.lang.INDEX_EXCHANGE_ALT_INCHARGE_LEAST}100！');
+			return;
+		}
+		if($('#czlx').val() ==""){
+			alert('{$Think.lang.INDEX_EXCHANGE_ALT_INCHARGE_TYPE}!');
+			return;
+		}
+		$.ajax({
+			type: "post",
+			url: "index/exchange/czsave",
+			data: {
+				gateway_account: $('#gateway_id').val(),
+				account_obj: $('#cz_account').val(),
+				asset: $('#cz_zctype').val(),
+				amount: $('#true_pay').text(),
+				type: $('#czlx').val()
+			},
+			async: true,
+			success: function(){
+				alert('{$Think.lang.INDEX_EXCHANGE_ALT_APPLY_WAITING}！');
+				location.reload();
+			}
+		});
+	})
+</script>

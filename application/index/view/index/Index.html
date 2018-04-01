@@ -1,0 +1,47 @@
+<div class="col-md-10 wallet_min">
+	<!-- 超级票余额 -->
+	<div class="col-md-8 mian_left"  id="user_main">
+		<ul class="list-unstyled scroll_main" id="balance_data">
+			
+			<li>
+				<h3>{$Think.lang.INDEX_BILL_REMAIN}</h3>
+				<div class="my_money">
+					<p><span>{$Think.lang.INDEX_BILL_AVL}</span><span><b id="ticket_used">--</b></span></p>
+					<p><span>{$Think.lang.INDEX_BILL_FREEZE}</span><span><b id="ticket_frez">20</b></span></p>
+					<p><span>{$Think.lang.INDEX_BILL_TOTAL}</span><span><b id="ticket_total">--</b></span></p>
+					<!--&asymp;<span>CNY</span><b>6521.00</b>-->
+				</div>
+				<div class="mian_left_ctrlbox">
+					<a href="/transaction" class="btn btn-default pull-right">{$Think.lang.INDEX_PAYMENT}</a>
+				</div>
+			</li>
+
+		</ul>
+	</div>
+	<div class="col-md-4 main_right">
+		<div class="newdeal_box">
+			<h3>{$Think.lang.INDEX_NEWEST_TRANSACTION}<span class="badge"></span><span class="glyphicon glyphicon-refresh pull-right refresh_btn" onclick="address('{$Think.session.USER_ACCOUNT}')"></span></h3>
+			<ul class="list-unstyled" id="payment_record">
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+
+<script>
+	$(document).ready(function() {
+		address('{$Think.session.USER_ACCOUNT}');
+		checkaccount();
+	});
+	
+	function checkaccount(){
+		if({$Think.config.auto_active_on_register} == 1 && !isExistUser('{$Think.session.USER_ACCOUNT}')){
+			location.href='/create';
+		}
+		if({$Think.config.trust_on} == 1 && !getassetAvlBalance('{$Think.session.USER_ACCOUNT}','{$Think.config.default_asset_code}','{$Think.config.default_asset_issuer}')){
+			location.href='/trust';
+		}
+	}
+</script>
+<!--Content end-->
